@@ -1,0 +1,123 @@
+.retro-screen::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background:
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.08), transparent 14%),
+    linear-gradient(
+      to bottom,
+      transparent,
+      rgba(255, 255, 255, 0.03) 82%,
+      rgba(0, 0, 0, 0.32)
+    );
+  mix-blend-mode: screen;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.retro-screen::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.02) 0,
+    rgba(255, 255, 255, 0.02) 1px,
+    rgba(0, 0, 0, 0) 2px,
+    rgba(0, 0, 0, 0) 4px
+  );
+  opacity: 0.26;
+  mix-blend-mode: screen;
+  pointer-events: none;
+  animation: screen-flicker 3.4s ease-in-out infinite alternate;
+}
+
+.retro-cursor {
+  display: inline-block;
+  animation: cursor-blink 0.9s steps(1, end) infinite;
+}
+
+@keyframes screen-flicker {
+  0% { opacity: 0.2; }
+  50% { opacity: 0.3; }
+  100% { opacity: 0.24; }
+}
+
+@keyframes cursor-blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+@keyframes crt-screen-open {
+  0% { clip-path: polygon(50% 49.5%, 50% 49.5%, 50% 50.5%, 50% 50.5%); }
+  35% { clip-path: polygon(0 49.5%, 100% 49.5%, 100% 50.5%, 0 50.5%); }
+  100% { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+}
+
+@keyframes crt-screen-close {
+  0% { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+  65% { clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%); }
+  100% { clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%); }
+}
+
+@keyframes crt-screen-flash {
+  0% { opacity: 0; }
+  22% { opacity: 0.94; }
+  100% { opacity: 0; }
+}
+
+@keyframes crt-beam-collapse {
+  0%, 34% {
+    transform: scaleX(1);
+    opacity: 0;
+  }
+  45% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes crt-center-glow {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  20% { opacity: 0.95; }
+  80% {
+    transform: scale(1);
+    opacity: 0.95;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes crt-rgb-drift {
+  0% { transform: translateX(0.2%); }
+  50% { transform: translateX(-0.2%) translateY(-0.02%) scaleY(1.005); }
+  100% { transform: translateX(-0.3%); }
+}
+
+.crt-screen-rgb {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 96, 160, 0.18) 0%,
+      rgba(255, 255, 255, 0.02) 38%,
+      rgba(98, 210, 255, 0.2) 100%
+    );
+  mix-blend-mode: screen;
+  opacity: 0.38;
+  animation: crt-rgb-drift 2s ease-in-out infinite alternate;
+}
+
+.crt-screen-vignette {
+  background: radial-gradient(circle at center, transparent 48%, rgba(0, 0, 0, 0.18) 100%);
+}

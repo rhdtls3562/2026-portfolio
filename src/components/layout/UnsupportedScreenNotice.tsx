@@ -33,12 +33,8 @@ export default function UnsupportedScreenNotice({
 
         {/* 배경 그라디언트 */}
         <div
-          className="pointer-events-none absolute inset-0"
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,93,167,0.14),transparent_40%),radial-gradient(circle_at_bottom_left,rgba(78,112,255,0.16),transparent_40%)]"
           aria-hidden="true"
-          style={{
-            background:
-              "radial-gradient(circle at top, rgba(255,93,167,0.14), transparent 40%), radial-gradient(circle at bottom left, rgba(78,112,255,0.16), transparent 40%)",
-          }}
         />
 
         {/* 모니터 아이콘 */}

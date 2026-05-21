@@ -1,0 +1,30 @@
+@theme inline {
+  --font-sans: var(--font-latin), "Mona12 Text KR", "Mona12";
+  --font-mono: var(--font-latin), "Mona12 Text KR", "Mona12";
+  --duration-slow: 900ms;
+  --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --color-d-bg: #f3ede2;
+  --color-d-surface: #f2ede7;
+  --color-d-cream: #e8e3db;
+  --color-d-ink: #1c1610;
+  --color-d-text: #3a3530;
+  --color-d-mid: #5a5245;
+  --color-d-muted: #9c8f7e;
+  --color-d-warm: #8b6f4e;
+  --color-d-warm-deep: #5a3820;
+  --color-d-border: #c0b8ae;
+  --color-d-chrome: #d4cfc8;
+
+  --text-2xs: 0.5rem;
+  --text-3xs: 0.375rem;
+  --text-4xs: 0.3125rem;
+}
+
+@utility font-retro-display {
+  font-family: var(--font-sans);
+}
+
+@utility font-retro-terminal {
+  font-family: var(--font-sans);
+}

@@ -15,19 +15,6 @@ export const WINDOW_TITLE: Record<AppKey, string> = {
   emails: "Emails",
 };
 
-export const SCREEN_POSITION = {
-  left: "50%",
-  top: "50%",
-  width: "24.5%",
-  height: "30%",
-};
-
-export const BUTTON_POSITION = {
-  left: "56.05%",
-  top: "70.15%",
-  width: "4%",
-};
-
 export const DESKTOP_APPS: DesktopApp[] = [
   { key: "readme", label: "about me", icon: "/asset/icon/icon_more.png" },
   { key: "documents", label: "records", icon: "/asset/icon/icon_file.png" },
