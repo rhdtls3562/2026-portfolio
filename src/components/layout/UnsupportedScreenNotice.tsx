@@ -3,7 +3,7 @@
  * 실제 콘텐츠는 데스크탑에서만 표시된다.
  */
 import Image from "next/image";
-import { images } from "@/constants/assets";
+import { images } from "@/constants/ASSETS";
 
 export default function UnsupportedScreenNotice({
   children,

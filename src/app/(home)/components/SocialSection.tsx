@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { icons } from "@/constants/assets";
+import { icons } from "@/constants/ASSETS";
 
 type SocialLink = {
   label: string;

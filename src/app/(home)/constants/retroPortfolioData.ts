@@ -1,5 +1,5 @@
 /** 레트로 포트폴리오 데스크톱에서 사용하는 공통 데이터와 상태 타입을 정의한다. */
-import { icons } from "@/constants/assets";
+import { icons } from "@/constants/ASSETS";
 
 export const EMAIL = "rhdtls3562@naver.com";
 

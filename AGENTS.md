@@ -53,7 +53,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 - `next/image` 사용 시 Next.js 16 기준으로 deprecated 된 `priority` prop은 사용하지 않는다.
 - 이미지 우선 로딩이 필요할 경우 `preload`, `loading="eager"`, `fetchPriority="high"` 중 상황에 맞는 한 가지 방식을 우선 검토한다.
 - 작은 로고, 아이콘, 일반 UI 이미지는 불필요하게 high priority 로딩을 지정하지 않는다.
-- public 에셋 경로는 컴포넌트에 직접 하드코딩하지 않고 `src/constants/assets.ts` 단일 상수 파일을 통해 불러온다.
+- public 에셋 경로는 컴포넌트에 직접 하드코딩하지 않고 `src/constants/ASSETS.ts` 단일 상수 파일을 통해 불러온다.
 
 ## 코드 컨벤션
 
@@ -87,7 +87,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 - 훅, 유틸, API, 일반 모듈: camelCase
 - 상수 파일: UPPER_SNAKE_CASE
 - 아이콘 파일명: `ic_` + snake_case
-- `src/constants/assets.ts`의 에셋 export 이름은 camelCase를 사용한다.
+- `src/constants/ASSETS.ts`의 에셋 export 이름은 camelCase를 사용한다.
 - 이미지: `img_` + snake_case
 - 로고: `img_logo_` + snake_case
 

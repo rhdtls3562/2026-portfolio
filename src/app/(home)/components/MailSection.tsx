@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { icons, images } from "@/constants/assets";
+import { icons, images } from "@/constants/ASSETS";
 
 const EMAIL = "rhdtls3562@naver.com";
 

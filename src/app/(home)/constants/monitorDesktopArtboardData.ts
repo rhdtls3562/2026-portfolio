@@ -1,5 +1,5 @@
 /** 모니터 아트보드에 배치되는 장식 아이콘의 위치와 크기 정보를 정의한다. */
-import { icons } from "@/constants/assets";
+import { icons } from "@/constants/ASSETS";
 
 export type DecoItem = {
   src: string;

@@ -1,6 +1,6 @@
 /** 자기소개와 핵심 키워드를 레트로 readme 창으로 표현하는 컴포넌트. */
 import Image from "next/image";
-import { images } from "@/constants/assets";
+import { images } from "@/constants/ASSETS";
 import { README_PARAGRAPHS } from "@/app/(home)/constants/retroPortfolioData";
 
 const KEYWORDS = [

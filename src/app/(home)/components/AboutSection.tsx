@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { icons, images } from "@/constants/assets";
+import { icons, images } from "@/constants/ASSETS";
 
 type Skill = {
   category: string;

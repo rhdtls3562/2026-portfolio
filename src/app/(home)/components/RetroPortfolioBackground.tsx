@@ -3,7 +3,7 @@
 
 import Image from "next/image";
 import { type ReactNode } from "react";
-import { images } from "@/constants/assets";
+import { images } from "@/constants/ASSETS";
 import { type PowerState } from "@/app/(home)/constants/retroPortfolioData";
 import {
   POWER_BUTTON_POSITION_CLASS,

@@ -1,6 +1,6 @@
 /** 폴더 선택과 상세 콘텐츠를 함께 보여주는 문서 창 컴포넌트. */
 import Image from "next/image";
-import { icons } from "@/constants/assets";
+import { icons } from "@/constants/ASSETS";
 import ProfileFolder from "@/app/(home)/components/ProfileFolder";
 import RecordsFolder from "@/app/(home)/components/RecordsFolder";
 import StackFolder from "@/app/(home)/components/StackFolder";

@@ -2,7 +2,7 @@
 "use client";
 
 import Image from "next/image";
-import { images } from "@/constants/assets";
+import { images } from "@/constants/ASSETS";
 import { DECO_ITEMS } from "@/app/(home)/constants/monitorDesktopArtboardData";
 
 export default function MonitorDesktopArtboard() {

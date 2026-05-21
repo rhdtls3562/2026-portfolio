@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { images } from "@/constants/assets";
+import { images } from "@/constants/ASSETS";
 
 const DETAILS = [
   { label: "현재",  value: "쉐브론 웹퍼블리셔 · 코드잇 프론트엔드 부트캠프 수료" },
