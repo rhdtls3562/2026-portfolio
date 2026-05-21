@@ -7,7 +7,14 @@ export type AppKey = "internet" | "documents" | "emails" | "readme";
 export type PowerState = "off" | "powering" | "powering-off" | "desktop";
 export type FolderKey = "profile" | "records" | "stack";
 
-export type DesktopApp = { key: AppKey; label: string; icon: string };
+export type DesktopApp = {
+  key: AppKey;
+  label: string;
+  icon: string;
+  width: number;
+  height: number;
+  imageClassName: string;
+};
 export type FolderItem = { key: FolderKey; label: string };
 export type LinkItem = { label: string; href: string; note: string };
 
@@ -19,10 +26,38 @@ export const WINDOW_TITLE: Record<AppKey, string> = {
 };
 
 export const DESKTOP_APPS: DesktopApp[] = [
-  { key: "readme", label: "about me", icon: icons.iconMore },
-  { key: "documents", label: "records", icon: icons.iconFile },
-  { key: "internet", label: "social", icon: icons.iconEarth },
-  { key: "emails", label: "contact", icon: icons.iconMail },
+  {
+    key: "readme",
+    label: "about me",
+    icon: icons.iconMore,
+    width: 81,
+    height: 87,
+    imageClassName: "w-[52px] h-auto",
+  },
+  {
+    key: "documents",
+    label: "records",
+    icon: icons.iconFile,
+    width: 175,
+    height: 156,
+    imageClassName: "w-[63px] h-auto",
+  },
+  {
+    key: "internet",
+    label: "social",
+    icon: icons.iconEarth,
+    width: 149,
+    height: 149,
+    imageClassName: "w-14 h-auto",
+  },
+  {
+    key: "emails",
+    label: "contact",
+    icon: icons.iconMail,
+    width: 155,
+    height: 159,
+    imageClassName: "w-[55px] h-auto",
+  },
 ];
 
 export const FOLDERS: FolderItem[] = [

@@ -28,3 +28,7 @@
 @utility font-retro-terminal {
   font-family: var(--font-sans);
 }
+
+@utility font-mona-title {
+  font-family: "Mona12", "Mona12 Text KR", var(--font-latin), system-ui;
+}

@@ -5,6 +5,7 @@ export const icons = {
   iconFolder: "/asset/icon/icon_folder.svg",
   iconMail: "/asset/icon/icon_mail.png",
   iconMore: "/asset/icon/icon_more.png",
+  iconHello: "/asset/icon/icon_hello.svg",
 } as const;
 
 export const images = {
@@ -13,4 +14,6 @@ export const images = {
   imgDesktop: "/asset/img/img_desktop.png",
   imgMain: "/asset/img/img_main.jpg",
   imgProfile: "/asset/img/img_profile.png",
+  imgBts: "/asset/img/img_beautyst.png",
+  imgCoworkers: "/asset/img/img_coworkers.png",
 } as const;

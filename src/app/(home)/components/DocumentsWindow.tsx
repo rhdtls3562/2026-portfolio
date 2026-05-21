@@ -52,9 +52,8 @@ export default function DocumentsWindow({
                   <Image
                     src={icons.iconFolder}
                     alt=""
-                    width={44}
-                    height={44}
-                    className="size-5.5"
+                    width={22}
+                    height={18}
                   />
                   <span
                     className={cn(

@@ -22,7 +22,7 @@ export default function UnsupportedScreenNotice({
           src={images.imgDesktop}
           alt=""
           fill
-          sizes="100vw"
+          sizes="(min-width: 1024px) 0px, 100vw"
           className="object-cover object-center"
         />
 

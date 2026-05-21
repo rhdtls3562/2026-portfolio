@@ -50,6 +50,7 @@ export default function RetroPortfolioScreen({
         <MonitorDesktop
           activeApp={activeApp}
           isInteractive={powerState === "desktop"}
+          isTitleAnimating={powerState === "powering" || powerState === "desktop"}
           selectedFolder={selectedFolder}
           onCloseApp={onCloseApp}
           onOpenApp={onOpenApp}

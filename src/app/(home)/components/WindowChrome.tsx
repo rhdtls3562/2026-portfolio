@@ -1,5 +1,8 @@
 /** 데스크톱 앱 창의 공통 크롬과 닫기 버튼을 감싸는 컴포넌트. */
-import { type AppKey, WINDOW_TITLE } from "@/app/(home)/constants/retroPortfolioData";
+import {
+  type AppKey,
+  WINDOW_TITLE,
+} from "@/app/(home)/constants/retroPortfolioData";
 import { cn } from "@/utils/cn";
 
 type Props = {
@@ -22,7 +25,7 @@ export default function WindowChrome({ app, children, onClose }: Props) {
         app === "emails" && "h-2/3 w-4/5",
       )}
     >
-      <div className="flex h-5.5 shrink-0 items-center justify-between border-b border-[#aaa49c] bg-linear-to-b from-[#d4cfc8] to-[#bfb9b1] px-1.5">
+      <div className="flex h-5.5 shrink-0 items-center justify-between border-b border-[#aaa49c] bg-linear-to-b from-d-chrome to-[#bfb9b1] px-1.5">
         <div className="flex items-center gap-0.75">
           <button
             type="button"

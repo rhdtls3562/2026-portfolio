@@ -18,6 +18,7 @@ import { cn } from "@/utils/cn";
 type Props = {
   activeApp: AppKey | null;
   isInteractive: boolean;
+  isTitleAnimating: boolean;
   selectedFolder: FolderKey;
   onCloseApp: () => void;
   onOpenApp: (app: AppKey) => void;
@@ -27,6 +28,7 @@ type Props = {
 export default function MonitorDesktop({
   activeApp,
   isInteractive,
+  isTitleAnimating,
   selectedFolder,
   onCloseApp,
   onOpenApp,
@@ -40,7 +42,7 @@ export default function MonitorDesktop({
         isInteractive ? "pointer-events-auto" : "pointer-events-none",
       )}
     >
-      <MonitorDesktopArtboard />
+      <MonitorDesktopArtboard isTitleAnimating={isTitleAnimating} />
 
       <div className="absolute bottom-[5.5%] left-1/2 z-20 flex -translate-x-1/2 items-end gap-2.5">
         {DESKTOP_APPS.map((app) => (
@@ -58,9 +60,9 @@ export default function MonitorDesktop({
             <Image
               src={app.icon}
               alt=""
-              width={120}
-              height={120}
-              className="size-14 drop-shadow-md"
+              width={app.width}
+              height={app.height}
+              className={cn(app.imageClassName, "drop-shadow-md")}
             />
             {/* 활성 인디케이터 */}
             {activeApp === app.key && (

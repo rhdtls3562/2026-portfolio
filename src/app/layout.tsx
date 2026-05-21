@@ -1,3 +1,4 @@
+/** 전역 폰트와 메타데이터를 설정하는 루트 레이아웃. */
 import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
 import UnsupportedScreenNotice from '@/components/layout/UnsupportedScreenNotice';

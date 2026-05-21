@@ -43,8 +43,8 @@ export default function SocialSection() {
             src={icons.iconFolder}
             alt=""
             width={28}
-            height={28}
-            className="size-7 opacity-80"
+            height={22}
+            className="opacity-80"
           />
           <div className="flex items-center gap-4">
             <span className="text-(--color-gold) tracking-[0.4em] text-xs uppercase font-medium">
