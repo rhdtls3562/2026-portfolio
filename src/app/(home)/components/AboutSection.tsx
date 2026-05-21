@@ -1,3 +1,4 @@
+/** 소개 섹션의 프로필과 핵심 역량을 보여주는 컴포넌트. */
 import Image from "next/image";
 import { icons, images } from "@/constants/ASSETS";
 
@@ -31,7 +32,7 @@ export default function AboutSection() {
         {/* 섹션 헤더 */}
         <div className="flex items-center gap-6 mb-20">
           <Image
-            src={icons.iconMore}
+            src={icons.iconFolder}
             alt=""
             width={28}
             height={28}

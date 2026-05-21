@@ -50,7 +50,7 @@ export default function DocumentsWindow({
                   )}
                 >
                   <Image
-                    src={icons.iconFile}
+                    src={icons.iconFolder}
                     alt=""
                     width={44}
                     height={44}

@@ -1,3 +1,4 @@
+/** 연락처와 메일 CTA를 보여주는 섹션 컴포넌트. */
 import Image from "next/image";
 import { icons, images } from "@/constants/ASSETS";
 
@@ -18,7 +19,7 @@ export default function MailSection() {
         {/* 섹션 헤더 */}
         <div className="flex items-center gap-6 mb-20">
           <Image
-            src={icons.iconMail}
+            src={icons.iconFolder}
             alt=""
             width={28}
             height={28}

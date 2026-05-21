@@ -15,7 +15,7 @@ export default function RecordSection() {
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center gap-6 mb-20">
           <Image
-            src={icons.iconFile}
+            src={icons.iconFolder}
             alt=""
             width={28}
             height={28}

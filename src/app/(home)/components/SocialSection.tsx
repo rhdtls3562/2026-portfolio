@@ -1,3 +1,4 @@
+/** 소셜 링크를 카드 레이아웃으로 보여주는 컴포넌트. */
 import Image from "next/image";
 import { icons } from "@/constants/ASSETS";
 
@@ -39,7 +40,7 @@ export default function SocialSection() {
         {/* 섹션 헤더 */}
         <div className="flex items-center gap-6 mb-20">
           <Image
-            src={icons.iconEarth}
+            src={icons.iconFolder}
             alt=""
             width={28}
             height={28}
