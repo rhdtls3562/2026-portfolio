@@ -79,6 +79,11 @@ export default function MonitorDesktop({
           {activeApp === "emails" && <EmailsWindow />}
         </WindowChrome>
       )}
+
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-40">
+        <div className="crt-screen-rgb absolute inset-0" />
+        <div className="crt-screen-vignette absolute inset-0" />
+      </div>
     </div>
   );
 }

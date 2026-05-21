@@ -28,7 +28,6 @@ export default function RetroPortfolio() {
   const [powerState, setPowerState] = useState<PowerState>("off");
   const [buttonLit, setButtonLit] = useState(false);
   const [screenVisible, setScreenVisible] = useState(false);
-  const [crtKey, setCrtKey] = useState(0);
   const [activeApp, setActiveApp] = useState<AppKey | null>(null);
   const [selectedFolder, setSelectedFolder] = useState<FolderKey>("profile");
 
@@ -36,11 +35,7 @@ export default function RetroPortfolio() {
     if (powerState !== "powering") return;
     const timers = [
       window.setTimeout(() => setButtonLit(true), 80),
-      window.setTimeout(() => {
-        setScreenVisible(true);
-        setCrtKey((k) => k + 1);
-      }, 560),
-      window.setTimeout(() => setPowerState("desktop"), 1460),
+      window.setTimeout(() => setPowerState("desktop"), 1080),
     ];
     return () => timers.forEach((t) => window.clearTimeout(t));
   }, [powerState]);
@@ -51,7 +46,7 @@ export default function RetroPortfolio() {
       setActiveApp(null);
       setSelectedFolder("profile");
       setButtonLit(false);
-      setScreenVisible(false);
+      setScreenVisible(true);
       setPowerState("powering");
       return;
     }
@@ -148,9 +143,9 @@ export default function RetroPortfolio() {
          */}
         <div
           className={cn(
-            "absolute left-1/2 z-10 -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-sm",
-            "border-2 border-[#1a1631] bg-black",
-            "shadow-[0_0_24px_rgba(20,18,46,0.55)]",
+            "retro-screen absolute left-1/2 z-10 -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-md",
+            "border-8 border-black bg-black",
+            "shadow-[0_0_24px_rgba(0,0,0,0.55)]",
             "transition-[top,width,height] duration-slow ease-spring",
             powerState === "desktop"
               ? "pointer-events-auto"
@@ -166,18 +161,33 @@ export default function RetroPortfolio() {
             screenVisible ? "opacity-100" : "opacity-0",
           )}
         >
-          <CrtPowerOn key={crtKey} animate={screenVisible} />
           <div
-            className="absolute inset-0 origin-center"
+            className="absolute inset-0 will-change-[clip-path]"
             style={
-              powerState === "powering-off"
-                ? { animation: "crt-power-off 700ms ease-in-out forwards" }
-                : undefined
+              powerState === "powering"
+                ? {
+                    animation:
+                      "crt-screen-open 500ms cubic-bezier(0.215, 0.61, 0.355, 1) 300ms both",
+                  }
+                : powerState === "powering-off"
+                  ? {
+                      animation:
+                        "crt-screen-close 450ms cubic-bezier(0.215, 0.61, 0.355, 1) 200ms forwards",
+                    }
+                  : powerState === "desktop"
+                    ? {
+                        clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+                      }
+                    : {
+                        clipPath: "polygon(50% 50%, 50% 50%, 50% 51%, 50% 51%)",
+                      }
             }
             onAnimationEnd={
               powerState === "powering-off"
                 ? (e: React.AnimationEvent<HTMLDivElement>) => {
-                    if (e.animationName === "crt-power-off") handlePowerOffFinished();
+                    if (e.animationName === "crt-screen-close") {
+                      handlePowerOffFinished();
+                    }
                   }
                 : undefined
             }
@@ -191,6 +201,7 @@ export default function RetroPortfolio() {
               onSelectFolder={setSelectedFolder}
             />
           </div>
+          <CrtPowerOn isPoweringOff={powerState === "powering-off"} />
         </div>
       </div>
     </main>
