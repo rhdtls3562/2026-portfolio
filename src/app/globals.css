@@ -1,0 +1,273 @@
+@import url("https://cdn.jsdelivr.net/gh/MonadABXY/mona-font/web/mona.css");
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-latin), "Mona12 Text KR", "Mona12";
+  --font-mono: var(--font-latin), "Mona12 Text KR", "Mona12";
+  --duration-slow: 1400ms;
+  --ease-spring: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* ── 데스크탑 컬러 팔레트 ── */
+  --color-d-bg:        #f3ede2;   /* 모니터 배경 */
+  --color-d-surface:   #f2ede7;   /* 윈도우 내부 */
+  --color-d-cream:     #e8e3db;   /* 태그·항목 배경 */
+  --color-d-ink:       #1c1610;   /* 가장 짙은 텍스트 */
+  --color-d-text:      #3a3530;   /* 본문 텍스트 */
+  --color-d-mid:       #5a5245;   /* 중간 텍스트 */
+  --color-d-muted:     #9c8f7e;   /* 흐린 텍스트 */
+  --color-d-warm:      #8b6f4e;   /* 워밍 포인트 */
+  --color-d-warm-deep: #5a3820;   /* 진한 워밍 */
+  --color-d-border:    #c0b8ae;   /* 기본 보더 */
+  --color-d-chrome:    #d4cfc8;   /* 윈도우 크롬 */
+
+  /* ── 모니터 내부 전용 소형 폰트 스케일 ── */
+  --text-2xs: 0.5rem;       /* 8px  */
+  --text-3xs: 0.375rem;     /* 6px  */
+  --text-4xs: 0.3125rem;    /* 5px  */
+}
+
+@utility font-retro-display {
+  font-family: var(--font-sans);
+}
+
+@utility font-retro-terminal {
+  font-family: var(--font-sans);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background:
+    radial-gradient(circle at top, rgba(255, 93, 167, 0.16), transparent 28%),
+    radial-gradient(
+      circle at bottom left,
+      rgba(78, 112, 255, 0.2),
+      transparent 25%
+    ),
+    #05030a;
+  color: #fff7fb;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button,
+a,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    rgba(140, 230, 255, 0.85),
+    rgba(255, 138, 196, 0.85)
+  );
+  border-radius: 999px;
+}
+
+::selection {
+  background-color: rgba(255, 138, 196, 0.88);
+  color: #09040f;
+}
+
+.retro-screen::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background:
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.08), transparent 14%),
+    linear-gradient(
+      to bottom,
+      transparent,
+      rgba(255, 255, 255, 0.03) 82%,
+      rgba(0, 0, 0, 0.32)
+    );
+  mix-blend-mode: screen;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.retro-screen::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.02) 0,
+    rgba(255, 255, 255, 0.02) 1px,
+    rgba(0, 0, 0, 0) 2px,
+    rgba(0, 0, 0, 0) 4px
+  );
+  opacity: 0.26;
+  mix-blend-mode: screen;
+  pointer-events: none;
+  animation: screen-flicker 3.4s ease-in-out infinite alternate;
+}
+
+.retro-cursor {
+  display: inline-block;
+  animation: cursor-blink 0.9s steps(1, end) infinite;
+}
+
+@keyframes screen-flicker {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.24;
+  }
+}
+
+@keyframes cursor-blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* 레이어 1: 검정 오버레이 - 콘텐츠를 완전히 가린 채 서서히 사라짐 */
+@keyframes crt-bg-fade {
+  0%, 40% {
+    opacity: 1;
+  }
+  78% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* 레이어 2: 밝은 CRT 수평 스캔라인 - 얇게 등장 후 빠르게 확장하며 사라짐 */
+@keyframes crt-line-expand {
+  0% {
+    transform: scaleY(0.004);
+    opacity: 0;
+    filter: none;
+  }
+  /* 얇은 선 등장 */
+  10% {
+    transform: scaleY(0.004);
+    opacity: 1;
+    filter: drop-shadow(0 0 8px #aae4ff) drop-shadow(0 0 20px #aae4ff);
+  }
+  /* 잠시 유지 */
+  30% {
+    transform: scaleY(0.004);
+    opacity: 1;
+    filter: drop-shadow(0 0 8px #aae4ff) drop-shadow(0 0 20px #aae4ff);
+  }
+  /* 빠르게 전체 화면으로 확장 */
+  65% {
+    transform: scaleY(1);
+    opacity: 0.85;
+    filter: none;
+  }
+  /* 투명해지며 콘텐츠 드러남 */
+  100% {
+    transform: scaleY(1);
+    opacity: 0;
+    filter: none;
+  }
+}
+
+/* 화면 꺼질때: 콘텐츠가 중앙으로 압축 → 빛나는 선 → 사라짐 */
+@keyframes crt-power-off {
+  0% {
+    transform: scaleY(1);
+    opacity: 1;
+    filter: none;
+  }
+  /* 순간적인 밝기 플래시 (방전 효과) */
+  7% {
+    transform: scaleY(1);
+    opacity: 1;
+    filter: brightness(2.2) saturate(0.1);
+  }
+  16% {
+    transform: scaleY(1);
+    opacity: 1;
+    filter: brightness(1.1) saturate(0.7);
+  }
+  /* 빠르게 중앙으로 압축 */
+  46% {
+    transform: scaleY(0.004);
+    opacity: 1;
+    filter: brightness(4) saturate(0) drop-shadow(0 0 10px #c8eeff) drop-shadow(0 0 24px #c8eeff);
+  }
+  /* 빛나는 얇은 선 유지 */
+  66% {
+    transform: scaleY(0.004);
+    opacity: 1;
+    filter: brightness(3) drop-shadow(0 0 8px #aae4ff);
+  }
+  /* 선이 사라짐 */
+  84% {
+    transform: scaleY(0.004);
+    opacity: 0.3;
+    filter: none;
+  }
+  100% {
+    transform: scaleY(0.004);
+    opacity: 0;
+    filter: none;
+  }
+}
+
+@keyframes icon-float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+.icon-float {
+  animation: icon-float 2.8s ease-in-out infinite;
+}
+.icon-float:nth-child(1) { animation-delay: 0s; }
+.icon-float:nth-child(2) { animation-delay: 0.7s; }
+.icon-float:nth-child(3) { animation-delay: 1.4s; }
+.icon-float:nth-child(4) { animation-delay: 2.1s; }
+.icon-float:nth-child(5) { animation-delay: 2.8s; }
+
+.float-delay-0 { animation-delay: 0s; }
+.float-delay-1 { animation-delay: 0.5s; }
+.float-delay-2 { animation-delay: 1.1s; }
+.float-delay-3 { animation-delay: 1.7s; }
+.float-delay-4 { animation-delay: 2.3s; }
