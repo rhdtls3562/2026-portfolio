@@ -1,6 +1,7 @@
 /** 경력과 프로젝트 이력을 카드 형태로 보여주는 기록 섹션 컴포넌트. */
 import Image from "next/image";
-import { PROJECTS } from "@/app/(home)/components/record-data";
+import { icons } from "@/constants/assets";
+import { PROJECTS } from "@/app/(home)/constants/recordSectionData";
 
 export default function RecordSection() {
   return (
@@ -14,7 +15,7 @@ export default function RecordSection() {
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center gap-6 mb-20">
           <Image
-            src="/asset/icon/icon_file.png"
+            src={icons.iconFile}
             alt=""
             width={28}
             height={28}

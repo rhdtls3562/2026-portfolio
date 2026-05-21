@@ -3,6 +3,7 @@
  * 실제 콘텐츠는 데스크탑에서만 표시된다.
  */
 import Image from "next/image";
+import { images } from "@/constants/assets";
 
 export default function UnsupportedScreenNotice({
   children,
@@ -18,7 +19,7 @@ export default function UnsupportedScreenNotice({
       <div className="lg:hidden fixed inset-0 z-50 flex flex-col items-center justify-center gap-6 px-8 text-center">
         {/* 배경 이미지 */}
         <Image
-          src="/asset/img/img_desktop.png"
+          src={images.imgDesktop}
           alt=""
           fill
           sizes="100vw"

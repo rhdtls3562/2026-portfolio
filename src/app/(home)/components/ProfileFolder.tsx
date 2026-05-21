@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { images } from "@/constants/assets";
 
 const DETAILS = [
   { label: "현재",  value: "쉐브론 웹퍼블리셔 · 코드잇 프론트엔드 부트캠프 수료" },
@@ -13,7 +14,7 @@ export default function ProfileFolder() {
       <div className="flex gap-2.5">
         <div className="relative h-20 w-16 shrink-0 overflow-hidden border border-d-border shadow-[1px_1px_0_rgba(0,0,0,0.1),inset_0_1px_0_rgba(255,255,255,0.8)]">
           <Image
-            src="/asset/img/img_profile.png"
+            src={images.imgProfile}
             alt="권새롬 프로필 사진"
             fill
             sizes="4rem"

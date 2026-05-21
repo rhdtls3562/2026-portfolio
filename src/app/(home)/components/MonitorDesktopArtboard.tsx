@@ -2,14 +2,15 @@
 "use client";
 
 import Image from "next/image";
-import { DECO_ITEMS } from "@/app/(home)/components/monitorDesktopArtboardData";
+import { images } from "@/constants/assets";
+import { DECO_ITEMS } from "@/app/(home)/constants/monitorDesktopArtboardData";
 
 export default function MonitorDesktopArtboard() {
   return (
     <>
       <div className="absolute inset-0 z-0">
         <Image
-          src="/asset/img/img_desktop.png"
+          src={images.imgDesktop}
           alt=""
           fill
           sizes="(max-width: 1024px) 100vw, 45vw"
@@ -31,7 +32,7 @@ export default function MonitorDesktopArtboard() {
 
       <div className="pointer-events-none absolute inset-x-0 bottom-0 top-[5%] z-20">
         <Image
-          src="/asset/img/img_profile.png"
+          src={images.imgProfile}
           alt="권새롬 프로필 컷아웃"
           fill
           sizes="(max-width: 640px) 30vw, (max-width: 1024px) 36vw, 42vw"

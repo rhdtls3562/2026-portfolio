@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { icons } from "@/constants/assets";
 
 type SocialLink = {
   label: string;
@@ -38,7 +39,7 @@ export default function SocialSection() {
         {/* 섹션 헤더 */}
         <div className="flex items-center gap-6 mb-20">
           <Image
-            src="/asset/icon/icon_earth.png"
+            src={icons.iconEarth}
             alt=""
             width={28}
             height={28}

@@ -8,11 +8,11 @@ import {
   type AppKey,
   type FolderKey,
   type PowerState,
-} from "@/app/(home)/components/retro-constants";
+} from "@/app/(home)/constants/retroPortfolioData";
 import {
   getScreenContentClass,
   getScreenFrameClass,
-} from "@/app/(home)/components/retroPortfolioClasses";
+} from "@/app/(home)/constants/retroPortfolioClasses";
 
 type Props = {
   activeApp: AppKey | null;

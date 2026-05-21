@@ -1,3 +1,4 @@
+/** 메인 기록 섹션에서 사용하는 프로젝트 카드 데이터를 정의한다. */
 export type Project = {
   id: number;
   title: string;

@@ -12,7 +12,7 @@ import {
   DESKTOP_APPS,
   type AppKey,
   type FolderKey,
-} from "@/app/(home)/components/retro-constants";
+} from "@/app/(home)/constants/retroPortfolioData";
 import { cn } from "@/utils/cn";
 
 type Props = {

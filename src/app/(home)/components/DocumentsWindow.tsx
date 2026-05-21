@@ -1,12 +1,13 @@
 /** 폴더 선택과 상세 콘텐츠를 함께 보여주는 문서 창 컴포넌트. */
 import Image from "next/image";
+import { icons } from "@/constants/assets";
 import ProfileFolder from "@/app/(home)/components/ProfileFolder";
 import RecordsFolder from "@/app/(home)/components/RecordsFolder";
 import StackFolder from "@/app/(home)/components/StackFolder";
 import {
   FOLDERS,
   type FolderKey,
-} from "@/app/(home)/components/retro-constants";
+} from "@/app/(home)/constants/retroPortfolioData";
 import { cn } from "@/utils/cn";
 
 type Props = {
@@ -49,7 +50,7 @@ export default function DocumentsWindow({
                   )}
                 >
                   <Image
-                    src="/asset/icon/icon_file.png"
+                    src={icons.iconFile}
                     alt=""
                     width={44}
                     height={44}

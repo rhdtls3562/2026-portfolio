@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { images } from "@/constants/assets";
 
 export default function HeroSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -20,7 +21,7 @@ export default function HeroSection() {
     <section className="relative w-full h-screen min-h-150 overflow-hidden">
       {/* 배경 이미지 */}
       <Image
-        src="/asset/img/img_main.jpg"
+        src={images.imgMain}
         alt="메인 배경 이미지"
         fill
         className="object-cover object-center"

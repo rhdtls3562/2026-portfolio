@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { icons, images } from "@/constants/assets";
 
 type Skill = {
   category: string;
@@ -30,7 +31,7 @@ export default function AboutSection() {
         {/* 섹션 헤더 */}
         <div className="flex items-center gap-6 mb-20">
           <Image
-            src="/asset/icon/icon_more.png"
+            src={icons.iconMore}
             alt=""
             width={28}
             height={28}
@@ -54,7 +55,7 @@ export default function AboutSection() {
             <div className="relative aspect-3/4 max-w-sm mx-auto md:mx-0">
               <div className="absolute inset-0 border border-(--color-gold)/30 translate-x-4 translate-y-4" />
               <Image
-                src="/asset/img/img_profile.png"
+                src={images.imgProfile}
                 alt="권새롬 프로필 사진"
                 fill
                 className="object-cover grayscale hover:grayscale-0 transition-all duration-700"

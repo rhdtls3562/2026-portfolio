@@ -1,5 +1,5 @@
 /** 데스크톱 앱 창의 공통 크롬과 닫기 버튼을 감싸는 컴포넌트. */
-import { type AppKey, WINDOW_TITLE } from "@/app/(home)/components/retro-constants";
+import { type AppKey, WINDOW_TITLE } from "@/app/(home)/constants/retroPortfolioData";
 import { cn } from "@/utils/cn";
 
 type Props = {

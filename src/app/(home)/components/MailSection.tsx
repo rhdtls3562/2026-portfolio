@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { icons, images } from "@/constants/assets";
 
 const EMAIL = "rhdtls3562@naver.com";
 
@@ -17,7 +18,7 @@ export default function MailSection() {
         {/* 섹션 헤더 */}
         <div className="flex items-center gap-6 mb-20">
           <Image
-            src="/asset/icon/icon_mail.png"
+            src={icons.iconMail}
             alt=""
             width={28}
             height={28}
@@ -59,7 +60,7 @@ export default function MailSection() {
           <div className="mt-16 flex justify-center">
             <a href={`mailto:${EMAIL}`} className="group block relative">
               <Image
-                src="/asset/img/img_button_on.jpg"
+                src={images.imgButtonOn}
                 alt="메일 보내기"
                 width={200}
                 height={200}

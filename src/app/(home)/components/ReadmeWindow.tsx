@@ -1,6 +1,7 @@
 /** 자기소개와 핵심 키워드를 레트로 readme 창으로 표현하는 컴포넌트. */
 import Image from "next/image";
-import { README_PARAGRAPHS } from "@/app/(home)/components/retro-constants";
+import { images } from "@/constants/assets";
+import { README_PARAGRAPHS } from "@/app/(home)/constants/retroPortfolioData";
 
 const KEYWORDS = [
   "디자인 × 구현",
@@ -16,7 +17,7 @@ export default function ReadmeWindow() {
       <div className="flex items-start gap-2.5">
         <div className="relative h-14 w-11 shrink-0 overflow-hidden border border-d-border shadow-[1px_1px_0_rgba(0,0,0,0.1),inset_0_1px_0_rgba(255,255,255,0.7)]">
           <Image
-            src="/asset/img/img_profile.png"
+            src={images.imgProfile}
             alt="권새롬 프로필 사진"
             fill
             sizes="2.75rem"

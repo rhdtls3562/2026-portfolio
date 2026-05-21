@@ -1,6 +1,6 @@
 /** 경력 목록을 폴더 내부 리스트 형식으로 보여주는 컴포넌트. */
 import { cn } from "@/utils/cn";
-import { PROJECTS } from "@/app/(home)/components/retro-constants";
+import { PROJECTS } from "@/app/(home)/constants/retroPortfolioData";
 
 export default function RecordsFolder() {
   return (

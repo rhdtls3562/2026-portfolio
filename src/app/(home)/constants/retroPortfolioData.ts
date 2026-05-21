@@ -1,3 +1,6 @@
+/** 레트로 포트폴리오 데스크톱에서 사용하는 공통 데이터와 상태 타입을 정의한다. */
+import { icons } from "@/constants/assets";
+
 export const EMAIL = "rhdtls3562@naver.com";
 
 export type AppKey = "internet" | "documents" | "emails" | "readme";
@@ -16,10 +19,10 @@ export const WINDOW_TITLE: Record<AppKey, string> = {
 };
 
 export const DESKTOP_APPS: DesktopApp[] = [
-  { key: "readme", label: "about me", icon: "/asset/icon/icon_more.png" },
-  { key: "documents", label: "records", icon: "/asset/icon/icon_file.png" },
-  { key: "internet", label: "social", icon: "/asset/icon/icon_earth.png" },
-  { key: "emails", label: "contact", icon: "/asset/icon/icon_mail.png" },
+  { key: "readme", label: "about me", icon: icons.iconMore },
+  { key: "documents", label: "records", icon: icons.iconFile },
+  { key: "internet", label: "social", icon: icons.iconEarth },
+  { key: "emails", label: "contact", icon: icons.iconMail },
 ];
 
 export const FOLDERS: FolderItem[] = [

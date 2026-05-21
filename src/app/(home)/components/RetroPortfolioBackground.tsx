@@ -3,12 +3,13 @@
 
 import Image from "next/image";
 import { type ReactNode } from "react";
-import { type PowerState } from "@/app/(home)/components/retro-constants";
+import { images } from "@/constants/assets";
+import { type PowerState } from "@/app/(home)/constants/retroPortfolioData";
 import {
   POWER_BUTTON_POSITION_CLASS,
   SCENE_CONTAINER_CLASS,
   getSceneZoomClass,
-} from "@/app/(home)/components/retroPortfolioClasses";
+} from "@/app/(home)/constants/retroPortfolioClasses";
 import { cn } from "@/utils/cn";
 
 type Props = {
@@ -28,7 +29,7 @@ export default function RetroPortfolioBackground({
     <div className={SCENE_CONTAINER_CLASS}>
       <div className={getSceneZoomClass(powerState)}>
         <Image
-          src="/asset/img/img_main.jpg"
+          src={images.imgMain}
           alt="레트로 컴퓨터 책상 장면"
           fill
           fetchPriority="high"
@@ -47,7 +48,7 @@ export default function RetroPortfolioBackground({
           )}
         >
           <Image
-            src={buttonLit ? "/asset/img/img_button_on.jpg" : "/asset/img/img_button_off.jpg"}
+            src={buttonLit ? images.imgButtonOn : images.imgButtonOff}
             alt=""
             fill
             loading="eager"

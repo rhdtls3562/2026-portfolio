@@ -1,5 +1,5 @@
 /** 레트로 포트폴리오 씬의 배치와 상태별 Tailwind 클래스를 관리한다. */
-import { type PowerState } from "@/app/(home)/components/retro-constants";
+import { type PowerState } from "@/app/(home)/constants/retroPortfolioData";
 import { cn } from "@/utils/cn";
 
 const ACTIVE_SCREEN_LAYOUT_CLASS = [

@@ -8,7 +8,7 @@ import {
   type AppKey,
   type FolderKey,
   type PowerState,
-} from "@/app/(home)/components/retro-constants";
+} from "@/app/(home)/constants/retroPortfolioData";
 
 export default function RetroPortfolio() {
   const [powerState, setPowerState] = useState<PowerState>("off");
