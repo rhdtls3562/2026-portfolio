@@ -1,73 +1,162 @@
+/** 모니터 화면 안의 배경, 프로필, 장식 아이콘 레이어를 배치하는 컴포넌트. */
 "use client";
 
 import Image from "next/image";
 
 type DecoItem = {
   src: string;
-  alt: string;
   position: string;
-  size: string;
+  width: number;
+  height: number;
   delay: string;
   rotate: string;
+  depth: "front" | "back";
 };
 
 const DECO_ITEMS: DecoItem[] = [
   {
-    src: "/asset/img/img_note.svg",
-    alt: "노트 데코 요소",
-    position: "top-[38%] right-[1%]",
-    size: "w-1/5",
+    src: "/asset/icon/icon_bubble_ready.svg",
+    position: "-top-[1%] -left-[30%]",
+    width: 453,
+    height: 278,
     delay: "float-delay-0",
     rotate: "-rotate-6",
+    depth: "back",
   },
   {
-    src: "/asset/img/img_code.svg",
-    alt: "코드 데코 요소",
-    position: "top-[6%] right-[3%]",
-    size: "w-1/4",
+    src: "/asset/icon/icon_sunglasses.svg",
+    position: "top-[10%] left-[18%]",
+    width: 164,
+    height: 36,
     delay: "float-delay-1",
     rotate: "rotate-3",
+    depth: "front",
   },
   {
-    src: "/asset/img/img_web.svg",
-    alt: "웹 데코 요소",
-    position: "top-[32%] left-[1%]",
-    size: "w-1/6",
+    src: "/asset/icon/icon_bubble_fire.svg",
+    position: "-top-[2%] -right-[24%]",
+    width: 378,
+    height: 301,
     delay: "float-delay-2",
-    rotate: "-rotate-2",
+    rotate: "rotate-4",
+    depth: "back",
   },
   {
-    src: "/asset/img/img_photo.svg",
-    alt: "포토 데코 요소",
-
-    position: "top-[5%] left-[10%]",
-    size: "w-1/6",
+    src: "/asset/icon/icon_question.svg",
+    position: "top-[15%] right-[18%]",
+    width: 110,
+    height: 97,
     delay: "float-delay-3",
-    rotate: "rotate-6",
+    rotate: "-rotate-3",
+    depth: "front",
   },
   {
-    src: "/asset/img/img_setting.svg",
-    alt: "세팅 데코 요소",
-    position: "bottom-[26%] left-[2%]",
-    size: "w-1/6",
+    src: "/asset/icon/icon_bubble_hello.svg",
+    position: "top-[30%] -left-[6%]",
+    width: 176,
+    height: 84,
     delay: "float-delay-4",
     rotate: "-rotate-3",
+    depth: "front",
   },
   {
-    src: "/asset/img/img_slide.svg",
-    alt: "슬라이드 데코 요소",
-    position: "bottom-[22%] right-[2%]",
-    size: "w-1/5",
+    src: "/asset/icon/icon_bubble_love.svg",
+    position: "top-[26%] right-[1%]",
+    width: 181,
+    height: 175,
     delay: "float-delay-0",
     rotate: "rotate-2",
+    depth: "front",
   },
   {
-    src: "/asset/img/img_gard.svg",
-    alt: "가드 데코 요소",
-    position: "top-[20%] right-[1%]",
-    size: "w-1/6",
+    src: "/asset/icon/icon_heart.svg",
+    position: "top-[43%] left-[10%]",
+    width: 91,
+    height: 77,
     delay: "float-delay-2",
+    rotate: "-rotate-6",
+    depth: "front",
+  },
+  {
+    src: "/asset/icon/icon_bubble_electric.svg",
+    position: "top-[42%] right-[8%]",
+    width: 84,
+    height: 111,
+    delay: "float-delay-1",
+    rotate: "rotate-6",
+    depth: "front",
+  },
+  {
+    src: "/asset/icon/icon_emoji.svg",
+    position: "bottom-[20%] -left-[22%]",
+    width: 322,
+    height: 98,
+    delay: "float-delay-3",
+    rotate: "rotate-2",
+    depth: "front",
+  },
+  {
+    src: "/asset/icon/icon_game.svg",
+    position: "bottom-[28%] right-[2%]",
+    width: 124,
+    height: 71,
+    delay: "float-delay-4",
+    rotate: "-rotate-2",
+    depth: "front",
+  },
+  {
+    src: "/asset/icon/icon_hourglass.svg",
+    position: "bottom-[22%] left-[14%]",
+    width: 49,
+    height: 71,
+    delay: "float-delay-0",
+    rotate: "rotate-3",
+    depth: "front",
+  },
+  {
+    src: "/asset/icon/icon_jellyfish.svg",
+    position: "bottom-[18%] right-[15%]",
+    width: 59,
+    height: 72,
+    delay: "float-delay-2",
+    rotate: "-rotate-3",
+    depth: "front",
+  },
+  {
+    src: "/asset/icon/icon_shine.svg",
+    position: "top-[21%] left-[28%]",
+    width: 85,
+    height: 78,
+    delay: "float-delay-4",
+    rotate: "rotate-6",
+    depth: "back",
+  },
+  {
+    src: "/asset/icon/icon_smile.svg",
+    position: "top-[20%] right-[23%]",
+    width: 227,
+    height: 72,
+    delay: "float-delay-1",
     rotate: "-rotate-4",
+    depth: "back",
+  },
+  {
+    src: "/asset/icon/icon_bubble_smile.svg",
+    position: "bottom-[14%] left-[24%]",
+    width: 120,
+    height: 133,
+    delay: "float-delay-2",
+    rotate: "rotate-5",
+    depth: "back",
+  },
+  {
+    src: "/asset/icon/icon_bubble_error.svg",
+    position: "bottom-[12%] -right-[23%]",
+    width: 323,
+    height: 204,
+    delay: "float-delay-3",
+    rotate: "-rotate-5",
+    depth: "back",
   },
 ];
 
@@ -80,7 +169,7 @@ export default function MonitorDesktopArtboard() {
           src="/asset/img/img_desktop.png"
           alt=""
           fill
-          sizes="45vw"
+          sizes="(max-width: 1024px) 100vw, 45vw"
           className="object-cover object-center"
         />
       </div>
@@ -109,24 +198,24 @@ export default function MonitorDesktopArtboard() {
         />
       </div>
 
-      {/* 플로팅 데코 요소 — SVG 벡터, 최상단 레이어 */}
+      {/* 플로팅 아이콘 — 아이콘 에셋 레이어 */}
       {DECO_ITEMS.map((item) => (
         <div
           key={item.src}
           className={[
-            "icon-float pointer-events-none absolute z-30 drop-shadow-sm",
+            "icon-float pointer-events-none absolute drop-shadow-sm",
+            item.depth === "front" ? "z-30" : "z-15",
             item.position,
-            item.size,
             item.delay,
             item.rotate,
           ].join(" ")}
         >
           <Image
             src={item.src}
-            alt={item.alt}
-            width={200}
-            height={200}
-            className="h-auto w-full"
+            alt=""
+            width={item.width}
+            height={item.height}
+            className="h-auto max-w-none"
           />
         </div>
       ))}

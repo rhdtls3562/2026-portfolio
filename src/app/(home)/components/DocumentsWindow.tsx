@@ -1,9 +1,13 @@
+/** 폴더 선택과 상세 콘텐츠를 함께 보여주는 문서 창 컴포넌트. */
 import Image from "next/image";
+import ProfileFolder from "@/app/(home)/components/ProfileFolder";
+import RecordsFolder from "@/app/(home)/components/RecordsFolder";
+import StackFolder from "@/app/(home)/components/StackFolder";
+import {
+  FOLDERS,
+  type FolderKey,
+} from "@/app/(home)/components/retro-constants";
 import { cn } from "@/utils/cn";
-import { FOLDERS, type FolderKey } from "./retro-constants";
-import ProfileFolder from "./ProfileFolder";
-import RecordsFolder from "./RecordsFolder";
-import StackFolder from "./StackFolder";
 
 type Props = {
   selectedFolder: FolderKey;

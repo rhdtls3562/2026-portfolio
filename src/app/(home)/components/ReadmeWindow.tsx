@@ -1,5 +1,6 @@
+/** 자기소개와 핵심 키워드를 레트로 readme 창으로 표현하는 컴포넌트. */
 import Image from "next/image";
-import { README_PARAGRAPHS } from "./retro-constants";
+import { README_PARAGRAPHS } from "@/app/(home)/components/retro-constants";
 
 const KEYWORDS = [
   "디자인 × 구현",

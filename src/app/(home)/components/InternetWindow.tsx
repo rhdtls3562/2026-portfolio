@@ -1,5 +1,6 @@
-import { LINKS } from "./retro-constants";
+/** 외부 링크를 작은 브라우저 창 스타일로 노출하는 컴포넌트. */
 import { cn } from "@/utils/cn";
+import { LINKS } from "@/app/(home)/components/retro-constants";
 
 export default function InternetWindow() {
   return (

@@ -1,14 +1,19 @@
+/** 전원이 켜진 모니터 안에서 데스크톱 아트보드와 앱 창을 관리하는 컴포넌트. */
 "use client";
 
 import Image from "next/image";
+import DocumentsWindow from "@/app/(home)/components/DocumentsWindow";
+import EmailsWindow from "@/app/(home)/components/EmailsWindow";
+import InternetWindow from "@/app/(home)/components/InternetWindow";
+import MonitorDesktopArtboard from "@/app/(home)/components/MonitorDesktopArtboard";
+import ReadmeWindow from "@/app/(home)/components/ReadmeWindow";
+import WindowChrome from "@/app/(home)/components/WindowChrome";
+import {
+  DESKTOP_APPS,
+  type AppKey,
+  type FolderKey,
+} from "@/app/(home)/components/retro-constants";
 import { cn } from "@/utils/cn";
-import { DESKTOP_APPS, type AppKey, type FolderKey } from "./retro-constants";
-import WindowChrome from "./WindowChrome";
-import ReadmeWindow from "./ReadmeWindow";
-import DocumentsWindow from "./DocumentsWindow";
-import InternetWindow from "./InternetWindow";
-import EmailsWindow from "./EmailsWindow";
-import MonitorDesktopArtboard from "./MonitorDesktopArtboard";
 
 type Props = {
   activeApp: AppKey | null;

@@ -1,4 +1,5 @@
-import { STACKS } from "./retro-constants";
+/** 기술 스택과 학습 이력을 폴더 타일 형태로 보여주는 컴포넌트. */
+import { STACKS } from "@/app/(home)/components/retro-constants";
 
 export default function StackFolder() {
   return (

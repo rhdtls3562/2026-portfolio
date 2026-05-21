@@ -55,7 +55,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 
 ## 코드 컨벤션
 
-- 절대경로 별칭 `@/`를 사용하고 상대경로 import는 사용하지 않는다.
+- 내부 모듈 import 경로는 `@/` 절대경로로 통일하고 상대경로 import는 남기지 않는다.
 - 예외: 프레임워크나 외부 CSS가 요구하는 경우만 허용한다.
 - 조건부 className은 `@/utils/cn`의 `cn` 유틸을 사용한다.
 - TypeScript 타입은 기본적으로 `interface` 대신 `type`을 사용한다.
@@ -94,7 +94,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 - 의미 있는 이미지는 구체적인 `alt`를 작성한다.
 - 장식 이미지는 `alt=""`를 사용한다.
 - 시맨틱 태그와 헤딩 계층을 지킨다.
-- 파일 상단 설명은 필요한 경우 TSDoc(`/** ... */`)으로 작성한다.
+- 수정하거나 새로 만드는 TS/TSX 파일은 파일 최상단에 역할을 설명하는 TSDoc(`/** ... */`)을 기본으로 추가한다.
 - 작업 예정 내용은 `// TODO: 내용` 형식을 사용한다.
 - 주석에는 이모지를 넣지 않는다.
 

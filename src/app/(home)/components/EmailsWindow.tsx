@@ -1,5 +1,6 @@
-import { EMAIL } from "./retro-constants";
+/** 연락용 메일 정보를 간단한 레트로 메일 창 형태로 보여주는 컴포넌트. */
 import { cn } from "@/utils/cn";
+import { EMAIL } from "@/app/(home)/components/retro-constants";
 
 function EmailRow({ label, value }: { label: string; value: string }) {
   return (

@@ -1,16 +1,17 @@
+/** CRT 전원 연출과 레트로 데스크톱 인터랙션을 관리하는 메인 씬 컴포넌트. */
 "use client";
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { cn } from "@/utils/cn";
+import CrtPowerOn from "@/app/(home)/components/CrtPowerOn";
+import MonitorDesktop from "@/app/(home)/components/MonitorDesktop";
 import {
-  type AppKey,
-  type PowerState,
-  type FolderKey,
   BUTTON_POSITION,
-} from "./retro-constants";
-import MonitorDesktop from "./MonitorDesktop";
-import CrtPowerOn from "./CrtPowerOn";
+  type AppKey,
+  type FolderKey,
+  type PowerState,
+} from "@/app/(home)/components/retro-constants";
+import { cn } from "@/utils/cn";
 
 /**
  * img_main.jpg 원본 치수: 3506 × 1972 (≈ 16:9)
