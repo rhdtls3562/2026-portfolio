@@ -1,7 +1,5 @@
-/** 자기소개와 핵심 키워드를 레트로 readme 창으로 표현하는 컴포넌트. */
-import Image from "next/image";
-import { images } from "@/constants/ASSETS";
-import { README_PARAGRAPHS } from "@/app/(home)/constants/retroPortfolioData";
+/** 레퍼런스의 문서형 읽기 창처럼 readme 내용을 흰 문서 패널에 담아낸다. */
+import { README_SECTIONS } from "@/app/(home)/constants/retroWindowData";
 
 const KEYWORDS = [
   "디자인 × 구현",
@@ -12,57 +10,49 @@ const KEYWORDS = [
 
 export default function ReadmeWindow() {
   return (
-    <div className="flex h-full flex-col gap-2.5 overflow-y-auto p-3">
-      {/* 헤더 */}
-      <div className="flex items-start gap-2.5">
-        <div className="relative h-14 w-11 shrink-0 overflow-hidden border border-d-border shadow-[1px_1px_0_rgba(0,0,0,0.1),inset_0_1px_0_rgba(255,255,255,0.7)]">
-          <Image
-            src={images.imgProfile}
-            alt="권새롬 프로필 사진"
-            fill
-            sizes="2.75rem"
-            className="object-cover object-top"
-          />
-        </div>
-        <div className="min-w-0">
-          <p className="font-retro-terminal text-2xs uppercase tracking-widest text-d-warm">
-            &gt;&gt; readme.txt
-          </p>
-          <p className="font-retro-display mt-0.5 text-xs uppercase tracking-wider text-d-ink">
-            Kwon Saerom
-          </p>
-          <p className="font-retro-terminal text-2xs leading-tight text-d-mid">
-            Frontend Developer · Web Publisher
-          </p>
-        </div>
-      </div>
-
-      <div className="h-px shrink-0 bg-d-border" />
-
-      <div className="flex-1 space-y-2 overflow-y-auto">
-        {README_PARAGRAPHS.map((p) => (
-          <p
-            key={p}
-            className="font-retro-terminal text-2xs leading-relaxed text-d-text"
-          >
-            {p}
-          </p>
-        ))}
-      </div>
-
-      <div className="shrink-0 border-t border-d-border pt-2">
-        <p className="font-retro-display mb-1.5 text-3xs uppercase tracking-widest text-d-mid">
-          Keywords
+    <div className="h-full bg-win-surface p-3">
+      <div className="h-full overflow-y-auto bg-white px-8 py-8 text-black">
+        <p className="font-retro-terminal text-2xs uppercase tracking-[0.16em] text-win-surface-dark">
+          Readme.txt
         </p>
-        <div className="flex flex-wrap gap-1">
-          {KEYWORDS.map((tag) => (
-            <span
-              key={tag}
-              className="font-retro-terminal border border-d-border bg-d-cream/80 px-1.5 py-0.5 text-3xs text-d-text"
-            >
-              {tag}
-            </span>
+        <h1 className="mt-4 max-w-[21rem] text-[1.8rem] leading-[1.02] font-semibold tracking-[-0.04em] text-black">
+          Welcome to the Kwon Saerom Portfolio
+        </h1>
+
+        <div className="mt-6 space-y-6">
+          {README_SECTIONS.map((section) => (
+            <section key={section.title}>
+              <h2 className="mb-2 text-base font-semibold tracking-[-0.02em] text-black">
+                {section.title}
+              </h2>
+              <div className="space-y-2">
+                {section.paragraphs.map((paragraph) => (
+                  <p
+                    key={paragraph}
+                    className="text-[0.86rem] leading-[1.4] font-medium tracking-[-0.01em] text-win-ink"
+                  >
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+            </section>
           ))}
+        </div>
+
+        <div className="mt-7 border-t border-[#d9d9d9] pt-4">
+          <p className="font-retro-terminal text-2xs uppercase tracking-[0.16em] text-win-surface-dark">
+            Keywords
+          </p>
+          <div className="mt-3 flex flex-wrap gap-2">
+            {KEYWORDS.map((tag) => (
+              <span
+                key={tag}
+                className="border border-[#d0d0d0] bg-[#f2f2f2] px-2 py-1 font-retro-terminal text-2xs uppercase tracking-[0.08em] text-win-ink"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
     </div>

@@ -1,3 +1,4 @@
+/** 문서 창의 프로필 폴더 상세 내용을 보여주는 컴포넌트. */
 import Image from "next/image";
 import { images } from "@/constants/ASSETS";
 
@@ -10,9 +11,9 @@ const DETAILS = [
 
 export default function ProfileFolder() {
   return (
-    <div className="flex h-full flex-col gap-2 overflow-y-auto p-2.5">
+    <div className="flex h-full flex-col gap-2.5 overflow-y-auto bg-[#f6f6f6] p-3">
       <div className="flex gap-2.5">
-        <div className="relative h-20 w-16 shrink-0 overflow-hidden border border-d-border shadow-[1px_1px_0_rgba(0,0,0,0.1),inset_0_1px_0_rgba(255,255,255,0.8)]">
+        <div className="relative h-20 w-16 shrink-0 overflow-hidden border-2 border-white bg-white shadow-[2px_2px_0_rgba(131,131,131,0.85)]">
           <Image
             src={images.imgProfile}
             alt="권새롬 프로필 사진"
@@ -23,21 +24,21 @@ export default function ProfileFolder() {
         </div>
         <div className="flex flex-col justify-center gap-1.5">
           <div>
-            <p className="font-retro-display text-xs uppercase tracking-wider text-d-ink">
+            <p className="font-retro-display text-xs uppercase tracking-[0.08em] text-win-blue">
               Kwon Saerom
             </p>
-            <p className="font-retro-terminal text-2xs text-d-warm">
+            <p className="font-retro-terminal text-2xs uppercase tracking-[0.08em] text-win-ink">
               Frontend Developer
             </p>
           </div>
-          <p className="font-retro-terminal text-2xs leading-tight text-d-mid">
+          <p className="font-retro-terminal text-2xs leading-tight text-[#616161]">
             Web Publisher · UI-sensitive
           </p>
           <div className="flex gap-1">
             {["1999 · 26세", "서울, KR"].map((tag) => (
               <span
                 key={tag}
-                className="font-retro-terminal border border-d-border bg-d-cream/70 px-1.5 py-0.5 text-3xs text-d-text"
+                className="border border-[#c9c9c9] bg-white px-1.5 py-0.5 font-retro-terminal text-3xs uppercase tracking-[0.06em] text-win-ink"
               >
                 {tag}
               </span>
@@ -46,18 +47,18 @@ export default function ProfileFolder() {
         </div>
       </div>
 
-      <div className="h-px shrink-0 bg-d-border" />
+      <div className="h-px shrink-0 bg-[#d0d0d0]" />
 
       <div className="flex flex-col gap-1.5">
         {DETAILS.map(({ label, value }) => (
           <div
             key={label}
-            className="border border-d-border bg-white/50 p-1.5 shadow-[inset_0_1px_0_rgba(255,255,255,0.8)]"
+            className="border border-[#cfcfcf] bg-white p-2 shadow-[inset_0_1px_0_rgba(255,255,255,0.8)]"
           >
-            <p className="font-retro-display text-3xs uppercase tracking-widest text-d-warm">
+            <p className="font-retro-terminal text-3xs uppercase tracking-[0.14em] text-win-blue">
               {label}
             </p>
-            <p className="font-retro-terminal mt-0.5 text-2xs leading-tight text-d-text">
+            <p className="mt-1 text-[0.72rem] leading-tight text-win-ink">
               {value}
             </p>
           </div>

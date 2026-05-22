@@ -42,9 +42,21 @@ export default function MonitorDesktop({
         isInteractive ? "pointer-events-auto" : "pointer-events-none",
       )}
     >
-      <MonitorDesktopArtboard isTitleAnimating={isTitleAnimating} />
+      <MonitorDesktopArtboard
+        isTitleAnimating={isTitleAnimating}
+        isWindowOpen={activeApp !== null}
+      />
 
-      <div className="absolute bottom-[5.5%] left-1/2 z-20 flex -translate-x-1/2 items-end gap-2.5">
+      {activeApp ? (
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-10 bg-black/8" />
+      ) : null}
+
+      <div
+        className={cn(
+          "absolute bottom-[5.5%] left-1/2 z-20 flex -translate-x-1/2 items-end gap-8 transition-opacity duration-200",
+          activeApp ? "pointer-events-none opacity-0" : "opacity-100",
+        )}
+      >
         {DESKTOP_APPS.map((app) => (
           <button
             key={app.key}

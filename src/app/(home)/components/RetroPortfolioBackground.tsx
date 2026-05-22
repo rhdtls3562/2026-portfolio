@@ -41,7 +41,9 @@ export default function RetroPortfolioBackground({
         <button
           type="button"
           onClick={onTogglePower}
-          aria-label={powerState === "off" ? "컴퓨터 전원 켜기" : "컴퓨터 전원 끄기"}
+          aria-label={
+            powerState === "off" ? "컴퓨터 전원 켜기" : "컴퓨터 전원 끄기"
+          }
           className={cn(
             "absolute z-20 aspect-7/3 translate-x-[-35%] translate-y-[-65%] transition-transform duration-300 hover:scale-105",
             POWER_BUTTON_POSITION_CLASS,
@@ -53,7 +55,7 @@ export default function RetroPortfolioBackground({
             fill
             loading="eager"
             sizes="4vw"
-            className="rounded object-cover"
+            className="rounded object-cover cursor-pointer"
           />
         </button>
       </div>

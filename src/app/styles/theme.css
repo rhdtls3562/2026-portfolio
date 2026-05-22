@@ -15,6 +15,15 @@
   --color-d-warm-deep: #5a3820;
   --color-d-border: #c0b8ae;
   --color-d-chrome: #d4cfc8;
+  --color-win-blue: #2e3f6b;
+  --color-win-blue-deep: #223050;
+  --color-win-surface: #d9d9d9;
+  --color-win-surface-light: #ffffff;
+  --color-win-surface-mid: #8a8b8d;
+  --color-win-surface-dark: #535354;
+  --color-win-ink: #535354;
+  --color-win-accent: #d5719d;
+  --color-win-accent-deep: #d6337b;
 
   --text-2xs: 0.5rem;
   --text-3xs: 0.375rem;

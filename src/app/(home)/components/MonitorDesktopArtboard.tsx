@@ -12,10 +12,12 @@ const TITLE_TYPE_INTERVAL_MS = 85;
 
 type Props = {
   isTitleAnimating: boolean;
+  isWindowOpen: boolean;
 };
 
 type DesktopFolderShortcutProps = {
   alt: string;
+  href?: string;
   label: string;
   note?: string;
   labelPosition: "top" | "bottom";
@@ -28,6 +30,7 @@ type DesktopFolderShortcutProps = {
 
 function DesktopFolderShortcut({
   alt,
+  href,
   label,
   note,
   labelPosition,
@@ -37,14 +40,17 @@ function DesktopFolderShortcut({
   shadowClassName,
   wrapperClassName,
 }: DesktopFolderShortcutProps) {
-  return (
-    <div
-      className={cn(
-        "pointer-events-none absolute z-20 flex items-center gap-2",
-        labelPosition === "top" ? "flex-col" : "flex-col-reverse",
-        wrapperClassName,
-      )}
-    >
+  const shortcutClassName = cn(
+    "absolute z-20 flex items-center gap-2",
+    labelPosition === "top" ? "flex-col" : "flex-col-reverse",
+    href
+      ? "pointer-events-auto transition-transform duration-150 hover:-translate-y-1"
+      : "pointer-events-none",
+    wrapperClassName,
+  );
+
+  const shortcutContent = (
+    <>
       <div className="flex flex-col items-center gap-1">
         <p className="text-xs font-medium tracking-[0.04em] text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.7)]">
           {label}
@@ -71,11 +77,30 @@ function DesktopFolderShortcut({
           className="max-w-none drop-shadow-md"
         />
       </div>
-    </div>
+    </>
   );
+
+  if (href) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noreferrer"
+        aria-label={`${alt} 외부 사이트 열기`}
+        className={shortcutClassName}
+      >
+        {shortcutContent}
+      </a>
+    );
+  }
+
+  return <div className={shortcutClassName}>{shortcutContent}</div>;
 }
 
-export default function MonitorDesktopArtboard({ isTitleAnimating }: Props) {
+export default function MonitorDesktopArtboard({
+  isTitleAnimating,
+  isWindowOpen,
+}: Props) {
   const [typedTitle, setTypedTitle] = useState("");
 
   useEffect(() => {
@@ -123,7 +148,10 @@ export default function MonitorDesktopArtboard({ isTitleAnimating }: Props) {
       <div className="pointer-events-none absolute inset-x-0 top-[5%] z-20 flex justify-center">
         <h1
           aria-label={TITLE_TEXT}
-          className="font-mona-title text-[34px] font-medium uppercase tracking-[0.12em] text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.42)]"
+          className={cn(
+            "font-mona-title text-[34px] font-medium uppercase tracking-[0.12em] text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.42)]",
+            isWindowOpen ? "opacity-0" : "opacity-100",
+          )}
         >
           {typedTitle}
           {isTyping ? (
@@ -140,23 +168,31 @@ export default function MonitorDesktopArtboard({ isTitleAnimating }: Props) {
           alt="권새롬 프로필 컷아웃"
           fill
           sizes="(max-width: 640px) 30vw, (max-width: 1024px) 36vw, 42vw"
-          className="object-contain object-bottom"
+          className={cn(
+            "object-contain object-bottom transition-opacity duration-200",
+            isWindowOpen ? "opacity-0" : "opacity-100",
+          )}
         />
       </div>
 
       {DECO_ITEMS.map((item) => (
-        <DesktopFolderShortcut
+        <div
           key={item.alt}
-          alt={item.alt}
-          label={item.label}
-          note={item.note}
-          labelPosition={item.labelPosition}
-          src={item.src}
-          width={item.width}
-          height={item.height}
-          shadowClassName={item.shadowClassName}
-          wrapperClassName={item.position}
-        />
+          className={cn("transition-opacity duration-200", isWindowOpen ? "opacity-0" : "opacity-100")}
+        >
+          <DesktopFolderShortcut
+            alt={item.alt}
+            href={item.href}
+            label={item.label}
+            note={item.note}
+            labelPosition={item.labelPosition}
+            src={item.src}
+            width={item.width}
+            height={item.height}
+            shadowClassName={item.shadowClassName}
+            wrapperClassName={item.position}
+          />
+        </div>
       ))}
     </>
   );

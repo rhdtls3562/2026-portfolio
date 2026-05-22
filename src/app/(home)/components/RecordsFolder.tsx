@@ -4,37 +4,37 @@ import { PROJECTS } from "@/app/(home)/constants/retroPortfolioData";
 
 export default function RecordsFolder() {
   return (
-    <div className="flex h-full flex-col gap-1.5 overflow-y-auto p-2">
+    <div className="flex h-full flex-col gap-2 overflow-y-auto bg-[#f6f6f6] p-3">
       {PROJECTS.map((project, i) => (
         <div
           key={project.title}
           className={cn(
-            "border bg-white/55 p-2 transition-colors",
+            "border bg-white p-2.5 transition-colors",
             "shadow-[inset_0_1px_0_rgba(255,255,255,0.8)]",
-            "border-d-border hover:border-d-warm hover:bg-white/75",
+            "border-[#cfcfcf] hover:border-win-blue hover:bg-white",
           )}
         >
           <div className="flex items-start justify-between gap-1">
             <div className="flex items-center gap-1.5">
-              <span className="font-retro-terminal text-2xs text-d-warm">
+              <span className="font-retro-terminal text-2xs text-win-blue">
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <p className="font-retro-display text-2xs uppercase tracking-tight text-d-ink">
+              <p className="font-retro-display text-2xs uppercase tracking-[0.04em] text-win-ink">
                 {project.title}
               </p>
             </div>
-            <p className="font-retro-terminal shrink-0 text-3xs text-d-muted">
+            <p className="font-retro-terminal shrink-0 text-3xs uppercase tracking-[0.08em] text-[#727272]">
               {project.period}
             </p>
           </div>
-          <p className="font-retro-terminal mt-1 text-2xs leading-tight text-d-text">
+          <p className="mt-1.5 text-[0.72rem] leading-tight text-win-ink">
             {project.desc}
           </p>
           <div className="mt-1.5 flex flex-wrap gap-1">
             {project.tags.map((tag) => (
               <span
                 key={tag}
-                className="font-retro-terminal border border-d-border bg-d-cream/80 px-1 py-0.5 text-3xs text-d-text"
+                className="border border-[#d0d0d0] bg-[#f1f1f1] px-1.5 py-0.5 font-retro-terminal text-3xs uppercase tracking-[0.06em] text-win-ink"
               >
                 {tag}
               </span>
