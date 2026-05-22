@@ -1,4 +1,5 @@
-/** 레퍼런스의 로그인 창 비율을 따라 회색 패널과 입력 줄 구성을 제공한다. */
+/** 로그인 패널 느낌의 레트로 정보 창 레이아웃을 제공하는 컴포넌트. */
+import { cn } from "@/utils/cn";
 import type { WindowPanelField } from "@/app/(home)/constants/retroWindowData";
 
 type Props = {
@@ -17,38 +18,37 @@ export default function RetroConnectionPanel({
   title,
 }: Props) {
   return (
-    <div className="flex h-full items-center justify-center bg-win-surface-light p-4">
-      <div className="flex w-full max-w-[700px] flex-col bg-win-surface px-[50px] py-[30px] shadow-[0_0_10px_rgba(0,0,0,0.25)]">
-        <div className="mb-5 flex h-[92px] items-center justify-center border-2 border-white bg-win-blue px-5">
-          <div className="text-center">
-            <p className="font-retro-terminal text-3xs uppercase tracking-[0.24em] text-white/70">
-              system access
-            </p>
-            <p className="mt-1 font-retro-display text-[1.7rem] uppercase tracking-[0.08em] text-white">
-              {title} <span className="text-win-accent">{accentTitle}</span>
-            </p>
-          </div>
+    <div className="flex h-full items-center justify-center bg-win-surface-light p-5">
+      <div className="w-full max-w-[25rem] border-2 border-white bg-win-surface px-8 py-7 shadow-[0_0_12px_rgba(0,0,0,0.15)]">
+        <div className="mb-5 flex items-center justify-center bg-win-blue px-4 py-3 shadow-[inset_0_0_0_2px_rgba(255,255,255,0.15)]">
+          <span className="font-retro-display text-xl uppercase tracking-[0.08em] text-white">
+            {title} <span className="text-win-accent">{accentTitle}</span>
+          </span>
         </div>
 
-        <div className="space-y-5">
+        <div className="space-y-3.5">
           {fields.map((field) => (
             <div key={field.label}>
-              <p className="mb-1.5 font-retro-display text-[1rem] uppercase tracking-[0.04em] text-win-accent-deep">
+              <p className="mb-1 font-retro-display text-2xs uppercase tracking-[0.1em] text-win-accent-deep">
                 {field.label}
               </p>
-              <div className="border-2 border-white bg-win-surface-mid px-[15px] py-2 font-retro-terminal text-base font-light text-white shadow-[0_0_10px_rgba(0,0,0,0.25)]">
+              <div
+                className={cn(
+                  "min-h-9 border-x-2 border-b-2 border-t-2 px-3 py-2",
+                  "border-l-win-surface-dark border-t-win-surface-dark border-r-white border-b-white",
+                  "bg-win-surface-light font-retro-terminal text-2xs text-win-ink",
+                )}
+              >
                 {field.value}
               </div>
             </div>
           ))}
         </div>
 
-        <div className="mt-6 flex flex-wrap justify-center gap-x-[25px] gap-y-4">
-          {children}
-        </div>
+        <div className="mt-5">{children}</div>
 
         {footer ? (
-          <p className="mt-5 text-center font-retro-terminal text-3xs uppercase tracking-[0.12em] text-win-surface-dark">
+          <p className="mt-4 text-center font-retro-terminal text-3xs uppercase tracking-[0.1em] text-[#6f6f6f]">
             {footer}
           </p>
         ) : null}

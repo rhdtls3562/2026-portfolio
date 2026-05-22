@@ -6,7 +6,6 @@ import RetroPortfolioBackground from "@/app/(home)/components/RetroPortfolioBack
 import RetroPortfolioScreen from "@/app/(home)/components/RetroPortfolioScreen";
 import {
   type AppKey,
-  type FolderKey,
   type PowerState,
 } from "@/app/(home)/constants/retroPortfolioData";
 
@@ -15,7 +14,6 @@ export default function RetroPortfolio() {
   const [buttonLit, setButtonLit] = useState(false);
   const [screenVisible, setScreenVisible] = useState(false);
   const [activeApp, setActiveApp] = useState<AppKey | null>(null);
-  const [selectedFolder, setSelectedFolder] = useState<FolderKey>("profile");
 
   useEffect(() => {
     if (powerState !== "powering") return;
@@ -30,7 +28,6 @@ export default function RetroPortfolio() {
     if (powerState === "powering" || powerState === "powering-off") return;
     if (powerState === "off") {
       setActiveApp(null);
-      setSelectedFolder("profile");
       setButtonLit(false);
       setScreenVisible(true);
       setPowerState("powering");
@@ -44,7 +41,6 @@ export default function RetroPortfolio() {
     setPowerState("off");
     setScreenVisible(false);
     setActiveApp(null);
-    setSelectedFolder("profile");
   };
 
   return (
@@ -58,11 +54,9 @@ export default function RetroPortfolio() {
           activeApp={activeApp}
           powerState={powerState}
           screenVisible={screenVisible}
-          selectedFolder={selectedFolder}
           onCloseApp={() => setActiveApp(null)}
           onOpenApp={setActiveApp}
           onPowerOffFinished={handlePowerOffFinished}
-          onSelectFolder={setSelectedFolder}
         />
       </RetroPortfolioBackground>
     </main>

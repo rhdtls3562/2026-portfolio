@@ -6,7 +6,6 @@ import CrtPowerOn from "@/app/(home)/components/CrtPowerOn";
 import MonitorDesktop from "@/app/(home)/components/MonitorDesktop";
 import {
   type AppKey,
-  type FolderKey,
   type PowerState,
 } from "@/app/(home)/constants/retroPortfolioData";
 import {
@@ -18,22 +17,18 @@ type Props = {
   activeApp: AppKey | null;
   powerState: PowerState;
   screenVisible: boolean;
-  selectedFolder: FolderKey;
   onCloseApp: () => void;
   onOpenApp: (app: AppKey) => void;
   onPowerOffFinished: () => void;
-  onSelectFolder: (folder: FolderKey) => void;
 };
 
 export default function RetroPortfolioScreen({
   activeApp,
   powerState,
   screenVisible,
-  selectedFolder,
   onCloseApp,
   onOpenApp,
   onPowerOffFinished,
-  onSelectFolder,
 }: Props) {
   const handleAnimationEnd = (event: AnimationEvent<HTMLDivElement>) => {
     if (powerState === "powering-off" && event.animationName === "crt-screen-close") {
@@ -51,10 +46,8 @@ export default function RetroPortfolioScreen({
           activeApp={activeApp}
           isInteractive={powerState === "desktop"}
           isTitleAnimating={powerState === "powering" || powerState === "desktop"}
-          selectedFolder={selectedFolder}
           onCloseApp={onCloseApp}
           onOpenApp={onOpenApp}
-          onSelectFolder={onSelectFolder}
         />
       </div>
       <CrtPowerOn isPoweringOff={powerState === "powering-off"} />

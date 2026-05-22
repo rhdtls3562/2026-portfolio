@@ -36,9 +36,5 @@ export default function WindowActionButton({
     );
   }
 
-  return (
-    <button type={type} onClick={onClick} className={cn(BUTTON_CLASS, className)}>
-      {children}
-    </button>
-  );
+  return <button type={type} onClick={onClick} className={cn(BUTTON_CLASS, className)}>{children}</button>;
 }

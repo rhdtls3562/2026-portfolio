@@ -11,7 +11,6 @@ import WindowChrome from "@/app/(home)/components/WindowChrome";
 import {
   DESKTOP_APPS,
   type AppKey,
-  type FolderKey,
 } from "@/app/(home)/constants/retroPortfolioData";
 import { cn } from "@/utils/cn";
 
@@ -19,20 +18,16 @@ type Props = {
   activeApp: AppKey | null;
   isInteractive: boolean;
   isTitleAnimating: boolean;
-  selectedFolder: FolderKey;
   onCloseApp: () => void;
   onOpenApp: (app: AppKey) => void;
-  onSelectFolder: (f: FolderKey) => void;
 };
 
 export default function MonitorDesktop({
   activeApp,
   isInteractive,
   isTitleAnimating,
-  selectedFolder,
   onCloseApp,
   onOpenApp,
-  onSelectFolder,
 }: Props) {
   return (
     <div
@@ -88,12 +83,7 @@ export default function MonitorDesktop({
       {activeApp && (
         <WindowChrome app={activeApp} onClose={onCloseApp}>
           {activeApp === "readme" && <ReadmeWindow />}
-          {activeApp === "documents" && (
-            <DocumentsWindow
-              selectedFolder={selectedFolder}
-              onSelectFolder={onSelectFolder}
-            />
-          )}
+          {activeApp === "documents" && <DocumentsWindow />}
           {activeApp === "internet" && <InternetWindow />}
           {activeApp === "emails" && <EmailsWindow />}
         </WindowChrome>

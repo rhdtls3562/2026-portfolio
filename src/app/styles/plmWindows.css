@@ -1,0 +1,43 @@
+.plm-grid-base {
+  background-image:
+    linear-gradient(#e8e8e8 1px, transparent 1px),
+    linear-gradient(90deg, #e8e8e8 1px, transparent 1px);
+  background-size: 28px 28px;
+  background-color: #fafafa;
+}
+
+.plm-grid-soft {
+  background-image:
+    linear-gradient(#e5e5e5 1px, transparent 1px),
+    linear-gradient(90deg, #e5e5e5 1px, transparent 1px);
+  background-size: 32px 32px;
+  background-color: #f7f7f7;
+}
+
+.plm-grid-dense {
+  background-image:
+    linear-gradient(#f0f0f0 1px, transparent 1px),
+    linear-gradient(90deg, #f0f0f0 1px, transparent 1px);
+  background-size: 24px 24px;
+  background-color: #f9f9f9;
+}
+
+.plm-highlight-butter {
+  background-color: #fff8e1;
+}
+
+.plm-highlight-pink {
+  background-color: #fce4ec;
+}
+
+.plm-highlight-blue {
+  background-color: #dfefff;
+}
+
+.plm-highlight-lavender {
+  background-color: #ede7f6;
+}
+
+.plm-marquee-slow {
+  animation-duration: 22s;
+}

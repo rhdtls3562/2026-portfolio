@@ -3,10 +3,10 @@ import { type PowerState } from "@/app/(home)/constants/retroPortfolioData";
 import { cn } from "@/utils/cn";
 
 const ACTIVE_SCREEN_LAYOUT_CLASS = [
-  "top-[50.34%] h-[42.9%] w-[29.5%]",
-  "sm:top-[50.46%] sm:h-[46.7%] sm:w-[32.1%]",
-  "md:top-[50.62%] md:h-[51.8%] md:w-[35.6%]",
-  "lg:top-[50.82%] lg:h-[53.2%] lg:w-[40.5%]",
+  "top-[50.34%] h-[48%] w-[33%]",
+  "sm:top-[50.46%] sm:h-[52%] sm:w-[36%]",
+  "md:top-[50.62%] md:h-[58%] md:w-[40%]",
+  "lg:top-[50.82%] lg:h-[60%] lg:w-[46%]",
 ].join(" ");
 
 const SCREEN_CONTENT_STATE_CLASS: Record<PowerState, string> = {

@@ -17,6 +17,7 @@ export type DesktopApp = {
 };
 export type FolderItem = { key: FolderKey; label: string };
 export type LinkItem = { label: string; href: string; note: string };
+export type ProjectTone = "pink" | "butter" | "mint" | "lavender" | "blue" | "cloud";
 
 export const WINDOW_TITLE: Record<AppKey, string> = {
   readme: "Readme.txt",
@@ -85,42 +86,63 @@ export const LINKS: LinkItem[] = [
   { label: "Mail", href: `mailto:${EMAIL}`, note: "협업 문의와 연락" },
 ];
 
-export const PROJECTS = [
+export type Project = {
+  title: string;
+  period: string;
+  tags: string[];
+  desc: string;
+  slug: string;
+  tone: ProjectTone;
+};
+
+export const PROJECTS: Project[] = [
   {
     title: "쉐브론",
-    period: "2024.10 – 현재",
+    period: "2024.10 – 2025.10",
     tags: ["UI/UX", "반응형 퍼블리싱"],
-    desc: "아모레퍼시픽 BTS·챗봇·립AR·두피진단 서비스 UI/UX 디자인 및 반응형 웹 퍼블리싱",
+    desc: "아모레퍼시픽 BTS·챗봇·립AR·두피진단 서비스 UI/UX 디자인 및 반응형 웹 퍼블리싱 담당",
+    slug: "CHEVRON",
+    tone: "pink",
   },
   {
     title: "피알몽땅",
-    period: "2023.11 – 2024.10",
+    period: "2023.11 – 2024.09",
     tags: ["Figma", "웹디자인", "팀 리드"],
-    desc: "브랜드 아이덴티티 설계부터 웹사이트 퍼블리싱까지 전체 디자인 프로세스 주도",
+    desc: "브랜드 아이덴티티 설계부터 웹 퍼블리싱까지 전체 디자인 프로세스 주도. 웹서비스 기획 및 UI 설계",
+    slug: "PRMONTDANG",
+    tone: "butter",
   },
   {
     title: "엔클레어 / 댕댕펫",
-    period: "2022.10 – 2023.11",
+    period: "2022.01 – 2023.10",
     tags: ["웹디자인", "콘텐츠디자인"],
-    desc: "뷰티·반려동물 브랜드 온라인 마케팅 콘텐츠 및 웹 페이지 디자인",
+    desc: "뷰티·반려동물 브랜드 온라인 마케팅 콘텐츠 기획 및 제작, 웹 페이지 디자인",
+    slug: "ENCLAIR / DDANGPET",
+    tone: "mint",
   },
   {
     title: "하이어랭크",
     period: "2021.06 – 2021.12",
     tags: ["UI/UX디자인", "패션브랜드"],
-    desc: "형지그룹(엘리트·까스텔바작·올리비아허슬러) 패션 브랜드 웹디자인",
+    desc: "형지그룹 엘리트·까스텔바작·올리비아허슬러 패션 브랜드 웹 서비스 기획 및 UI/UX 디자인",
+    slug: "HIGHERRANK",
+    tone: "lavender",
   },
   {
-    title: "서연성형외과의원",
+    title: "서연성형외과",
     period: "2020.05 – 2021.05",
     tags: ["웹디자인", "BI"],
-    desc: "병원 BI 반영 홈페이지 디자인·유지보수, 이벤트 배너·온라인 홍보물 제작",
+    desc: "병원 BI를 반영한 홈페이지 디자인 및 유지보수, 이벤트 배너·온라인 홍보물 제작",
+    slug: "SEOYEON CLINIC",
+    tone: "blue",
   },
   {
     title: "수디자인광고기획",
     period: "2019.05 – 2020.05",
     tags: ["웹디자인", "옥외광고"],
-    desc: "다양한 클라이언트의 웹사이트 및 옥외광고 디자인으로 실무 역량 기초 확립",
+    desc: "다양한 클라이언트의 웹사이트 디자인 및 옥외광고 디자인으로 실무 역량 기초 확립",
+    slug: "SU DESIGN",
+    tone: "cloud",
   },
 ];
 

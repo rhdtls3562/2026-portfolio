@@ -1,134 +1,87 @@
-/** 레퍼런스 탐색기 구조에 맞춰 문서 창의 루트와 폴더 상세를 렌더링한다. */
-"use client";
+/** 프로젝트 창 - 여백과 섹션 간격을 넉넉히 둔 컬러풀 아카이브 레이아웃. */
+import ProjectCard from "@/app/(home)/components/ProjectCard";
+import PlmTickerBand from "@/app/(home)/components/PlmTickerBand";
+import PlmWindowNav from "@/app/(home)/components/PlmWindowNav";
+import { PROJECTS } from "@/app/(home)/constants/retroPortfolioData";
 
-import { useState } from "react";
-import Image from "next/image";
-import ProfileFolder from "@/app/(home)/components/ProfileFolder";
-import RecordsFolder from "@/app/(home)/components/RecordsFolder";
-import StackFolder from "@/app/(home)/components/StackFolder";
-import {
-  FOLDERS,
-  type FolderKey,
-} from "@/app/(home)/constants/retroPortfolioData";
-import { icons } from "@/constants/ASSETS";
-import { cn } from "@/utils/cn";
+const TICKER_ITEMS = [
+  "MY PROJECTS",
+  "6 WORKS",
+  "2019 – 2025",
+  "DESIGN × CODE",
+  "UI/UX",
+  "FRONTEND",
+  "WEB PUBLISHING",
+];
 
-type Props = {
-  selectedFolder: FolderKey;
-  onSelectFolder: (f: FolderKey) => void;
-};
+const SUMMARY_ITEMS = ["6 works", "2019 – 2025", "Brand design to publishing"];
 
-function ToolbarButton({
-  children,
-  isDisabled,
-  label,
-  onClick,
-}: {
-  children: React.ReactNode;
-  isDisabled?: boolean;
-  label: string;
-  onClick?: () => void;
-}) {
+export default function DocumentsWindow() {
   return (
-    <button
-      type="button"
-      aria-label={label}
-      disabled={isDisabled}
-      onClick={onClick}
-      className={cn(
-        "flex size-10 items-center justify-center border-r-2 border-white text-win-ink",
-        isDisabled ? "cursor-default opacity-40" : "hover:bg-[#c7c7c7]",
-      )}
-    >
-      {children}
-    </button>
-  );
-}
+    <div className="h-full overflow-y-auto bg-white text-black">
+      <PlmWindowNav active="Projects" />
 
-function DocumentsFolderContent({ selectedFolder }: { selectedFolder: FolderKey }) {
-  if (selectedFolder === "profile") return <ProfileFolder />;
-  if (selectedFolder === "records") return <RecordsFolder />;
-  return <StackFolder />;
-}
+      <section className="plm-grid-base relative overflow-hidden px-12 py-12">
+        <span className="decor-float absolute right-12 top-7 text-[2rem] text-black/15">
+          ◈
+        </span>
+        <span className="decor-float-slow decor-delay-1 absolute right-24 top-18 font-mono text-[1rem] font-black text-yellow-500/30">
+          {"[ ]"}
+        </span>
 
-export default function DocumentsWindow({
-  selectedFolder,
-  onSelectFolder,
-}: Props) {
-  const [isRootView, setIsRootView] = useState(true);
-  const currentFolder = FOLDERS.find((folder) => folder.key === selectedFolder);
+        <span className="inline-flex rounded-full border border-yellow-300 bg-[#fff9eb] px-4 py-1.5 text-[0.6rem] font-black uppercase tracking-[0.2em] text-[#d58b16]">
+          Portfolio
+        </span>
 
-  const handleOpenFolder = (folderKey: FolderKey) => {
-    onSelectFolder(folderKey);
-    setIsRootView(false);
-  };
+        <h2 className="mt-5 text-[2.6rem] font-black leading-none tracking-[-0.05em]">
+          My{" "}
+          <span className="relative inline-block">
+            <span className="relative z-10">Projects</span>
+            <span className="plm-highlight-butter absolute inset-x-0 bottom-1 z-0 h-4 rounded-sm" />
+          </span>
+        </h2>
 
-  const handleShowRoot = () => {
-    setIsRootView(true);
-  };
+        <div className="mt-5 flex flex-wrap gap-2.5">
+          {SUMMARY_ITEMS.map((item) => (
+            <span
+              key={item}
+              className="rounded-full border border-[#ece7cf] bg-white/80 px-3.5 py-1.5 text-[0.62rem] font-black uppercase tracking-[0.14em] text-[#7d7046]"
+            >
+              {item}
+            </span>
+          ))}
+        </div>
 
-  return (
-    <div className="flex h-full flex-col bg-win-surface-light text-win-ink">
-      <div className="flex h-10 shrink-0 border-b-2 border-win-surface-mid bg-win-surface">
-        <ToolbarButton
-          label="뒤로 가기"
-          isDisabled={isRootView}
-          onClick={handleShowRoot}
-        >
-          <svg aria-hidden="true" viewBox="0 0 19 12" className="h-3 w-4 fill-current">
-            <path d="M9.332 3.193H17.9c.217 0 .395.184.395.41v5.144c0 .226-.178.41-.395.41H9.332v2.276a.404.404 0 0 1-.207.36.376.376 0 0 1-.404-.017L.93 6.518a.403.403 0 0 1-.18-.343c0-.143.064-.265.18-.343L8.72.573a.376.376 0 0 1 .404-.017c.13.073.207.206.207.36v2.277Z" />
-          </svg>
-        </ToolbarButton>
-        <ToolbarButton label="홈" onClick={handleShowRoot}>
-          <svg aria-hidden="true" viewBox="0 0 23 21" className="h-4 w-4 fill-current">
-            <path d="M19.672 8.06V2.651H15.73l-.001 1.47L11.667.067 3.837 8.01.75 11.143h3.086v9.595h5.367v-.047l.003.035h5.095v.012h5.371v-9.595h3.086L19.672 8.06Zm-4.623 4.588h-2.952V9.589h2.952v3.059Zm-3.65-3.059v3.059H8.472V9.589h2.927Zm-2.927 6.814v-3.032h2.927v3.032H8.472Zm3.625 0v-3.032h2.952v3.032h-2.952Z" />
-          </svg>
-        </ToolbarButton>
-        <div className="flex flex-1 items-center bg-win-surface px-3 py-1.5">
-          <div className="flex h-full w-full items-center border-2 border-win-surface-mid bg-white px-3 font-retro-terminal text-2xs text-win-ink">
-            {isRootView
-              ? "C:\\Documents\\"
-              : `C:\\Documents\\${currentFolder?.label ?? ""}\\`}
+        <p className="mt-5 max-w-[35rem] text-[0.82rem] leading-[1.8] text-[#676767]">
+          패션, 뷰티, 의료, 반려동물처럼 결이 다른 브랜드를 맡으며 디자인과
+          퍼블리싱을 함께 다뤘습니다. 화면 위 결과물과 실무 기록이 한눈에
+          보이도록 프로젝트 중심으로 정리한 섹션입니다.
+        </p>
+      </section>
+
+      <PlmTickerBand items={TICKER_ITEMS} tone="butter" />
+
+      <section className="px-12 py-12">
+        <div className="mb-8 flex items-end justify-between gap-6">
+          <div>
+            <p className="text-[0.62rem] font-black uppercase tracking-[0.22em] text-[#b5b5b5]">
+              Selected records
+            </p>
+            <p className="mt-2 text-[0.8rem] leading-[1.75] text-[#717171]">
+              회사별 역할과 성격이 다르게 보이도록 카드 간 여백과 정보 구조를
+              조금 더 넉넉하게 정리했습니다.
+            </p>
           </div>
         </div>
-      </div>
 
-      <div className="min-h-0 flex-1 bg-white">
-        {isRootView ? (
-          <div className="grid grid-cols-3 gap-x-12 gap-y-8 px-10 pb-8 pt-7">
-            {FOLDERS.map((folder) => (
-              <button
-                key={folder.key}
-                type="button"
-                onClick={() => handleOpenFolder(folder.key)}
-                className="flex w-[110px] flex-col items-center gap-3 text-center"
-              >
-                <Image
-                  src={icons.iconFolder}
-                  alt=""
-                  width={148}
-                  height={119}
-                  className="h-auto w-[70px] drop-shadow-[0_0_10px_rgba(0,0,0,0.25)]"
-                />
-                <span className="font-retro-terminal text-[0.9rem] uppercase tracking-[0.01em] text-win-ink">
-                  {folder.label}
-                </span>
-              </button>
-            ))}
-          </div>
-        ) : (
-          <div className="h-full bg-win-surface p-3">
-            <div className="flex h-full flex-col overflow-hidden border-2 border-white bg-[#efefef]">
-              <div className="border-b-2 border-win-surface-mid bg-white px-4 py-2 font-retro-terminal text-2xs uppercase tracking-[0.08em] text-win-ink">
-                {currentFolder?.label}
-              </div>
-              <div className="min-h-0 flex-1 overflow-hidden">
-                <DocumentsFolderContent selectedFolder={selectedFolder} />
-              </div>
-            </div>
-          </div>
-        )}
-      </div>
+        <div className="grid grid-cols-2 gap-6">
+          {PROJECTS.map((project) => (
+            <ProjectCard key={project.title} project={project} />
+          ))}
+        </div>
+      </section>
+
+      <div className="h-8" />
     </div>
   );
 }
