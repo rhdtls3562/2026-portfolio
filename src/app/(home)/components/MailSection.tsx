@@ -1,7 +1,7 @@
 /** 연락처와 메일 CTA를 보여주는 섹션 컴포넌트. */
 import Image from "next/image";
-import { icons, images } from "@/constants/ASSETS";
-import { getNaverMailComposeHref } from "@/constants/NAVER_MAIL";
+import { icons, images } from "@/constants/assetPaths";
+import { getNaverMailComposeHref } from "@/constants/naverMail";
 
 const EMAIL = "rhdtls3562@naver.com";
 const NAVER_MAIL_HREF = getNaverMailComposeHref({ to: EMAIL });

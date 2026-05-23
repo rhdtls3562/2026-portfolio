@@ -1,5 +1,5 @@
 /** 모니터 아트보드에 배치되는 폴더 아이콘 레이아웃 정보를 정의한다. */
-import { icons, images } from "@/constants/ASSETS";
+import { icons, images } from "@/constants/assetPaths";
 
 export type DecoItem = {
   key: string;
