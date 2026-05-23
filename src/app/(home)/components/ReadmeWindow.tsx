@@ -10,7 +10,7 @@ import {
 } from "@/app/(home)/constants/WINDOW_CONTENT";
 import { LINKS } from "@/app/(home)/constants/retroPortfolioData";
 import { README_SECTIONS } from "@/app/(home)/constants/retroWindowData";
-import { images } from "@/constants/assetPaths";
+import { images } from "@/utils/assetPaths";
 import { cn } from "@/utils/cn";
 
 const TICKER_ITEMS = [

@@ -1,6 +1,6 @@
 /** 소셜 링크를 카드 레이아웃으로 보여주는 컴포넌트. */
 import Image from "next/image";
-import { icons } from "@/constants/assetPaths";
+import { icons } from "@/utils/assetPaths";
 
 type SocialLink = {
   label: string;

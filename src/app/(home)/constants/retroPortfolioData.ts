@@ -1,6 +1,6 @@
 /** 레트로 포트폴리오 데스크톱에서 사용하는 공통 데이터와 상태 타입을 정의한다. */
-import { documents, icons, images } from "@/constants/assetPaths";
-import { getNaverMailComposeHref } from "@/constants/naverMail";
+import { documents, icons, images } from "@/utils/assetPaths";
+import { getNaverMailComposeHref } from "@/utils/naverMail";
 
 export const EMAIL = "rhdtls3562@naver.com";
 

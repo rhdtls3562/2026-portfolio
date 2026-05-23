@@ -1,6 +1,6 @@
 /** 경력과 프로젝트 이력을 카드 형태로 보여주는 기록 섹션 컴포넌트. */
 import Image from "next/image";
-import { icons } from "@/constants/assetPaths";
+import { icons } from "@/utils/assetPaths";
 import { PROJECTS } from "@/app/(home)/constants/recordSectionData";
 
 export default function RecordSection() {

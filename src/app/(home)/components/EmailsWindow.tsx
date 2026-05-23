@@ -6,7 +6,7 @@ import PlmTickerBand from "@/app/(home)/components/PlmTickerBand";
 import PlmWindowNav from "@/app/(home)/components/PlmWindowNav";
 import { CONTACT_TOPIC_ITEMS } from "@/app/(home)/constants/WINDOW_CONTENT";
 import { EMAIL } from "@/app/(home)/constants/retroPortfolioData";
-import { getNaverMailComposeHref } from "@/constants/naverMail";
+import { getNaverMailComposeHref } from "@/utils/naverMail";
 import { cn } from "@/utils/cn";
 
 const TICKER_ITEMS = [

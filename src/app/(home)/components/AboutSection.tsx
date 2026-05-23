@@ -1,6 +1,6 @@
 /** 소개 섹션의 프로필과 핵심 역량을 보여주는 컴포넌트. */
 import Image from "next/image";
-import { icons, images } from "@/constants/assetPaths";
+import { icons, images } from "@/utils/assetPaths";
 
 type Skill = {
   category: string;

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { images } from "@/constants/assetPaths";
+import { images } from "@/utils/assetPaths";
 
 export default function HeroSection() {
   const [isVisible, setIsVisible] = useState(false);

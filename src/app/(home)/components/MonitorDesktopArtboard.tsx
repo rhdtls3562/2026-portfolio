@@ -4,7 +4,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import DesktopFolderShortcut from "@/app/(home)/components/DesktopFolderShortcut";
-import { images } from "@/constants/assetPaths";
+import { images } from "@/utils/assetPaths";
 import { DECO_ITEMS } from "@/app/(home)/constants/monitorDesktopArtboardData";
 import { cn } from "@/utils/cn";
 
