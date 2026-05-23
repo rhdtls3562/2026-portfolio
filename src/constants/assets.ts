@@ -28,5 +28,6 @@ export const images = {
 } as const;
 
 export const documents = {
+  chevronRecommendationPdf: "/asset/pdf/쉐브론_권새롬_추천서 (1).pdf",
   recommendationPdf: "/asset/pdf/kwon-saerom-recommendation.pdf",
 } as const;

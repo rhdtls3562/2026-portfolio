@@ -21,6 +21,7 @@ export default function MonitorDesktopArtboard({
   isWindowOpen,
 }: Props) {
   const [activePreviewKey, setActivePreviewKey] = useState<string | null>(null);
+  const [isDecoIntroActive, setIsDecoIntroActive] = useState(false);
   const [typedTitle, setTypedTitle] = useState("");
 
   const handleTogglePreview = (itemKey: string) => {
@@ -53,6 +54,26 @@ export default function MonitorDesktopArtboard({
 
       if (typingTimer) {
         window.clearInterval(typingTimer);
+      }
+    };
+  }, [isTitleAnimating]);
+
+  useEffect(() => {
+    const startTimer = window.setTimeout(() => {
+      setIsDecoIntroActive(isTitleAnimating);
+    }, 0);
+
+    const endTimer = isTitleAnimating
+      ? window.setTimeout(() => {
+          setIsDecoIntroActive(false);
+        }, 2300)
+      : null;
+
+    return () => {
+      window.clearTimeout(startTimer);
+
+      if (endTimer) {
+        window.clearTimeout(endTimer);
       }
     };
   }, [isTitleAnimating]);
@@ -103,19 +124,19 @@ export default function MonitorDesktopArtboard({
       </div>
 
       {DECO_ITEMS.map((item) => (
-        <div
+        <DesktopFolderShortcut
           key={item.key}
           className={cn(
             "transition-opacity duration-200",
+            isDecoIntroActive
+              ? cn("desktop-pop-enter", item.enterDelayClassName)
+              : "",
             isWindowOpen ? "pointer-events-none opacity-0" : "opacity-100",
           )}
-        >
-          <DesktopFolderShortcut
-            isPreviewVisible={visiblePreviewKey === item.key}
-            item={item}
-            onTogglePreview={handleTogglePreview}
-          />
-        </div>
+          isPreviewVisible={visiblePreviewKey === item.key}
+          item={item}
+          onTogglePreview={handleTogglePreview}
+        />
       ))}
     </>
   );

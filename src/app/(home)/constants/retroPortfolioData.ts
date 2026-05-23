@@ -91,9 +91,14 @@ export const LINKS: LinkItem[] = [
     note: "협업 문의와 연락",
   },
   {
-    label: "추천서",
+    label: "디자이너 추천서",
     href: documents.recommendationPdf,
-    note: "추천서 정리",
+    note: "디자이너 추천서 PDF",
+  },
+  {
+    label: "웹퍼블리셔 추천서",
+    href: documents.chevronRecommendationPdf,
+    note: "웹퍼블리셔 추천서 PDF",
   },
 ];
 

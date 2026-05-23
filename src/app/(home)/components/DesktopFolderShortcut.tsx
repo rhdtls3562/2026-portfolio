@@ -7,6 +7,7 @@ import type { DecoItem } from "@/app/(home)/constants/monitorDesktopArtboardData
 import { cn } from "@/utils/cn";
 
 type Props = {
+  className?: string;
   isPreviewVisible: boolean;
   item: DecoItem;
   onTogglePreview: (itemKey: string) => void;
@@ -72,6 +73,7 @@ function ShortcutVisual({
 }
 
 export default function DesktopFolderShortcut({
+  className,
   isPreviewVisible,
   item,
   onTogglePreview,
@@ -85,6 +87,7 @@ export default function DesktopFolderShortcut({
       ? "pointer-events-auto transition-transform duration-150 hover:-translate-y-1"
       : "pointer-events-none",
     item.position,
+    className,
   );
 
   if (item.preview) {

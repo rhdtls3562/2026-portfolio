@@ -4,6 +4,7 @@ import { icons, images } from "@/constants/ASSETS";
 export type DecoItem = {
   key: string;
   alt: string;
+  enterDelayClassName: string;
   label: string;
   note?: string;
   src: string;
@@ -28,6 +29,7 @@ export const DECO_ITEMS: DecoItem[] = [
   {
     key: "web-publishing-folder",
     alt: "Web Publishing",
+    enterDelayClassName: "desktop-pop-delay-0",
     label: "Web Publishing",
     src: icons.iconFolder,
     position: "left-[5%] top-[20%]",
@@ -48,6 +50,7 @@ export const DECO_ITEMS: DecoItem[] = [
   {
     key: "other-designs-folder",
     alt: "Other Designs",
+    enterDelayClassName: "desktop-pop-delay-1",
     label: "Other Designs",
     src: icons.iconFolder,
     position: "right-[6%] top-[17%]",
@@ -68,6 +71,7 @@ export const DECO_ITEMS: DecoItem[] = [
   {
     key: "web-design-folder",
     alt: "Web Design",
+    enterDelayClassName: "desktop-pop-delay-5",
     label: "Web Design",
     src: icons.iconFolder,
     position: "left-[10%] bottom-[10%]",
@@ -88,6 +92,7 @@ export const DECO_ITEMS: DecoItem[] = [
   {
     key: "frontend-folder",
     alt: "Frontend",
+    enterDelayClassName: "desktop-pop-delay-6",
     label: "Frontend",
     src: icons.iconFolder,
     position: "right-[5%] bottom-[10%]",
@@ -108,6 +113,7 @@ export const DECO_ITEMS: DecoItem[] = [
   {
     key: "bts-project",
     alt: "BTS Project",
+    enterDelayClassName: "desktop-pop-delay-3",
     label: "BTS Project",
     src: images.imgBts,
     href: "https://buly.kr/jbS2Pq",
@@ -120,6 +126,7 @@ export const DECO_ITEMS: DecoItem[] = [
   {
     key: "coworkers-project",
     alt: "Coworkers Project",
+    enterDelayClassName: "desktop-pop-delay-4",
     label: "Coworkers Project",
     src: images.imgCoworkers,
     href: "https://coworkers-blond.vercel.app",
@@ -132,6 +139,7 @@ export const DECO_ITEMS: DecoItem[] = [
   {
     key: "hello-icon",
     alt: "Hello",
+    enterDelayClassName: "desktop-pop-delay-2",
     label: "",
     src: icons.iconHello,
     position: "right-[22%] top-[22%]",
