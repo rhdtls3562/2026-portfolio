@@ -9,22 +9,22 @@ export const icons = {
 } as const;
 
 export const images = {
-  imgButtonOff: "/asset/img/img_button_off.jpg",
-  imgButtonOn: "/asset/img/img_button_on.jpg",
-  imgDesktop: "/asset/img/img_desktop.png",
-  imgMain: "/asset/img/img_main.jpg",
-  imgProfile: "/asset/img/img_profile.png",
-  imgProfileBlack: "/asset/img/img_profile_black.png",
-  imgBts: "/asset/img/img_beautyst.png",
-  imgCoworkers: "/asset/img/img_coworkers.png",
-  imgCoworkersBrowser: "/asset/img/img_coworkers_browser.png",
-  imgTaskifyBrowser: "/asset/img/img_taskify_browser.png",
-  imgBtsBrowser: "/asset/img/img_bts_browser.png",
-  imgPrBrowser: "/asset/img/img_pr_browser.jpg",
-  imgDangBrowser: "/asset/img/img_dang_browser.jpg",
-  imgSevenBrowser: "/asset/img/img_seven_browser.jpg",
-  imgSyBrowser: "/asset/img/img_sy_browser.jpg",
-  imgSuBrowser: "/asset/img/img_su_browser.jpg",
+  imgButtonOff: "/asset/img/img_button_off.webp",
+  imgButtonOn: "/asset/img/img_button_on.webp",
+  imgDesktop: "/asset/img/img_desktop.webp",
+  imgMain: "/asset/img/img_main.webp",
+  imgProfile: "/asset/img/img_profile.webp",
+  imgProfileBlack: "/asset/img/img_profile_black.webp",
+  imgBts: "/asset/img/img_beautyst.webp",
+  imgCoworkers: "/asset/img/img_coworkers.webp",
+  imgCoworkersBrowser: "/asset/img/img_coworkers_browser.webp",
+  imgTaskifyBrowser: "/asset/img/img_taskify_browser.webp",
+  imgBtsBrowser: "/asset/img/img_bts_browser.webp",
+  imgPrBrowser: "/asset/img/img_pr_browser.webp",
+  imgDangBrowser: "/asset/img/img_dang_browser.webp",
+  imgSevenBrowser: "/asset/img/img_seven_browser.webp",
+  imgSyBrowser: "/asset/img/img_sy_browser.webp",
+  imgSuBrowser: "/asset/img/img_su_browser.webp",
 } as const;
 
 export const documents = {

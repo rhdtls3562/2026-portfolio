@@ -88,6 +88,9 @@ export default function MonitorDesktopArtboard({
           src={images.imgDesktop}
           alt=""
           fill
+          fetchPriority="high"
+          loading="eager"
+          preload
           sizes="(max-width: 1024px) 100vw, 45vw"
           className="object-cover object-center"
         />
@@ -115,6 +118,9 @@ export default function MonitorDesktopArtboard({
           src={images.imgProfile}
           alt="권새롬 프로필 컷아웃"
           fill
+          fetchPriority="high"
+          loading="eager"
+          preload
           sizes="(max-width: 640px) 30vw, (max-width: 1024px) 36vw, 42vw"
           className={cn(
             "object-contain object-bottom transition-opacity duration-200",

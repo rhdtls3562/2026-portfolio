@@ -34,6 +34,7 @@ export default function RetroPortfolioBackground({
           fill
           fetchPriority="high"
           loading="eager"
+          preload
           sizes="100vw"
           className="object-cover object-center"
         />
@@ -53,7 +54,9 @@ export default function RetroPortfolioBackground({
             src={buttonLit ? images.imgButtonOn : images.imgButtonOff}
             alt=""
             fill
+            fetchPriority="high"
             loading="eager"
+            preload
             sizes="4vw"
             className="rounded object-cover cursor-pointer"
           />
