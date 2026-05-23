@@ -76,17 +76,12 @@ export const FOLDERS: FolderItem[] = [
 export const LINKS: LinkItem[] = [
   {
     label: "GitHub",
-    href: "https://github.com/kwonsaerom",
+    href: "https://github.com/rhdtls3562?tab=repositories",
     note: "구현 결과와 코드 기록",
   },
   {
-    label: "Portfolio",
-    href: "https://rhdtls3562.github.io/portfolio2025/",
-    note: "2025년 디자인 & 개발 포트폴리오",
-  },
-  {
-    label: "Velog",
-    href: "https://velog.io/@kwonsaerom",
+    label: "Notion",
+    href: "https://www.notion.so/2c40e03e823180ce9101f3db7c90bf27?v=2c40e03e8231811a8782000c92cceef9",
     note: "작업 메모와 회고 정리",
   },
   { label: "Mail", href: `mailto:${EMAIL}`, note: "협업 문의와 연락" },
@@ -177,7 +172,10 @@ export const STACKS = [
     items: ["TypeScript", "JavaScript", "HTML5", "CSS3"],
   },
   { category: "Framework", items: ["React", "Next.js"] },
-  { category: "Styling", items: ["Tailwind CSS", "반응형 퍼블리싱", "UI/UX 설계"] },
+  {
+    category: "Styling",
+    items: ["Tailwind CSS", "반응형 퍼블리싱", "UI/UX 설계"],
+  },
   {
     category: "Tool",
     items: ["Figma", "Adobe Photoshop", "Illustrator"],

@@ -17,7 +17,7 @@ export const ABOUT_SECTION_THEMES = [
 export const CAREER_ITEMS = [
   {
     period: "2024.10 – 2025.10",
-    company: "쉐브론",
+    company: "Chavron",
     role: "웹퍼블리싱 · 웹디자인",
     cardClassName: "bg-[#fff4f8]",
     dotClassName: "bg-[#f48fb1]",
@@ -52,7 +52,7 @@ export const CAREER_ITEMS = [
   },
   {
     period: "2019.05 – 2020.05",
-    company: "SU디자인 광고기획사",
+    company: "SU-디자인 광고기획사",
     role: "옥외광고디자인",
     cardClassName: "bg-[#f6f6f6]",
     dotClassName: "bg-[#bdbdbd]",
@@ -63,14 +63,14 @@ export const CERTIFICATION_ITEMS = [
   {
     year: "2025.11–2026.05",
     title: "Codeit Frontend 개발자 부트캠프",
-    description: "6개월 과정 수료 · 팀 프로젝트 팀장 2회",
+    description: "6개월 과정 수료 · 프로젝트 팀장",
     cardClassName: "bg-[#fff4f8]",
     yearClassName: "border-[#f4cade] bg-white text-[#c2185b]",
   },
   {
     year: "2018.05–2019.03",
     title: "Cut above academy, Digital Design",
-    description: "뉴질랜드 유학 · 디지털 디자인 전공",
+    description: "뉴질랜드 유학 · 미술, 특수분장 전공",
     cardClassName: "bg-[#eef9f0]",
     yearClassName: "border-[#cde8d0] bg-white text-[#2e7d32]",
   },
@@ -93,17 +93,18 @@ export const CERTIFICATION_ITEMS = [
 export const ABOUT_GLANCE_ITEMS = [
   {
     title: "Frontend Developer · Web Publisher",
-    description: "현재 지원 분야와 가장 가까운 정체성을 한 줄로 정리한 프로필 요약입니다.",
+    description: "저와 가장 가까운 정체성을 한 줄로 정리한 프로필 요약입니다.",
     cardClassName: "border-[#f5d5e3] bg-[#fff5f9]",
   },
   {
     title: "5 years 6 months",
-    description: "웹디자인, 웹퍼블리싱, 서비스 기획을 넘나들며 실무 경력을 쌓아왔습니다.",
+    description:
+      "웹디자인, 웹퍼블리싱, 서비스 기획을 넘나들며 실무 경력을 쌓아왔습니다.",
     cardClassName: "border-[#d8ecda] bg-[#f3fbf4]",
   },
   {
     title: "Design background",
-    description: "예술고와 뉴질랜드 디지털 디자인 전공을 기반으로 시각적 완성도를 다집니다.",
+    description: "미술전공 출신 배경을 기반으로 시각적 완성도를 다집니다.",
     cardClassName: "border-[#ddd0f4] bg-[#f7f3fd]",
   },
 ] as const;
@@ -111,17 +112,20 @@ export const ABOUT_GLANCE_ITEMS = [
 export const SKILL_HIGHLIGHT_ITEMS = [
   {
     title: "Responsive publishing",
-    description: "브랜드 화면을 디바이스에 맞게 자연스럽게 재구성하는 퍼블리싱 역량",
+    description:
+      "브랜드 화면을 디바이스에 맞게 자연스럽게 재구성하는 퍼블리싱 역량",
     cardClassName: "border-[#f5d5e3] bg-[#fff5f9]",
   },
   {
     title: "UI system thinking",
-    description: "컴포넌트 단위로 구조를 정리하고 반복 가능한 화면 패턴을 만드는 방식",
+    description:
+      "컴포넌트 단위로 구조를 정리하고 반복 가능한 화면 패턴을 만드는 방식",
     cardClassName: "border-[#d8ecda] bg-[#f3fbf4]",
   },
   {
     title: "AI-assisted workflow",
-    description: "Codex, Claude Code 같은 도구를 실제 작업 흐름에 통합하는 습관",
+    description:
+      "Codex, Claude Code 같은 도구를 실제 작업 흐름에 통합하는 습관",
     cardClassName: "border-[#ddd0f4] bg-[#f7f3fd]",
   },
 ] as const;

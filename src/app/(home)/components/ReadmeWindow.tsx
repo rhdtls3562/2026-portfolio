@@ -14,12 +14,12 @@ import { images } from "@/constants/ASSETS";
 import { cn } from "@/utils/cn";
 
 const TICKER_ITEMS = [
-  "FRONTEND DEVELOPER",
-  "WEB PUBLISHER",
-  "KWON SAEROM",
-  "5 YEARS 6 MONTHS",
-  "REACT · NEXT.JS",
-  "DESIGN × CODE",
+  "React",
+  "Next.js",
+  "Tailwind",
+  "Typescript",
+  "Storybook",
+  "Figma",
 ];
 
 const LINK_TONES = [
@@ -38,7 +38,7 @@ export default function ReadmeWindow() {
         <span className="decor-float absolute right-10 top-8 text-[5rem] font-black leading-none text-pink-200">
           ✦
         </span>
-        <span className="decor-float-slow decor-delay-2 absolute bottom-8 right-28 font-mono text-[2rem] font-black text-purple-200">
+        <span className="decor-float-slow decor-delay-2 absolute bottom-50 right-10 font-mono text-[2rem] font-black text-purple-200">
           {"</>"}
         </span>
 
@@ -58,18 +58,21 @@ export default function ReadmeWindow() {
             </h1>
             <p className="mt-6 max-w-[28rem] text-[0.85rem] leading-[1.85] text-[#666]">
               웹디자인과 퍼블리싱 실무 5년 6개월을 바탕으로 프론트엔드 개발자로
-              확장하고 있습니다. 디자인 의도를 코드로 정확히 옮기고, 사용자 흐름과
+              <br />
+              확장하고 있습니다. 디자인 의도를 코드로 정확히 옮기고, 사용자
+              흐름과
+              <br />
               화면 완성도를 함께 보는 방식으로 일합니다.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
-                href="mailto:rhdtls3562@naver.com?subject=Let's build something together"
+                href="tel:+821079063994"
                 className="rounded-full border border-[#f3c8da] bg-white px-6 py-3 text-[0.7rem] font-black uppercase tracking-[0.14em] text-[#c2185b] transition-colors hover:bg-[#fff1f6]"
               >
                 Contact me ↗
               </a>
               <a
-                href="https://github.com/kwonsaerom"
+                href="https://github.com/rhdtls3562?tab=repositories"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-full border border-[#d8e9da] bg-white px-6 py-3 text-[0.7rem] font-black uppercase tracking-[0.14em] text-[#2e7d32] transition-colors hover:bg-[#edf8ef]"
@@ -79,13 +82,14 @@ export default function ReadmeWindow() {
             </div>
           </div>
 
-          <div className="relative mb-2 mr-4 size-[110px] shrink-0 overflow-hidden rounded-full border-4 border-[#f48fb1]">
+          <div className="relative mb-[-60] pr-5">
             <Image
               src={images.imgProfileBlack}
               alt="권새롬 프로필"
-              fill
-              sizes="110px"
-              className="object-cover object-top"
+              width={300}
+              height={0}
+              style={{ height: "auto" }}
+              className="w-[300px]"
             />
           </div>
         </div>
@@ -171,7 +175,7 @@ export default function ReadmeWindow() {
         </section>
       ))}
 
-      <section className="bg-[#fafafa] px-12 py-14">
+      <section className="px-12 py-14">
         <div className="mb-8 flex items-center gap-3">
           <h2 className="text-[1.5rem] font-black tracking-[-0.03em]">
             Career
