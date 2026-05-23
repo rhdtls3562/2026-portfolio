@@ -80,9 +80,20 @@ export default function ProjectCard({ project }: Props) {
           <span className="rounded-full border border-[#f2dce7] bg-[#fff6fa] px-3 py-1 text-[0.58rem] font-black uppercase tracking-[0.12em] text-[#bf5d89]">
             Project record
           </span>
-          <span className="font-mono text-[0.54rem] uppercase tracking-[0.18em] text-[#b3b3b3]">
-            archive
-          </span>
+          {project.href ? (
+            <a
+              href={project.href}
+              target="_blank"
+              rel="noreferrer"
+              className="font-mono text-[0.54rem] uppercase tracking-[0.18em] text-[#8c8c8c] transition-colors hover:text-black"
+            >
+              github ↗
+            </a>
+          ) : (
+            <span className="font-mono text-[0.54rem] uppercase tracking-[0.18em] text-[#b3b3b3]">
+              archive
+            </span>
+          )}
         </div>
       </div>
     </article>

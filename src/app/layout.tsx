@@ -1,19 +1,19 @@
 /** 전역 폰트와 메타데이터를 설정하는 루트 레이아웃. */
-import type { Metadata } from 'next';
-import { Montserrat } from 'next/font/google';
-import UnsupportedScreenNotice from '@/components/layout/UnsupportedScreenNotice';
-import './globals.css';
+import type { Metadata } from "next";
+import { Montserrat } from "next/font/google";
+import UnsupportedScreenNotice from "@/components/layout/UnsupportedScreenNotice";
+import "./globals.css";
 
 const montserrat = Montserrat({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-latin',
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-latin",
 });
 
 export const metadata: Metadata = {
-  title: 'Kwon Saerom | Retro Portfolio',
+  title: "Kwon Saerom | Portfolio",
   description:
-    'moviepalaceonline 무드를 참고해 만든 프론트엔드 개발자 권새롬의 레트로 데스크톱 포트폴리오입니다.',
+    "moviepalaceonline 무드를 참고해 만든 프론트엔드 개발자 권새롬의 레트로 데스크톱 포트폴리오입니다.",
 };
 
 export default function RootLayout({

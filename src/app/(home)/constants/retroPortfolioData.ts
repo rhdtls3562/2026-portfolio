@@ -17,13 +17,19 @@ export type DesktopApp = {
 };
 export type FolderItem = { key: FolderKey; label: string };
 export type LinkItem = { label: string; href: string; note: string };
-export type ProjectTone = "pink" | "butter" | "mint" | "lavender" | "blue" | "cloud";
+export type ProjectTone =
+  | "pink"
+  | "butter"
+  | "mint"
+  | "lavender"
+  | "blue"
+  | "cloud";
 
 export const WINDOW_TITLE: Record<AppKey, string> = {
-  readme: "Readme.txt",
-  documents: "Documents",
-  internet: "Internet",
-  emails: "Emails",
+  readme: "About_Me.txt",
+  documents: "Project.txt",
+  internet: "Skill.txt",
+  emails: "Contact.txt",
 };
 
 export const DESKTOP_APPS: DesktopApp[] = [
@@ -37,7 +43,7 @@ export const DESKTOP_APPS: DesktopApp[] = [
   },
   {
     key: "documents",
-    label: "records",
+    label: "project",
     icon: icons.iconFile,
     width: 175,
     height: 156,
@@ -45,7 +51,7 @@ export const DESKTOP_APPS: DesktopApp[] = [
   },
   {
     key: "internet",
-    label: "social",
+    label: "skill",
     icon: icons.iconEarth,
     width: 149,
     height: 149,
@@ -93,9 +99,28 @@ export type Project = {
   desc: string;
   slug: string;
   tone: ProjectTone;
+  href?: string;
 };
 
 export const PROJECTS: Project[] = [
+  {
+    title: "Taskify",
+    period: "2026.03 – 2026.04",
+    tags: ["협업 관리", "대시보드", "Team Project"],
+    desc: "팀원 간 업무를 생성·관리·공유하는 협업형 태스크 관리 서비스입니다. 태그·컬러칩·상태 뱃지·대시보드 제목·로고, 할 일 생성/수정 모달 UI, 마이페이지, 404 페이지, 페이지네이션을 담당했습니다.",
+    slug: "TASKIFY",
+    tone: "pink",
+    href: "https://github.com/sprint22-part3-Team3/Taskify_Front",
+  },
+  {
+    title: "Coworkers",
+    period: "2026.04 – 2026.05",
+    tags: ["To do list", "Next.js", "Team Project"],
+    desc: "팀 기반 To do list, 할 일 관리, 채용/홍보 기능을 묶은 협업 플랫폼입니다. 팀장으로 랜딩 페이지, 로그인, 마이히스토리 화면을 맡아 서비스 진입 경험과 개인 작업 흐름을 설계했습니다.",
+    slug: "COWORKERS",
+    tone: "lavender",
+    href: "https://github.com/part4-3team/Coworkers",
+  },
   {
     title: "쉐브론",
     period: "2024.10 – 2025.10",
@@ -151,19 +176,22 @@ export const STACKS = [
     category: "Language",
     items: ["TypeScript", "JavaScript", "HTML5", "CSS3"],
   },
-  { category: "Framework", items: ["Next.js", "React", "Bootstrap"] },
-  { category: "Styling", items: ["Tailwind CSS", "반응형 웹", "UI/UX 디자인"] },
+  { category: "Framework", items: ["React", "Next.js"] },
+  { category: "Styling", items: ["Tailwind CSS", "반응형 퍼블리싱", "UI/UX 설계"] },
   {
     category: "Tool",
-    items: ["Figma", "Adobe Photoshop", "Illustrator", "Git"],
+    items: ["Figma", "Adobe Photoshop", "Illustrator"],
   },
   {
-    category: "State / Form",
-    items: ["TanStack Query", "Zod", "React Hook Form"],
+    category: "Workflow",
+    items: ["Git", "AI Codex", "Claude Code"],
   },
   {
     category: "Education",
-    items: ["코드잇 부트캠프(2025–2026)", "MBC 웹퍼블리셔 과정(2024)"],
+    items: [
+      "Codeit Frontend Bootcamp (2025.11–2026.05)",
+      "Cut above academy, Digital Design (2018.05–2019.03)",
+    ],
   },
 ];
 

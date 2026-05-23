@@ -17,7 +17,7 @@ export default function WindowChrome({ app, children, onClose }: Props) {
     <section
       className={cn(
         "absolute left-1/2 top-1/2 z-30 -translate-x-1/2 -translate-y-1/2 overflow-hidden",
-        "border-2 border-white bg-win-surface p-3 shadow-[0_0_10px_rgba(0,0,0,0.25)]",
+        "border-2 border-white bg-win-surface shadow-[0_0_10px_rgba(0,0,0,0.25)]",
         WINDOW_SIZE_CLASS[app],
       )}
     >
@@ -40,7 +40,7 @@ export default function WindowChrome({ app, children, onClose }: Props) {
           </div>
         </div>
 
-        <div className="min-h-0 flex-1 overflow-hidden bg-win-surface p-3">
+        <div className="min-h-0 flex-1 overflow-hidden bg-win-surface">
           <div className="h-full overflow-hidden border border-white/70 bg-white shadow-[inset_0_1px_0_rgba(255,255,255,0.7)]">
             {children}
           </div>

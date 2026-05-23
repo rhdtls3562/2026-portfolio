@@ -35,7 +35,9 @@ export default function EmailsWindow() {
       <PlmWindowNav active="Contact" />
 
       <section className="plm-grid-base relative overflow-hidden px-12 py-12">
-        <span className="decor-float absolute right-12 top-8 text-[2.5rem] text-black/10">✉</span>
+        <span className="decor-float absolute right-12 top-8 text-[2.5rem] text-black/10">
+          ✉
+        </span>
         <span className="decor-float-slow decor-delay-1 absolute right-28 top-20 font-mono text-[1rem] font-black text-blue-400/30">
           {"@"}
         </span>
@@ -49,7 +51,7 @@ export default function EmailsWindow() {
           <br />
           <span className="relative inline-block">
             <span className="relative z-10">something together</span>
-            <span className="plm-highlight-blue absolute inset-x-0 bottom-1 -z-0 h-4 rounded-sm" />
+            <span className="plm-highlight-blue absolute inset-x-0 bottom-1 z-0 h-4 rounded-sm" />
           </span>
         </h2>
 
@@ -102,9 +104,19 @@ export default function EmailsWindow() {
       <section className="plm-grid-dense px-12 py-10">
         <div className="grid grid-cols-3 gap-4">
           {CONTACT_TOPIC_ITEMS.map((item) => (
-            <article key={item.title} className={cn("rounded-[24px] border px-5 py-6", item.cardClassName)}>
-              <p className="text-[0.82rem] font-black text-black">{item.title}</p>
-              <p className="mt-3 text-[0.72rem] leading-[1.7] text-[#666]">{item.description}</p>
+            <article
+              key={item.title}
+              className={cn(
+                "rounded-[24px] border px-5 py-6",
+                item.cardClassName,
+              )}
+            >
+              <p className="text-[0.82rem] font-black text-black">
+                {item.title}
+              </p>
+              <p className="mt-3 text-[0.72rem] leading-[1.7] text-[#666]">
+                {item.description}
+              </p>
             </article>
           ))}
         </div>

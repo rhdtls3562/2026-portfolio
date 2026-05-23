@@ -18,21 +18,21 @@ export const CAREER_ITEMS = [
   {
     period: "2024.10 – 2025.10",
     company: "쉐브론",
-    role: "웹퍼블리싱 · UI/UX 디자인",
+    role: "웹퍼블리싱 · 웹디자인",
     cardClassName: "bg-[#fff4f8]",
     dotClassName: "bg-[#f48fb1]",
   },
   {
     period: "2023.11 – 2024.09",
     company: "피알몽땅",
-    role: "웹디자인 · 서비스 기획 (대리)",
+    role: "웹서비스기획 · 모바일기획 · UI 설계 및 디자인",
     cardClassName: "bg-[#fff9eb]",
     dotClassName: "bg-[#ffd54f]",
   },
   {
     period: "2022.01 – 2023.10",
     company: "엔클레어 / 댕댕펫",
-    role: "웹디자인 (프리랜서)",
+    role: "웹디자이너 · 프리랜서",
     cardClassName: "bg-[#eef9f0]",
     dotClassName: "bg-[#81c784]",
   },
@@ -45,15 +45,15 @@ export const CAREER_ITEMS = [
   },
   {
     period: "2020.05 – 2021.05",
-    company: "서연성형외과",
-    role: "웹디자인 · BI",
+    company: "SY(서연)성형외과",
+    role: "웹배너제작 · 웹디자인",
     cardClassName: "bg-[#eef6ff]",
     dotClassName: "bg-[#64b5f6]",
   },
   {
     period: "2019.05 – 2020.05",
-    company: "수디자인광고기획",
-    role: "웹디자인 · 옥외광고",
+    company: "SU디자인 광고기획사",
+    role: "옥외광고디자인",
     cardClassName: "bg-[#f6f6f6]",
     dotClassName: "bg-[#bdbdbd]",
   },
@@ -61,11 +61,18 @@ export const CAREER_ITEMS = [
 
 export const CERTIFICATION_ITEMS = [
   {
-    year: "2025–2026",
-    title: "코드잇 프론트엔드 개발자 부트캠프 수료",
-    description: "'흠잡을 곳이 없다' 평가 · 팀 프로젝트 팀장 2회",
+    year: "2025.11–2026.05",
+    title: "Codeit Frontend 개발자 부트캠프",
+    description: "6개월 과정 수료 · 팀 프로젝트 팀장 2회",
     cardClassName: "bg-[#fff4f8]",
     yearClassName: "border-[#f4cade] bg-white text-[#c2185b]",
+  },
+  {
+    year: "2018.05–2019.03",
+    title: "Cut above academy, Digital Design",
+    description: "뉴질랜드 유학 · 디지털 디자인 전공",
+    cardClassName: "bg-[#eef9f0]",
+    yearClassName: "border-[#cde8d0] bg-white text-[#2e7d32]",
   },
   {
     year: "2024.07",
@@ -77,26 +84,44 @@ export const CERTIFICATION_ITEMS = [
   {
     year: "2018.03",
     title: "IELTS 6.0 취득",
-    description: "Cut above academy, New Zealand",
+    description: "NZ school of tourism 교내 자체시험",
     cardClassName: "bg-[#eef6ff]",
     yearClassName: "border-[#cde2fb] bg-white text-[#1565c0]",
   },
 ] as const;
 
-export const SOCIAL_PRESENCE_ITEMS = [
+export const ABOUT_GLANCE_ITEMS = [
   {
-    title: "Code archive",
-    description: "구현 결과와 코드 기록, 작업 맥락이 가장 빠르게 쌓이는 공간입니다.",
+    title: "Frontend Developer · Web Publisher",
+    description: "현재 지원 분야와 가장 가까운 정체성을 한 줄로 정리한 프로필 요약입니다.",
     cardClassName: "border-[#f5d5e3] bg-[#fff5f9]",
   },
   {
-    title: "Portfolio showcase",
-    description: "완성된 결과물을 시각적으로 정리한 포트폴리오 아카이브를 보여줍니다.",
+    title: "5 years 6 months",
+    description: "웹디자인, 웹퍼블리싱, 서비스 기획을 넘나들며 실무 경력을 쌓아왔습니다.",
     cardClassName: "border-[#d8ecda] bg-[#f3fbf4]",
   },
   {
-    title: "Process notes",
-    description: "작업 메모, 회고, 프론트엔드 학습 기록을 꾸준히 남기는 로그입니다.",
+    title: "Design background",
+    description: "예술고와 뉴질랜드 디지털 디자인 전공을 기반으로 시각적 완성도를 다집니다.",
+    cardClassName: "border-[#ddd0f4] bg-[#f7f3fd]",
+  },
+] as const;
+
+export const SKILL_HIGHLIGHT_ITEMS = [
+  {
+    title: "Responsive publishing",
+    description: "브랜드 화면을 디바이스에 맞게 자연스럽게 재구성하는 퍼블리싱 역량",
+    cardClassName: "border-[#f5d5e3] bg-[#fff5f9]",
+  },
+  {
+    title: "UI system thinking",
+    description: "컴포넌트 단위로 구조를 정리하고 반복 가능한 화면 패턴을 만드는 방식",
+    cardClassName: "border-[#d8ecda] bg-[#f3fbf4]",
+  },
+  {
+    title: "AI-assisted workflow",
+    description: "Codex, Claude Code 같은 도구를 실제 작업 흐름에 통합하는 습관",
     cardClassName: "border-[#ddd0f4] bg-[#f7f3fd]",
   },
 ] as const;

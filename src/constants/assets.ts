@@ -14,6 +14,7 @@ export const images = {
   imgDesktop: "/asset/img/img_desktop.png",
   imgMain: "/asset/img/img_main.jpg",
   imgProfile: "/asset/img/img_profile.png",
+  imgProfileBlack: "/asset/img/img_profile_black.png",
   imgBts: "/asset/img/img_beautyst.png",
   imgCoworkers: "/asset/img/img_coworkers.png",
 } as const;
