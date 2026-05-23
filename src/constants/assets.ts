@@ -17,4 +17,16 @@ export const images = {
   imgProfileBlack: "/asset/img/img_profile_black.png",
   imgBts: "/asset/img/img_beautyst.png",
   imgCoworkers: "/asset/img/img_coworkers.png",
+  imgCoworkersBrowser: "/asset/img/img_coworkers_browser.png",
+  imgTaskifyBrowser: "/asset/img/img_taskify_browser.png",
+  imgBtsBrowser: "/asset/img/img_bts_browser.png",
+  imgPrBrowser: "/asset/img/img_pr_browser.jpg",
+  imgDangBrowser: "/asset/img/img_dang_browser.jpg",
+  imgSevenBrowser: "/asset/img/img_seven_browser.jpg",
+  imgSyBrowser: "/asset/img/img_sy_browser.jpg",
+  imgSuBrowser: "/asset/img/img_su_browser.jpg",
+} as const;
+
+export const documents = {
+  recommendationPdf: "/asset/pdf/kwon-saerom-recommendation.pdf",
 } as const;

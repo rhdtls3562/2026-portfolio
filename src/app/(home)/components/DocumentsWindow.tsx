@@ -58,10 +58,11 @@ export default function DocumentsWindow() {
           ))}
         </div>
 
-        <p className="mt-5 max-w-[40rem] text-[0.82rem] leading-[1.8] text-[#676767]">
-          실무 프로젝트와 부트캠프 팀 프로젝트를 함께 모아두었습니다. 패션,
-          뷰티, 의료, 반려동물 분야 실무 경험부터 협업형 웹 서비스 구현 경험까지
-          한눈에 보이도록 프로젝트 중심으로 정리한 섹션입니다.
+        <p className="mt-5 max-w-160 text-[0.82rem] leading-[1.8] text-[#676767]">
+          실무 프로젝트와 부트캠프 팀 프로젝트를 함께 모아두었습니다.
+          <br />
+          실무 경험부터 협업형 웹 서비스 구현 경험까지 한눈에 보이도록 프로젝트
+          중심으로 정리한 섹션입니다.
         </p>
       </section>
 
@@ -86,8 +87,6 @@ export default function DocumentsWindow() {
           ))}
         </div>
       </section>
-
-      <div className="h-8" />
     </div>
   );
 }

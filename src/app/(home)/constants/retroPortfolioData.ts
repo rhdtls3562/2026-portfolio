@@ -1,5 +1,6 @@
 /** 레트로 포트폴리오 데스크톱에서 사용하는 공통 데이터와 상태 타입을 정의한다. */
-import { icons } from "@/constants/ASSETS";
+import { documents, icons, images } from "@/constants/ASSETS";
+import { getNaverMailComposeHref } from "@/constants/NAVER_MAIL";
 
 export const EMAIL = "rhdtls3562@naver.com";
 
@@ -84,7 +85,16 @@ export const LINKS: LinkItem[] = [
     href: "https://www.notion.so/2c40e03e823180ce9101f3db7c90bf27?v=2c40e03e8231811a8782000c92cceef9",
     note: "작업 메모와 회고 정리",
   },
-  { label: "Mail", href: `mailto:${EMAIL}`, note: "협업 문의와 연락" },
+  {
+    label: "Mail",
+    href: getNaverMailComposeHref({ to: EMAIL }),
+    note: "협업 문의와 연락",
+  },
+  {
+    label: "추천서",
+    href: documents.recommendationPdf,
+    note: "추천서 정리",
+  },
 ];
 
 export type Project = {
@@ -95,17 +105,23 @@ export type Project = {
   slug: string;
   tone: ProjectTone;
   href?: string;
+  imageAlt?: string;
+  imageSizes?: string;
+  imageSrc?: string;
 };
 
 export const PROJECTS: Project[] = [
   {
-    title: "Taskify",
-    period: "2026.03 – 2026.04",
-    tags: ["협업 관리", "대시보드", "Team Project"],
-    desc: "팀원 간 업무를 생성·관리·공유하는 협업형 태스크 관리 서비스입니다. 태그·컬러칩·상태 뱃지·대시보드 제목·로고, 할 일 생성/수정 모달 UI, 마이페이지, 404 페이지, 페이지네이션을 담당했습니다.",
-    slug: "TASKIFY",
+    title: "Chavron",
+    period: "2024.10 – 2025.10",
+    tags: ["UI/UX", "반응형 퍼블리싱"],
+    desc: "아모레퍼시픽 BTS·챗봇·립AR·두피진단 서비스 UI/UX 디자인 및 반응형 웹 퍼블리싱 담당",
+    slug: "CHEVRON",
     tone: "pink",
-    href: "https://github.com/sprint22-part3-Team3/Taskify_Front",
+    href: "https://buly.kr/jbS2Pq",
+    imageSrc: images.imgBtsBrowser,
+    imageAlt: "쉐브론 BTS 프로젝트 대표 이미지",
+    imageSizes: "(max-width: 1024px) 50vw, 320px",
   },
   {
     title: "Coworkers",
@@ -115,22 +131,33 @@ export const PROJECTS: Project[] = [
     slug: "COWORKERS",
     tone: "lavender",
     href: "https://github.com/part4-3team/Coworkers",
+    imageSrc: images.imgCoworkersBrowser,
+    imageAlt: "Coworkers 프로젝트 대표 이미지",
+    imageSizes: "(max-width: 1024px) 50vw, 320px",
   },
   {
-    title: "쉐브론",
-    period: "2024.10 – 2025.10",
-    tags: ["UI/UX", "반응형 퍼블리싱"],
-    desc: "아모레퍼시픽 BTS·챗봇·립AR·두피진단 서비스 UI/UX 디자인 및 반응형 웹 퍼블리싱 담당",
-    slug: "CHEVRON",
+    title: "Taskify",
+    period: "2026.03 – 2026.04",
+    tags: ["협업 관리", "대시보드", "Team Project"],
+    desc: "팀원 간 업무를 생성·관리·공유하는 협업형 태스크 관리 서비스입니다. 태그·컬러칩·상태 뱃지·대시보드 제목·로고, 할 일 생성/수정 모달 UI, 마이페이지, 404 페이지, 페이지네이션을 담당했습니다.",
+    slug: "TASKIFY",
     tone: "pink",
+    href: "https://github.com/sprint22-part3-Team3/Taskify_Front",
+    imageSrc: images.imgTaskifyBrowser,
+    imageAlt: "Taskify 프로젝트 대표 이미지",
+    imageSizes: "(max-width: 1024px) 50vw, 320px",
   },
+
   {
     title: "피알몽땅",
     period: "2023.11 – 2024.09",
-    tags: ["Figma", "웹디자인", "팀 리드"],
+    tags: ["Figma", "웹디자인", "UI/UX 기획"],
     desc: "브랜드 아이덴티티 설계부터 웹 퍼블리싱까지 전체 디자인 프로세스 주도. 웹서비스 기획 및 UI 설계",
     slug: "PRMONTDANG",
     tone: "butter",
+    imageSrc: images.imgPrBrowser,
+    imageAlt: "피알몽땅 대표 이미지",
+    imageSizes: "(max-width: 1024px) 50vw, 320px",
   },
   {
     title: "엔클레어 / 댕댕펫",
@@ -139,14 +166,20 @@ export const PROJECTS: Project[] = [
     desc: "뷰티·반려동물 브랜드 온라인 마케팅 콘텐츠 기획 및 제작, 웹 페이지 디자인",
     slug: "ENCLAIR / DDANGPET",
     tone: "mint",
+    imageSrc: images.imgDangBrowser,
+    imageAlt: "댕댕펫 대표 이미지",
+    imageSizes: "(max-width: 1024px) 50vw, 320px",
   },
   {
-    title: "하이어랭크",
-    period: "2021.06 – 2021.12",
-    tags: ["UI/UX디자인", "패션브랜드"],
-    desc: "형지그룹 엘리트·까스텔바작·올리비아허슬러 패션 브랜드 웹 서비스 기획 및 UI/UX 디자인",
-    slug: "HIGHERRANK",
+    title: "Sevenzero",
+    period: "2021.06 – 2021.08",
+    tags: ["UI/UX디자인", "웹퍼블리싱"],
+    desc: "Ai 이미지 제작 사이트 Ginigen의 디자인 및 퍼블리싱",
+    slug: "SEVENZERO",
     tone: "lavender",
+    imageSrc: images.imgSevenBrowser,
+    imageAlt: "지니젠 대표 이미지",
+    imageSizes: "(max-width: 1024px) 50vw, 320px",
   },
   {
     title: "서연성형외과",
@@ -155,6 +188,9 @@ export const PROJECTS: Project[] = [
     desc: "병원 BI를 반영한 홈페이지 디자인 및 유지보수, 이벤트 배너·온라인 홍보물 제작",
     slug: "SEOYEON CLINIC",
     tone: "blue",
+    imageSrc: images.imgSyBrowser,
+    imageAlt: "서연성형외과 대표 이미지",
+    imageSizes: "(max-width: 1024px) 50vw, 320px",
   },
   {
     title: "수디자인광고기획",
@@ -163,6 +199,9 @@ export const PROJECTS: Project[] = [
     desc: "다양한 클라이언트의 웹사이트 디자인 및 옥외광고 디자인으로 실무 역량 기초 확립",
     slug: "SU DESIGN",
     tone: "cloud",
+    imageSrc: images.imgSuBrowser,
+    imageAlt: "수디자인 대표 이미지",
+    imageSizes: "(max-width: 1024px) 50vw, 320px",
   },
 ];
 

@@ -3,6 +3,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import DesktopFolderShortcut from "@/app/(home)/components/DesktopFolderShortcut";
 import { images } from "@/constants/ASSETS";
 import { DECO_ITEMS } from "@/app/(home)/constants/monitorDesktopArtboardData";
 import { cn } from "@/utils/cn";
@@ -15,93 +16,18 @@ type Props = {
   isWindowOpen: boolean;
 };
 
-type DesktopFolderShortcutProps = {
-  alt: string;
-  href?: string;
-  label: string;
-  note?: string;
-  labelPosition: "top" | "bottom";
-  src: string;
-  width: number;
-  height: number;
-  shadowClassName: string;
-  wrapperClassName: string;
-};
-
-function DesktopFolderShortcut({
-  alt,
-  href,
-  label,
-  note,
-  labelPosition,
-  src,
-  width,
-  height,
-  shadowClassName,
-  wrapperClassName,
-}: DesktopFolderShortcutProps) {
-  const shortcutClassName = cn(
-    "absolute z-20 flex items-center gap-2",
-    labelPosition === "top" ? "flex-col" : "flex-col-reverse",
-    href
-      ? "pointer-events-auto transition-transform duration-150 hover:-translate-y-1"
-      : "pointer-events-none",
-    wrapperClassName,
-  );
-
-  const shortcutContent = (
-    <>
-      <div className="flex flex-col items-center gap-1">
-        <p className="text-xs font-medium tracking-[0.04em] text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.7)]">
-          {label}
-        </p>
-        {note ? (
-          <p className="text-sm font-medium italic tracking-[0.06em] text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.7)]">
-            {note}
-          </p>
-        ) : null}
-      </div>
-      <div className="relative">
-        <div
-          aria-hidden="true"
-          className={cn(
-            "absolute left-1/2 top-[78%] -z-10 -translate-x-1/2 rounded-full bg-slate-950/35 blur-xl",
-            shadowClassName,
-          )}
-        />
-        <Image
-          src={src}
-          alt={alt}
-          width={width}
-          height={height}
-          className="max-w-none drop-shadow-md"
-        />
-      </div>
-    </>
-  );
-
-  if (href) {
-    return (
-      <a
-        href={href}
-        target="_blank"
-        rel="noreferrer"
-        aria-label={`${alt} 외부 사이트 열기`}
-        className={shortcutClassName}
-      >
-        {shortcutContent}
-      </a>
-    );
-  }
-
-  return <div className={shortcutClassName}>{shortcutContent}</div>;
-}
-
 export default function MonitorDesktopArtboard({
   isTitleAnimating,
   isWindowOpen,
 }: Props) {
+  const [activePreviewKey, setActivePreviewKey] = useState<string | null>(null);
   const [typedTitle, setTypedTitle] = useState("");
+
+  const handleTogglePreview = (itemKey: string) => {
+    setActivePreviewKey((currentKey) =>
+      currentKey === itemKey ? null : itemKey,
+    );
+  };
 
   useEffect(() => {
     if (!isTitleAnimating) return;
@@ -132,6 +58,7 @@ export default function MonitorDesktopArtboard({
   }, [isTitleAnimating]);
 
   const isTyping = isTitleAnimating && typedTitle.length < TITLE_TEXT.length;
+  const visiblePreviewKey = isWindowOpen ? null : activePreviewKey;
 
   return (
     <>
@@ -177,20 +104,16 @@ export default function MonitorDesktopArtboard({
 
       {DECO_ITEMS.map((item) => (
         <div
-          key={item.alt}
-          className={cn("transition-opacity duration-200", isWindowOpen ? "opacity-0" : "opacity-100")}
+          key={item.key}
+          className={cn(
+            "transition-opacity duration-200",
+            isWindowOpen ? "pointer-events-none opacity-0" : "opacity-100",
+          )}
         >
           <DesktopFolderShortcut
-            alt={item.alt}
-            href={item.href}
-            label={item.label}
-            note={item.note}
-            labelPosition={item.labelPosition}
-            src={item.src}
-            width={item.width}
-            height={item.height}
-            shadowClassName={item.shadowClassName}
-            wrapperClassName={item.position}
+            isPreviewVisible={visiblePreviewKey === item.key}
+            item={item}
+            onTogglePreview={handleTogglePreview}
           />
         </div>
       ))}

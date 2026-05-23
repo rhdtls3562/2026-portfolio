@@ -11,6 +11,7 @@ import WindowChrome from "@/app/(home)/components/WindowChrome";
 import {
   DESKTOP_APPS,
   type AppKey,
+  WINDOW_TITLE,
 } from "@/app/(home)/constants/retroPortfolioData";
 import { cn } from "@/utils/cn";
 
@@ -59,11 +60,14 @@ export default function MonitorDesktop({
             onClick={() => onOpenApp(app.key)}
             aria-label={app.label}
             className={cn(
-              "relative flex flex-col items-center transition-all duration-150",
+              "group relative flex flex-col items-center outline-none transition-all duration-150",
               "hover:-translate-y-1 hover:scale-110",
               activeApp === app.key ? "-translate-y-0.5 scale-110" : "",
             )}
           >
+            <span className="pointer-events-none absolute -top-11 left-1/2 -translate-x-1/2 rounded-full bg-black/80 px-3 py-1 font-mono text-[11px] font-semibold tracking-[0.14em] text-white opacity-0 shadow-lg transition-opacity duration-150 group-focus-visible:opacity-100 group-hover:opacity-100">
+              {WINDOW_TITLE[app.key]}
+            </span>
             <Image
               src={app.icon}
               alt=""

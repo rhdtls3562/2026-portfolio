@@ -2,6 +2,7 @@
 import { icons, images } from "@/constants/ASSETS";
 
 export type DecoItem = {
+  key: string;
   alt: string;
   label: string;
   note?: string;
@@ -12,54 +13,100 @@ export type DecoItem = {
   height: number;
   labelPosition: "top" | "bottom";
   shadowClassName: string;
+  preview?: {
+    alt: string;
+    fileLabel: string;
+    src: string;
+    sizes: string;
+    width: number;
+    height: number;
+    wrapperClassName?: string;
+  };
 };
 
 export const DECO_ITEMS: DecoItem[] = [
   {
+    key: "web-publishing-folder",
     alt: "Web Publishing",
     label: "Web Publishing",
     src: icons.iconFolder,
-    href: "https://example.com/web-publishing",
     position: "left-[5%] top-[20%]",
     width: 148,
     height: 119,
     labelPosition: "bottom",
     shadowClassName: "h-4 w-28",
+    preview: {
+      alt: "Web Publishing 폴더 미리보기",
+      fileLabel: "img_seven_browser.jpg",
+      src: images.imgSevenBrowser,
+      sizes: "177px",
+      width: 177,
+      height: 118,
+      wrapperClassName: "-rotate-3",
+    },
   },
   {
+    key: "other-designs-folder",
     alt: "Other Designs",
     label: "Other Designs",
     src: icons.iconFolder,
-    href: "https://example.com/other-designs",
     position: "right-[6%] top-[17%]",
     width: 70,
     height: 56,
     labelPosition: "bottom",
     shadowClassName: "h-5 w-32",
+    preview: {
+      alt: "Other Designs 폴더 미리보기",
+      fileLabel: "img_dang_browser.jpg",
+      src: images.imgDangBrowser,
+      sizes: "165px",
+      width: 165,
+      height: 110,
+      wrapperClassName: "rotate-3",
+    },
   },
   {
+    key: "web-design-folder",
     alt: "Web Design",
     label: "Web Design",
     src: icons.iconFolder,
-    href: "https://example.com/web-design",
     position: "left-[10%] bottom-[10%]",
     width: 70,
     height: 56,
     labelPosition: "bottom",
     shadowClassName: "h-6 w-40",
+    preview: {
+      alt: "Web Design 폴더 미리보기",
+      fileLabel: "img_pr_browser.jpg",
+      src: images.imgPrBrowser,
+      sizes: "168px",
+      width: 168,
+      height: 112,
+      wrapperClassName: "-rotate-2",
+    },
   },
   {
+    key: "frontend-folder",
     alt: "Frontend",
     label: "Frontend",
     src: icons.iconFolder,
-    href: "https://example.com/frontend",
     position: "right-[5%] bottom-[10%]",
     width: 148,
     height: 119,
     labelPosition: "bottom",
     shadowClassName: "h-6 w-40",
+    preview: {
+      alt: "Frontend 폴더 미리보기",
+      fileLabel: "img_taskify_browser.png",
+      src: images.imgTaskifyBrowser,
+      sizes: "186px",
+      width: 186,
+      height: 117,
+      wrapperClassName: "rotate-2",
+    },
   },
   {
+    key: "bts-project",
     alt: "BTS Project",
     label: "BTS Project",
     src: images.imgBts,
@@ -71,6 +118,7 @@ export const DECO_ITEMS: DecoItem[] = [
     shadowClassName: "h-6 w-40",
   },
   {
+    key: "coworkers-project",
     alt: "Coworkers Project",
     label: "Coworkers Project",
     src: images.imgCoworkers,
@@ -82,6 +130,7 @@ export const DECO_ITEMS: DecoItem[] = [
     shadowClassName: "h-6 w-40",
   },
   {
+    key: "hello-icon",
     alt: "Hello",
     label: "",
     src: icons.iconHello,

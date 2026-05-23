@@ -14,12 +14,12 @@ import { images } from "@/constants/ASSETS";
 import { cn } from "@/utils/cn";
 
 const TICKER_ITEMS = [
-  "React",
-  "Next.js",
-  "Tailwind",
-  "Typescript",
-  "Storybook",
-  "Figma",
+  "디자인",
+  "기획",
+  "웹퍼블리싱",
+  "프론트개발",
+  "까지 가능한 저",
+  "탐나지 않으신가요",
 ];
 
 const LINK_TONES = [
@@ -57,7 +57,7 @@ export default function ReadmeWindow() {
               .
             </h1>
             <p className="mt-6 max-w-[28rem] text-[0.85rem] leading-[1.85] text-[#666]">
-              웹디자인과 퍼블리싱 실무 5년 6개월을 바탕으로 프론트엔드 개발자로
+              웹디자인과 퍼블리싱 실무 약 6년을 바탕으로 프론트엔드 개발자로
               <br />
               확장하고 있습니다. 디자인 의도를 코드로 정확히 옮기고, 사용자
               흐름과
@@ -86,10 +86,9 @@ export default function ReadmeWindow() {
             <Image
               src={images.imgProfileBlack}
               alt="권새롬 프로필"
-              width={300}
-              height={0}
-              style={{ height: "auto" }}
-              className="w-[300px]"
+              width={1122}
+              height={1402}
+              className="h-auto w-[300px]"
             />
           </div>
         </div>
@@ -97,7 +96,7 @@ export default function ReadmeWindow() {
 
       <PlmTickerBand items={TICKER_ITEMS} tone="pink" />
 
-      <section className="grid grid-cols-[1.05fr_0.95fr] gap-8 px-12 py-12">
+      <section className="grid grid-cols-[1.05fr_0.95fr] gap-7 px-12 py-12">
         <div>
           <p className="mb-5 text-[0.62rem] font-black uppercase tracking-[0.22em] text-[#c2c2c2]">
             Quick links

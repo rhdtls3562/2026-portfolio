@@ -1,4 +1,5 @@
 /** 프로젝트 카드 한 장을 렌더링한다. */
+import Image from "next/image";
 import {
   type Project,
   type ProjectTone,
@@ -35,6 +36,21 @@ export default function ProjectCard({ project }: Props) {
           PROJECT_TONES[project.tone],
         )}
       >
+        {project.imageSrc ? (
+          <>
+            <Image
+              src={project.imageSrc}
+              alt={project.imageAlt ?? `${project.title} 프로젝트 이미지`}
+              fill
+              sizes={project.imageSizes ?? "(max-width: 1024px) 50vw, 320px"}
+              className="object-cover object-center"
+            />
+            <div
+              aria-hidden="true"
+              className="absolute inset-0 bg-linear-to-t from-black/18 via-transparent to-white/10"
+            />
+          </>
+        ) : null}
         <span className="absolute left-5 top-4 font-mono text-[1.7rem] font-black text-black/10">
           {"</>"}
         </span>

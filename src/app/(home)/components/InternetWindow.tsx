@@ -29,10 +29,10 @@ export default function InternetWindow() {
       <PlmWindowNav active="Skill" />
 
       <section className="plm-grid-base relative overflow-hidden px-12 py-12">
-        <span className="decor-float absolute right-12 top-8 text-[2rem] text-purple-400/25">
+        <span className="decor-float absolute right-20 top-8 text-[2rem] text-black/10">
           ★
         </span>
-        <span className="decor-float-slow decor-delay-2 absolute right-10 top-18 font-mono text-[0.95rem] font-black text-purple-400/25">
+        <span className="decor-float-slow decor-delay-2 absolute right-30 top-25 font-mono text-[3rem] font-black text-purple-400/25">
           {"{ }"}
         </span>
 
@@ -40,7 +40,7 @@ export default function InternetWindow() {
           Skill
         </span>
 
-        <h2 className="mt-5 text-[2.55rem] font-black leading-[1.02] tracking-[-0.05em]">
+        <h2 className="mt-5 text-[2.55rem] font-black leading-[1.02] tracking-[-0.02em]">
           Skills I use
           <br />
           <span className="relative inline-block">
@@ -49,9 +49,12 @@ export default function InternetWindow() {
           </span>
         </h2>
 
-        <p className="mt-5 max-w-[34rem] text-[0.82rem] leading-[1.8] text-[#666]">
-          실무와 프로젝트에서 반복해서 사용한 기술을 카테고리별로 나눠 정리했습니다.
-          구현 기술뿐 아니라 퍼블리싱, UI 구조화, 협업 방식까지 함께 보이도록 구성한 창입니다.
+        <p className="mt-5 max-w-136 text-[0.82rem] leading-[1.8] text-[#666]">
+          실무와 프로젝트에서 반복해서 사용한 기술을 카테고리별로 나눠
+          정리했습니다.
+          <br />
+          구현 기술뿐 아니라 퍼블리싱, UI 구조화, 협업 방식까지 함께 보이도록
+          구성한 창입니다.
         </p>
       </section>
 
@@ -66,7 +69,7 @@ export default function InternetWindow() {
             <article
               key={stack.category}
               className={cn(
-                "rounded-[24px] border px-6 py-5",
+                "rounded-3xl border px-6 py-5",
                 STACK_TONES[index % STACK_TONES.length],
               )}
             >
@@ -89,10 +92,7 @@ export default function InternetWindow() {
           {SKILL_HIGHLIGHT_ITEMS.map((item) => (
             <article
               key={item.title}
-              className={cn(
-                "rounded-[24px] border px-5 py-6",
-                item.cardClassName,
-              )}
+              className={cn("rounded-3xl border px-5 py-6", item.cardClassName)}
             >
               <p className="text-[0.82rem] font-black text-black">
                 {item.title}
@@ -104,8 +104,6 @@ export default function InternetWindow() {
           ))}
         </div>
       </section>
-
-      <div className="h-8" />
     </div>
   );
 }

@@ -1,8 +1,10 @@
 /** 연락처와 메일 CTA를 보여주는 섹션 컴포넌트. */
 import Image from "next/image";
 import { icons, images } from "@/constants/ASSETS";
+import { getNaverMailComposeHref } from "@/constants/NAVER_MAIL";
 
 const EMAIL = "rhdtls3562@naver.com";
+const NAVER_MAIL_HREF = getNaverMailComposeHref({ to: EMAIL });
 
 export default function MailSection() {
   return (
@@ -46,7 +48,9 @@ export default function MailSection() {
 
           {/* 이메일 링크 */}
           <a
-            href={`mailto:${EMAIL}`}
+            href={NAVER_MAIL_HREF}
+            target="_blank"
+            rel="noreferrer"
             className="group inline-flex items-center gap-3 border border-(--color-gold)/40 hover:border-(--color-gold) px-8 py-4 transition-all duration-300 hover:bg-(--color-gold)/5"
           >
             <span className="text-(--color-text-secondary) group-hover:text-(--color-gold) text-sm tracking-widest transition-colors duration-300">
@@ -59,7 +63,12 @@ export default function MailSection() {
 
           {/* 버튼 이미지 사용 */}
           <div className="mt-16 flex justify-center">
-            <a href={`mailto:${EMAIL}`} className="group block relative">
+            <a
+              href={NAVER_MAIL_HREF}
+              target="_blank"
+              rel="noreferrer"
+              className="group block relative"
+            >
               <Image
                 src={images.imgButtonOn}
                 alt="메일 보내기"

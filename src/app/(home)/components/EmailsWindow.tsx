@@ -6,6 +6,7 @@ import PlmTickerBand from "@/app/(home)/components/PlmTickerBand";
 import PlmWindowNav from "@/app/(home)/components/PlmWindowNav";
 import { CONTACT_TOPIC_ITEMS } from "@/app/(home)/constants/WINDOW_CONTENT";
 import { EMAIL } from "@/app/(home)/constants/retroPortfolioData";
+import { getNaverMailComposeHref } from "@/constants/NAVER_MAIL";
 import { cn } from "@/utils/cn";
 
 const TICKER_ITEMS = [
@@ -19,6 +20,10 @@ const TICKER_ITEMS = [
 
 export default function EmailsWindow() {
   const [isCopied, setIsCopied] = useState(false);
+  const naverMailHref = getNaverMailComposeHref({
+    subject: "Let's build something together",
+    to: EMAIL,
+  });
 
   const handleCopyAddress = async () => {
     try {
@@ -35,10 +40,10 @@ export default function EmailsWindow() {
       <PlmWindowNav active="Contact" />
 
       <section className="plm-grid-base relative overflow-hidden px-12 py-12">
-        <span className="decor-float absolute right-12 top-8 text-[2.5rem] text-black/10">
+        <span className="decor-float absolute right-20 top-8 text-[3rem] text-black/10">
           ✉
         </span>
-        <span className="decor-float-slow decor-delay-1 absolute right-28 top-20 font-mono text-[1rem] font-black text-blue-400/30">
+        <span className="decor-float-slow decor-delay-1 absolute right-35 top-25 font-mono text-[1.5rem] font-black text-blue-400/30">
           {"@"}
         </span>
 
@@ -46,19 +51,20 @@ export default function EmailsWindow() {
           Contact
         </span>
 
-        <h2 className="mt-5 text-[2.55rem] font-black leading-[1.04] tracking-[-0.05em]">
-          Let&apos;s build
+        <h2 className="mt-5 text-[2.55rem] font-black leading-[1.04] tracking-[-0.02em]">
+          Hybride Developer
           <br />
           <span className="relative inline-block">
-            <span className="relative z-10">something together</span>
+            <span className="relative z-10">Get yout Chance</span>
             <span className="plm-highlight-blue absolute inset-x-0 bottom-1 z-0 h-4 rounded-sm" />
           </span>
         </h2>
 
-        <p className="mt-5 max-w-[31rem] text-[0.82rem] leading-[1.8] text-[#666]">
-          새로운 프로젝트, 리디자인, 퍼블리싱 협업처럼 구체적인 논의가 필요한
-          상황이라면 메일이 가장 빠릅니다. 연락 수단과 협업 포인트만 간결하게
-          모아둔 창입니다.
+        <p className="mt-5 max-w-124 text-[0.82rem] leading-[1.8] text-[#666]">
+          기획, 디자인, 개발 가능 하이브리드 개발자 권새롬입니다. <br />
+          성실함과 Ai 친화적인 스킬을 장점으로 열심히 일하겠습니다.
+          <br />
+          지금 지점매수 하세요!!
         </p>
       </section>
 
@@ -80,7 +86,9 @@ export default function EmailsWindow() {
 
           <div className="mt-5 grid grid-cols-2 gap-3">
             <a
-              href={`mailto:${EMAIL}?subject=Let's build something together`}
+              href={naverMailHref}
+              target="_blank"
+              rel="noreferrer"
               className="rounded-full border border-[#cde2fb] bg-white px-5 py-3.5 text-center text-[0.68rem] font-black uppercase tracking-[0.15em] text-[#1565c0] transition-colors hover:bg-[#dfefff]"
             >
               Send Mail ↗
@@ -106,10 +114,7 @@ export default function EmailsWindow() {
           {CONTACT_TOPIC_ITEMS.map((item) => (
             <article
               key={item.title}
-              className={cn(
-                "rounded-[24px] border px-5 py-6",
-                item.cardClassName,
-              )}
+              className={cn("rounded-3xl border px-5 py-6", item.cardClassName)}
             >
               <p className="text-[0.82rem] font-black text-black">
                 {item.title}
@@ -121,8 +126,6 @@ export default function EmailsWindow() {
           ))}
         </div>
       </section>
-
-      <div className="h-8" />
     </div>
   );
 }

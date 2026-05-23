@@ -117,9 +117,9 @@ export const SKILL_HIGHLIGHT_ITEMS = [
     cardClassName: "border-[#f5d5e3] bg-[#fff5f9]",
   },
   {
-    title: "UI system thinking",
+    title: "Frontend Architecture",
     description:
-      "컴포넌트 단위로 구조를 정리하고 반복 가능한 화면 패턴을 만드는 방식",
+      "재사용 가능한 컴포넌트와 일관된 상태 관리 구조를 설계하며 유지보수성과 확장성을 고려한 프론트엔드 개발 방식",
     cardClassName: "border-[#d8ecda] bg-[#f3fbf4]",
   },
   {

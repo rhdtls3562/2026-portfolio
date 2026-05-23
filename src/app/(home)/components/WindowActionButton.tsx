@@ -27,8 +27,8 @@ export default function WindowActionButton({
     return (
       <a
         href={href}
-        target={href.startsWith("mailto:") ? undefined : "_blank"}
-        rel={href.startsWith("mailto:") ? undefined : "noreferrer"}
+        target="_blank"
+        rel="noreferrer"
         className={cn(BUTTON_CLASS, className)}
       >
         {children}
