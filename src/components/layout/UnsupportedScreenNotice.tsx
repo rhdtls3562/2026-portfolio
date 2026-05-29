@@ -52,10 +52,11 @@ export default function UnsupportedScreenNotice({
 
         {/* 설명 */}
         <p className="relative z-10 max-w-xs font-retro-terminal text-sm leading-relaxed text-white">
-          이 포트폴리오는
+          본 포트폴리오는
           <br />
-          데스크탑 환경에서만 관람 가능합니다.
-          <br />더 넓은 화면으로 접속해 주세요.
+          데스크톱 환경에 최적화되어 있습니다.
+          <br />
+          PC에서 열람해 주시면 감사하겠습니다.
         </p>
 
         {/* 터미널 스타일 힌트 */}
