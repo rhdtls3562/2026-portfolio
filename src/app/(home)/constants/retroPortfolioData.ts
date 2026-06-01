@@ -40,7 +40,7 @@ export const DESKTOP_APPS: DesktopApp[] = [
     icon: icons.iconMore,
     width: 81,
     height: 87,
-    imageClassName: "w-[52px] h-auto",
+    imageClassName: "w-[2.8vw] h-auto",
   },
   {
     key: "documents",
@@ -48,7 +48,7 @@ export const DESKTOP_APPS: DesktopApp[] = [
     icon: icons.iconFile,
     width: 175,
     height: 156,
-    imageClassName: "w-[63px] h-auto",
+    imageClassName: "w-[3.4vw] h-auto",
   },
   {
     key: "internet",
@@ -56,7 +56,7 @@ export const DESKTOP_APPS: DesktopApp[] = [
     icon: icons.iconEarth,
     width: 149,
     height: 149,
-    imageClassName: "w-14 h-auto",
+    imageClassName: "w-[3.1vw] h-auto",
   },
   {
     key: "emails",
@@ -64,7 +64,7 @@ export const DESKTOP_APPS: DesktopApp[] = [
     icon: icons.iconMail,
     width: 155,
     height: 159,
-    imageClassName: "w-[55px] h-auto",
+    imageClassName: "w-[3vw] h-auto",
   },
 ];
 

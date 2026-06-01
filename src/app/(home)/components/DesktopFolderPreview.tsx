@@ -7,6 +7,7 @@ type Props = {
   height: number;
   isVisible: boolean;
   sizes: string;
+  sizeClassName: string;
   src: string;
   width: number;
   wrapperClassName?: string;
@@ -17,6 +18,7 @@ export default function DesktopFolderPreview({
   height,
   isVisible,
   sizes,
+  sizeClassName,
   src,
   width,
   wrapperClassName,
@@ -42,7 +44,7 @@ export default function DesktopFolderPreview({
         width={width}
         height={height}
         sizes={sizes}
-        className="max-w-none shadow-[0_22px_40px_rgba(15,23,42,0.34)]"
+        className={cn("shadow-[0_22px_40px_rgba(15,23,42,0.34)]", sizeClassName)}
       />
     </div>
   );

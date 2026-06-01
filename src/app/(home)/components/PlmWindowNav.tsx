@@ -11,13 +11,13 @@ type Props = {
 
 export default function PlmWindowNav({ active }: Props) {
   return (
-    <nav className="sticky top-0 z-20 flex items-center justify-end border-b border-[#ebebeb] bg-white px-10 py-3">
-      <div className="flex items-center gap-7">
+    <nav className="sticky top-0 z-20 flex items-center justify-end border-b border-[#ebebeb] bg-white px-[2.8vw] py-[0.83vw]">
+      <div className="flex items-center gap-[1.9vw]">
         {NAV_ITEMS.map((item) => (
           <span
             key={item}
             className={cn(
-              "cursor-default text-[0.72rem] font-medium transition-colors",
+              "cursor-default text-[0.8vw] font-medium transition-colors",
               item === active ? "font-black text-black" : "text-[#9b9b9b]",
             )}
           >

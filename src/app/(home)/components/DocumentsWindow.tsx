@@ -27,38 +27,38 @@ export default function DocumentsWindow() {
     <div className="h-full overflow-y-auto bg-white text-black">
       <PlmWindowNav active="Project" />
 
-      <section className="plm-grid-base relative overflow-hidden px-12 py-12">
-        <span className="decor-float absolute right-15 top-10 text-[2.5rem] text-black/15">
+      <section className="plm-grid-base relative overflow-hidden px-[3.3vw] py-[3.3vw]">
+        <span className="decor-float absolute right-15 top-10 text-[2.8vw] text-black/15">
           ◈
         </span>
-        <span className="decor-float-slow decor-delay-1 absolute right-30 top-30 font-mono text-[3rem] font-black text-yellow-500/30">
+        <span className="decor-float-slow decor-delay-1 absolute right-30 top-30 font-mono text-[3.3vw] font-black text-yellow-500/30">
           {"[ ]"}
         </span>
 
-        <span className="inline-flex rounded-full border border-yellow-300 bg-[#fff9eb] px-4 py-1.5 text-[0.6rem] font-black uppercase tracking-[0.2em] text-[#d58b16]">
+        <span className="inline-flex rounded-full border border-yellow-300 bg-[#fff9eb] px-[1.1vw] py-[0.42vw] text-[0.6rem] font-black uppercase tracking-[0.2em] text-[#d58b16]">
           Portfolio
         </span>
 
-        <h2 className="mt-5 text-[2.6rem] font-black leading-none tracking-[-0.02em]">
+        <h2 className="mt-[1.4vw] text-[2.9vw] font-black leading-none tracking-[-0.02em]">
           Project{" "}
           <span className="relative inline-block">
             <span className="relative z-10">Archive</span>
-            <span className="plm-highlight-butter absolute inset-x-0 bottom-1 z-0 h-4 rounded-sm" />
+            <span className="plm-highlight-butter absolute inset-x-0 bottom-1 z-0 h-[1.1vw] rounded-sm" />
           </span>
         </h2>
 
-        <div className="mt-5 flex flex-wrap gap-2.5">
+        <div className="mt-[1.4vw] flex flex-wrap gap-[0.7vw]">
           {SUMMARY_ITEMS.map((item) => (
             <span
               key={item}
-              className="rounded-full border border-[#ece7cf] bg-white/80 px-3.5 py-1.5 text-[0.62rem] font-black uppercase tracking-[0.14em] text-[#7d7046]"
+              className="rounded-full border border-[#ece7cf] bg-white/80 px-[1vw] py-[0.42vw] text-[0.62rem] font-black uppercase tracking-[0.14em] text-[#7d7046]"
             >
               {item}
             </span>
           ))}
         </div>
 
-        <p className="mt-5 max-w-160 text-[0.82rem] leading-[1.8] text-[#676767]">
+        <p className="mt-[1.4vw] max-w-[44vw] text-[0.91vw] leading-[1.8] text-[#676767]">
           실무 프로젝트와 부트캠프 팀 프로젝트를 함께 모아두었습니다.
           <br />
           실무 경험부터 협업형 웹 서비스 구현 경험까지 한눈에 보이도록 프로젝트
@@ -68,20 +68,20 @@ export default function DocumentsWindow() {
 
       <PlmTickerBand items={TICKER_ITEMS} tone="butter" />
 
-      <section className="px-12 py-12">
-        <div className="mb-8 flex items-end justify-between gap-6">
+      <section className="px-[3.3vw] py-[3.3vw]">
+        <div className="mb-[2.2vw] flex items-end justify-between gap-[1.7vw]">
           <div>
             <p className="text-[0.62rem] font-black uppercase tracking-[0.22em] text-[#b5b5b5]">
               Project overview
             </p>
-            <p className="mt-2 text-[0.8rem] leading-[1.75] text-[#717171]">
+            <p className="mt-[0.55vw] text-[0.89vw] leading-[1.75] text-[#717171]">
               실무 중심 작업과 부트캠프 팀 프로젝트가 함께 보이도록 순서를 다시
               정리했습니다.
             </p>
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-6">
+        <div className="grid grid-cols-2 gap-[1.7vw]">
           {PROJECTS.map((project) => (
             <ProjectCard key={project.title} project={project} />
           ))}

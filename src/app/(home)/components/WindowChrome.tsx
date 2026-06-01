@@ -22,18 +22,18 @@ export default function WindowChrome({ app, children, onClose }: Props) {
       )}
     >
       <div className="flex h-full flex-col overflow-hidden border border-white/70 bg-win-surface shadow-[inset_0_1px_0_rgba(255,255,255,0.7)]">
-        <div className="flex h-10 shrink-0 items-stretch bg-linear-to-b from-win-blue to-win-blue-deep">
-          <div className="flex flex-1 items-center px-4">
-            <span className="font-retro-terminal select-none text-[0.875rem] tracking-[0.01em] text-white">
+        <div className="flex h-[2.8vw] shrink-0 items-stretch bg-linear-to-b from-win-blue to-win-blue-deep">
+          <div className="flex flex-1 items-center px-[1.1vw]">
+            <span className="font-retro-terminal select-none text-[1vw] tracking-[0.01em] text-white">
               {WINDOW_TITLE[app]}
             </span>
           </div>
-          <div className="w-10 border-l-2 border-white bg-win-surface-mid">
+          <div className="w-[2.8vw] border-l-2 border-white bg-win-surface-mid">
             <button
               type="button"
               onClick={onClose}
               aria-label={`${WINDOW_TITLE[app]} 닫기`}
-              className="flex size-full items-center justify-center font-retro-terminal text-sm leading-none text-white transition-colors hover:bg-win-accent-deep"
+              className="flex size-full items-center justify-center font-retro-terminal text-[1vw] leading-none text-white transition-colors hover:bg-win-accent-deep"
             >
               x
             </button>

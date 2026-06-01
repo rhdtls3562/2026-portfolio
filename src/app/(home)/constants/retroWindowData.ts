@@ -13,10 +13,10 @@ export type ReadmeSection = {
 };
 
 export const WINDOW_SIZE_CLASS: Record<AppKey, string> = {
-  documents: "h-[700px] w-[920px] max-h-[92%] max-w-[97%]",
-  readme: "h-[700px] w-[920px] max-h-[92%] max-w-[97%]",
-  internet: "h-[700px] w-[920px] max-h-[92%] max-w-[97%]",
-  emails: "h-[700px] w-[920px] max-h-[92%] max-w-[97%]",
+  documents: "h-[92%] w-[97%]",
+  readme: "h-[92%] w-[97%]",
+  internet: "h-[92%] w-[97%]",
+  emails: "h-[92%] w-[97%]",
 };
 
 export const README_SECTIONS: ReadmeSection[] = [

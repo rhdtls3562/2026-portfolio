@@ -21,12 +21,12 @@ function ShortcutLabel({ label, note }: Pick<DecoItem, "label" | "note">) {
   return (
     <div className="flex flex-col items-center gap-1">
       {label ? (
-        <p className="text-xs font-medium tracking-[0.04em] text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.7)]">
+        <p className="text-[0.83vw] font-medium tracking-[0.04em] text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.7)]">
           {label}
         </p>
       ) : null}
       {note ? (
-        <p className="text-sm font-medium italic tracking-[0.06em] text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.7)]">
+        <p className="text-[0.97vw] font-medium italic tracking-[0.06em] text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.7)]">
           {note}
         </p>
       ) : null}
@@ -50,6 +50,7 @@ function ShortcutVisual({
             sizes={item.preview.sizes}
             src={item.preview.src}
             width={item.preview.width}
+            sizeClassName={item.preview.sizeClassName}
             wrapperClassName={item.preview.wrapperClassName}
           />
         ) : null}
@@ -65,7 +66,7 @@ function ShortcutVisual({
           alt={item.alt}
           width={item.width}
           height={item.height}
-          className="max-w-none drop-shadow-md"
+          className={cn("drop-shadow-md", item.sizeClassName)}
         />
       </div>
     </>

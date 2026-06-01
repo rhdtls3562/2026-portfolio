@@ -19,15 +19,15 @@ export default function PlmTickerBand({ items, tone, trackClassName }: Props) {
   const duplicatedItems = [...items, ...items];
 
   return (
-    <div className={cn("overflow-hidden border-y py-3", BAND_TONES[tone])}>
+    <div className={cn("overflow-hidden border-y py-[0.83vw]", BAND_TONES[tone])}>
       <div className={cn("marquee-track", trackClassName)}>
         {duplicatedItems.map((item, index) => (
           <span
             key={`${item}-${index}`}
-            className="mx-8 whitespace-nowrap text-[0.65rem] font-black uppercase tracking-[0.22em]"
+            className="mx-[2.2vw] whitespace-nowrap text-[0.72vw] font-black uppercase tracking-[0.22em]"
           >
             {item}
-            <span className="mx-6 opacity-30">✦</span>
+            <span className="mx-[1.7vw] opacity-30">✦</span>
           </span>
         ))}
       </div>

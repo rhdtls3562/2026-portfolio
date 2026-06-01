@@ -28,28 +28,28 @@ export default function InternetWindow() {
     <div className="h-full overflow-y-auto bg-white text-black">
       <PlmWindowNav active="Skill" />
 
-      <section className="plm-grid-base relative overflow-hidden px-12 py-12">
-        <span className="decor-float absolute right-20 top-8 text-[2rem] text-black/10">
+      <section className="plm-grid-base relative overflow-hidden px-[3.3vw] py-[3.3vw]">
+        <span className="decor-float absolute right-20 top-8 text-[2.2vw] text-black/10">
           ★
         </span>
-        <span className="decor-float-slow decor-delay-2 absolute right-30 top-25 font-mono text-[3rem] font-black text-purple-400/25">
+        <span className="decor-float-slow decor-delay-2 absolute right-30 top-25 font-mono text-[3.3vw] font-black text-purple-400/25">
           {"{ }"}
         </span>
 
-        <span className="inline-flex rounded-full border border-purple-300 bg-[#f5efff] px-4 py-1.5 text-[0.6rem] font-black uppercase tracking-[0.2em] text-[#6d48c3]">
+        <span className="inline-flex rounded-full border border-purple-300 bg-[#f5efff] px-[1.1vw] py-[0.42vw] text-[0.6rem] font-black uppercase tracking-[0.2em] text-[#6d48c3]">
           Skill
         </span>
 
-        <h2 className="mt-5 text-[2.55rem] font-black leading-[1.02] tracking-[-0.02em]">
+        <h2 className="mt-[1.4vw] text-[2.8vw] font-black leading-[1.02] tracking-[-0.02em]">
           Skills I use
           <br />
           <span className="relative inline-block">
             <span className="relative z-10">in real projects</span>
-            <span className="plm-highlight-lavender absolute inset-x-0 bottom-1 z-0 h-4 rounded-sm" />
+            <span className="plm-highlight-lavender absolute inset-x-0 bottom-1 z-0 h-[1.1vw] rounded-sm" />
           </span>
         </h2>
 
-        <p className="mt-5 max-w-136 text-[0.82rem] leading-[1.8] text-[#666]">
+        <p className="mt-[1.4vw] max-w-[38vw] text-[0.91vw] leading-[1.8] text-[#666]">
           실무와 프로젝트에서 반복해서 사용한 기술을 카테고리별로 나눠
           정리했습니다.
           <br />
@@ -60,44 +60,44 @@ export default function InternetWindow() {
 
       <PlmTickerBand items={TICKER_ITEMS} tone="lavender" />
 
-      <section className="px-12 py-10">
-        <p className="mb-5 text-[0.62rem] font-black uppercase tracking-[0.22em] text-[#b6b6b6]">
+      <section className="px-[3.3vw] py-[2.8vw]">
+        <p className="mb-[1.4vw] text-[0.62rem] font-black uppercase tracking-[0.22em] text-[#b6b6b6]">
           Stack board
         </p>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 gap-[1.1vw]">
           {STACKS.map((stack, index) => (
             <article
               key={stack.category}
               className={cn(
-                "rounded-3xl border px-6 py-5",
+                "rounded-[1.7vw] border px-[1.7vw] py-[1.4vw]",
                 STACK_TONES[index % STACK_TONES.length],
               )}
             >
-              <div className="flex items-start justify-between gap-4">
+              <div className="flex items-start justify-between gap-[1.1vw]">
                 <div>
-                  <p className="text-[0.92rem] font-black">{stack.category}</p>
-                  <p className="mt-2 text-[0.73rem] leading-[1.65] text-[#666]">
+                  <p className="text-[1vw] font-black">{stack.category}</p>
+                  <p className="mt-[0.55vw] text-[0.81vw] leading-[1.65] text-[#666]">
                     {stack.items.join(" · ")}
                   </p>
                 </div>
-                <span className="text-base opacity-35">✦</span>
+                <span className="text-[1.1vw] opacity-35">✦</span>
               </div>
             </article>
           ))}
         </div>
       </section>
 
-      <section className="plm-grid-dense px-12 py-10">
-        <div className="grid grid-cols-3 gap-4">
+      <section className="plm-grid-dense px-[3.3vw] py-[2.8vw]">
+        <div className="grid grid-cols-3 gap-[1.1vw]">
           {SKILL_HIGHLIGHT_ITEMS.map((item) => (
             <article
               key={item.title}
-              className={cn("rounded-3xl border px-5 py-6", item.cardClassName)}
+              className={cn("rounded-[1.7vw] border px-[1.4vw] py-[1.7vw]", item.cardClassName)}
             >
-              <p className="text-[0.82rem] font-black text-black">
+              <p className="text-[0.91vw] font-black text-black">
                 {item.title}
               </p>
-              <p className="mt-3 text-[0.72rem] leading-[1.7] text-[#666]">
+              <p className="mt-[0.83vw] text-[0.8vw] leading-[1.7] text-[#666]">
                 {item.description}
               </p>
             </article>
