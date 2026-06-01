@@ -42,32 +42,29 @@ export default function ReadmeWindow() {
           {"</>"}
         </span>
 
-        <div className="flex items-end justify-between gap-[2.2vw]">
-          <div>
-            <span className="inline-flex items-center gap-[0.55vw] rounded-full border border-pink-200 bg-pink-50 px-[1.1vw] py-[0.42vw] text-[0.72vw] font-black uppercase tracking-[0.18em] text-pink-500">
+        <div className="flex items-end gap-[2.2vw]">
+          <div className="flex-1 min-w-0">
+            <span className="inline-flex items-center gap-[0.55vw] rounded-full border border-pink-200 bg-pink-50 px-[1.1vw] py-[0.42vw] text-[0.72vw] font-black uppercase tracking-spaced text-pink-500">
               <span className="size-[0.55vw] rounded-full bg-pink-400" />
-              Frontend Developer · Web Publisher
+              Frontend Developer
             </span>
-            <h1 className="mt-[1.7vw] text-[3.6vw] font-black leading-none tracking-[-0.05em]">
+            <h1 className="mt-[1.7vw] text-[3.6vw] font-black leading-none tracking-tighter whitespace-nowrap">
               Hello, I&apos;m{" "}
-              <span className="relative inline-block">
+              <span className="relative inline-block whitespace-nowrap">
                 <span className="relative z-10">Saerom</span>
                 <span className="plm-highlight-pink absolute inset-x-0 bottom-2 z-0 h-[1.4vw] rounded" />
               </span>
               .
             </h1>
-            <p className="mt-[1.7vw] max-w-[31vw] text-[0.94vw] leading-[1.85] text-[#666]">
+            <p className="mt-[1.7vw] max-w-[31vw] text-[0.94vw] leading-read-xl text-[#666] break-keep">
               웹디자인과 퍼블리싱 실무 약 6년을 바탕으로 프론트엔드 개발자로
-              <br />
               확장하고 있습니다. 디자인 의도를 코드로 정확히 옮기고, 사용자
-              흐름과
-              <br />
-              화면 완성도를 함께 보는 방식으로 일합니다.
+              흐름과 화면 완성도를 함께 보는 방식으로 일합니다.
             </p>
             <div className="mt-[2.2vw] flex flex-wrap gap-[0.83vw]">
               <a
                 href="tel:+821079063994"
-                className="rounded-full border border-[#f3c8da] bg-white px-[1.7vw] py-[0.83vw] text-[0.78vw] font-black uppercase tracking-[0.14em] text-[#c2185b] transition-colors hover:bg-[#fff1f6]"
+                className="rounded-full border border-[#f3c8da] bg-white px-[1.7vw] py-[0.83vw] text-[0.78vw] font-black uppercase tracking-airy text-[#c2185b] transition-colors hover:bg-[#fff1f6]"
               >
                 Contact me ↗
               </a>
@@ -75,20 +72,20 @@ export default function ReadmeWindow() {
                 href="https://github.com/rhdtls3562?tab=repositories"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-full border border-[#d8e9da] bg-white px-[1.7vw] py-[0.83vw] text-[0.78vw] font-black uppercase tracking-[0.14em] text-[#2e7d32] transition-colors hover:bg-[#edf8ef]"
+                className="rounded-full border border-[#d8e9da] bg-white px-[1.7vw] py-[0.83vw] text-[0.78vw] font-black uppercase tracking-airy text-[#2e7d32] transition-colors hover:bg-[#edf8ef]"
               >
                 GitHub ↗
               </a>
             </div>
           </div>
 
-          <div className="relative mb-[-4.2vw] pr-[1.4vw]">
+          <div className="relative mb-[-4.2vw]">
             <Image
               src={images.imgProfileBlack}
               alt="권새롬 프로필"
               width={1122}
               height={1402}
-              className="h-auto w-[20.8vw]"
+              className="h-auto w-[20vw]"
             />
           </div>
         </div>
@@ -98,7 +95,7 @@ export default function ReadmeWindow() {
 
       <section className="grid grid-cols-[1.05fr_0.95fr] gap-[1.9vw] px-[3.3vw] py-[3.3vw]">
         <div>
-          <p className="mb-[1.4vw] text-[0.62rem] font-black uppercase tracking-[0.22em] text-[#c2c2c2]">
+          <p className="mb-[1.4vw] text-[0.62rem] font-black uppercase tracking-vast text-[#c2c2c2]">
             Quick links
           </p>
           <div className="flex flex-wrap gap-[0.83vw]">
@@ -119,7 +116,7 @@ export default function ReadmeWindow() {
           </div>
         </div>
         <div>
-          <p className="mb-[1.4vw] text-[0.62rem] font-black uppercase tracking-[0.22em] text-[#c2c2c2]">
+          <p className="mb-[1.4vw] text-[0.62rem] font-black uppercase tracking-vast text-[#c2c2c2]">
             At a glance
           </p>
           <div className="space-y-[0.83vw]">
@@ -131,10 +128,10 @@ export default function ReadmeWindow() {
                   item.cardClassName,
                 )}
               >
-                <p className="text-[0.75vw] font-black uppercase tracking-[0.16em] text-black">
+                <p className="text-[0.75vw] font-black uppercase tracking-loose text-black">
                   {item.title}
                 </p>
-                <p className="mt-[0.55vw] text-[0.8vw] leading-[1.7] text-[#666]">
+                <p className="mt-[0.55vw] text-[0.8vw] leading-read text-[#666]">
                   {item.description}
                 </p>
               </article>
@@ -154,7 +151,7 @@ export default function ReadmeWindow() {
         >
           <span
             className={cn(
-              "inline-flex rounded-full px-[1.1vw] py-[0.42vw] text-[0.62rem] font-black uppercase tracking-[0.18em]",
+              "inline-flex rounded-full px-[1.1vw] py-[0.42vw] text-[0.62rem] font-black uppercase tracking-spaced",
               ABOUT_SECTION_THEMES[index % ABOUT_SECTION_THEMES.length]
                 .badgeClassName,
             )}
@@ -165,7 +162,7 @@ export default function ReadmeWindow() {
             {section.paragraphs.map((paragraph) => (
               <p
                 key={paragraph}
-                className="text-[0.93vw] leading-[1.85] text-[#5a5a5a]"
+                className="text-[0.93vw] leading-read-xl text-[#5a5a5a]"
               >
                 {paragraph}
               </p>
@@ -176,10 +173,8 @@ export default function ReadmeWindow() {
 
       <section className="px-[3.3vw] py-[3.9vw]">
         <div className="mb-[2.2vw] flex items-center gap-[0.83vw]">
-          <h2 className="text-[1.7vw] font-black tracking-[-0.03em]">
-            Career
-          </h2>
-          <span className="rounded-full border border-[#f3d6e3] bg-white px-[0.83vw] py-[0.28vw] text-[0.58rem] font-black uppercase tracking-[0.14em] text-[#bf5d89]">
+          <h2 className="text-[1.7vw] font-black tracking-close">Career</h2>
+          <span className="rounded-full border border-[#f3d6e3] bg-white px-[0.83vw] py-[0.28vw] text-[0.58rem] font-black uppercase tracking-airy text-[#bf5d89]">
             6 companies
           </span>
         </div>
@@ -217,7 +212,7 @@ export default function ReadmeWindow() {
       />
 
       <section className="px-[3.3vw] py-[3.9vw]">
-        <h2 className="mb-[2.2vw] text-[1.7vw] font-black tracking-[-0.03em]">
+        <h2 className="mb-[2.2vw] text-[1.7vw] font-black tracking-close">
           Education & Certification
         </h2>
         <div className="space-y-[1.4vw]">

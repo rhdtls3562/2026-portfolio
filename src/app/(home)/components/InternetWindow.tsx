@@ -36,11 +36,11 @@ export default function InternetWindow() {
           {"{ }"}
         </span>
 
-        <span className="inline-flex rounded-full border border-purple-300 bg-[#f5efff] px-[1.1vw] py-[0.42vw] text-[0.6rem] font-black uppercase tracking-[0.2em] text-[#6d48c3]">
+        <span className="inline-flex rounded-full border border-purple-300 bg-[#f5efff] px-[1.1vw] py-[0.42vw] text-[0.6rem] font-black uppercase tracking-broad text-[#6d48c3]">
           Skill
         </span>
 
-        <h2 className="mt-[1.4vw] text-[2.8vw] font-black leading-[1.02] tracking-[-0.02em]">
+        <h2 className="mt-[1.4vw] text-[2.8vw] font-black leading-flat tracking-snug">
           Skills I use
           <br />
           <span className="relative inline-block">
@@ -49,7 +49,7 @@ export default function InternetWindow() {
           </span>
         </h2>
 
-        <p className="mt-[1.4vw] max-w-[38vw] text-[0.91vw] leading-[1.8] text-[#666]">
+        <p className="mt-[1.4vw] max-w-[38vw] text-[0.91vw] leading-read-lg text-[#666]">
           실무와 프로젝트에서 반복해서 사용한 기술을 카테고리별로 나눠
           정리했습니다.
           <br />
@@ -61,7 +61,7 @@ export default function InternetWindow() {
       <PlmTickerBand items={TICKER_ITEMS} tone="lavender" />
 
       <section className="px-[3.3vw] py-[2.8vw]">
-        <p className="mb-[1.4vw] text-[0.62rem] font-black uppercase tracking-[0.22em] text-[#b6b6b6]">
+        <p className="mb-[1.4vw] text-[0.62rem] font-black uppercase tracking-vast text-[#b6b6b6]">
           Stack board
         </p>
         <div className="grid grid-cols-2 gap-[1.1vw]">
@@ -76,7 +76,7 @@ export default function InternetWindow() {
               <div className="flex items-start justify-between gap-[1.1vw]">
                 <div>
                   <p className="text-[1vw] font-black">{stack.category}</p>
-                  <p className="mt-[0.55vw] text-[0.81vw] leading-[1.65] text-[#666]">
+                  <p className="mt-[0.55vw] text-[0.81vw] leading-read-sm text-[#666]">
                     {stack.items.join(" · ")}
                   </p>
                 </div>
@@ -97,7 +97,7 @@ export default function InternetWindow() {
               <p className="text-[0.91vw] font-black text-black">
                 {item.title}
               </p>
-              <p className="mt-[0.83vw] text-[0.8vw] leading-[1.7] text-[#666]">
+              <p className="mt-[0.83vw] text-[0.8vw] leading-read text-[#666]">
                 {item.description}
               </p>
             </article>

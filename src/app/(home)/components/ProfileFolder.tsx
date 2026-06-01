@@ -24,10 +24,10 @@ export default function ProfileFolder() {
         </div>
         <div className="flex flex-col justify-center gap-1.5">
           <div>
-            <p className="font-retro-display text-xs uppercase tracking-[0.08em] text-win-blue">
+            <p className="font-retro-display text-xs uppercase tracking-soft text-win-blue">
               Kwon Saerom
             </p>
-            <p className="font-retro-terminal text-2xs uppercase tracking-[0.08em] text-win-ink">
+            <p className="font-retro-terminal text-2xs uppercase tracking-soft text-win-ink">
               Frontend Developer
             </p>
           </div>
@@ -38,7 +38,7 @@ export default function ProfileFolder() {
             {["1999 · 26세", "서울, KR"].map((tag) => (
               <span
                 key={tag}
-                className="border border-[#c9c9c9] bg-white px-1.5 py-0.5 font-retro-terminal text-3xs uppercase tracking-[0.06em] text-win-ink"
+                className="border border-[#c9c9c9] bg-white px-1.5 py-0.5 font-retro-terminal text-3xs uppercase tracking-ease text-win-ink"
               >
                 {tag}
               </span>
@@ -55,7 +55,7 @@ export default function ProfileFolder() {
             key={label}
             className="border border-[#cfcfcf] bg-white p-2 shadow-[inset_0_1px_0_rgba(255,255,255,0.8)]"
           >
-            <p className="font-retro-terminal text-3xs uppercase tracking-[0.14em] text-win-blue">
+            <p className="font-retro-terminal text-3xs uppercase tracking-airy text-win-blue">
               {label}
             </p>
             <p className="mt-1 text-[0.72rem] leading-tight text-win-ink">

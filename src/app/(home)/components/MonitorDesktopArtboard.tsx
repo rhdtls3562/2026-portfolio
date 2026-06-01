@@ -100,7 +100,7 @@ export default function MonitorDesktopArtboard({
         <h1
           aria-label={TITLE_TEXT}
           className={cn(
-            "font-mona-title text-[2vw] font-medium uppercase tracking-[0.12em] text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.42)]",
+            "font-mona-title text-[2vw] font-medium uppercase tracking-roomy text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.42)]",
             isWindowOpen ? "opacity-0" : "opacity-100",
           )}
         >

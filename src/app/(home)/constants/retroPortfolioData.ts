@@ -118,7 +118,7 @@ export type Project = {
 export const PROJECTS: Project[] = [
   {
     title: "Chavron",
-    period: "2024.10 – 2025.10",
+    period: "2024.11 – 2025.11",
     tags: ["UI/UX", "반응형 퍼블리싱"],
     desc: "아모레퍼시픽 BTS·챗봇·립AR·두피진단 서비스 UI/UX 디자인 및 반응형 웹 퍼블리싱 담당",
     slug: "CHEVRON",
@@ -155,7 +155,7 @@ export const PROJECTS: Project[] = [
 
   {
     title: "피알몽땅",
-    period: "2023.11 – 2024.09",
+    period: "2023.05 – 2024.05",
     tags: ["Figma", "웹디자인", "UI/UX 기획"],
     desc: "브랜드 아이덴티티 설계부터 웹 퍼블리싱까지 전체 디자인 프로세스 주도. 웹서비스 기획 및 UI 설계",
     slug: "PRMONTDANG",
@@ -166,7 +166,7 @@ export const PROJECTS: Project[] = [
   },
   {
     title: "엔클레어 / 댕댕펫",
-    period: "2022.01 – 2023.10",
+    period: "2021.05 – 2022.11",
     tags: ["웹디자인", "콘텐츠디자인"],
     desc: "뷰티·반려동물 브랜드 온라인 마케팅 콘텐츠 기획 및 제작, 웹 페이지 디자인",
     slug: "ENCLAIR / DDANGPET",
@@ -177,7 +177,7 @@ export const PROJECTS: Project[] = [
   },
   {
     title: "Sevenzero",
-    period: "2021.06 – 2021.08",
+    period: "2024.05 – 2024.07",
     tags: ["UI/UX디자인", "웹퍼블리싱"],
     desc: "Ai 이미지 제작 사이트 Ginigen의 디자인 및 퍼블리싱",
     slug: "SEVENZERO",

@@ -19,11 +19,11 @@ export default function RecordsFolder() {
               <span className="font-retro-terminal text-2xs text-win-blue">
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <p className="font-retro-display text-2xs uppercase tracking-[0.04em] text-win-ink">
+              <p className="font-retro-display text-2xs uppercase tracking-trim text-win-ink">
                 {project.title}
               </p>
             </div>
-            <p className="font-retro-terminal shrink-0 text-3xs uppercase tracking-[0.08em] text-[#727272]">
+            <p className="font-retro-terminal shrink-0 text-3xs uppercase tracking-soft text-[#727272]">
               {project.period}
             </p>
           </div>
@@ -34,7 +34,7 @@ export default function RecordsFolder() {
             {project.tags.map((tag) => (
               <span
                 key={tag}
-                className="border border-[#d0d0d0] bg-[#f1f1f1] px-1.5 py-0.5 font-retro-terminal text-3xs uppercase tracking-[0.06em] text-win-ink"
+                className="border border-[#d0d0d0] bg-[#f1f1f1] px-1.5 py-0.5 font-retro-terminal text-3xs uppercase tracking-ease text-win-ink"
               >
                 {tag}
               </span>

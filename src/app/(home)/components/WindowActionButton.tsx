@@ -11,7 +11,7 @@ type Props = {
 
 const BUTTON_CLASS = cn(
   "relative inline-flex h-[54px] min-w-[175px] items-center justify-center border-[3px] border-white",
-  "bg-win-surface-mid px-5 font-retro-terminal text-xs uppercase tracking-[0.08em] text-white",
+  "bg-win-surface-mid px-5 font-retro-terminal text-xs uppercase tracking-soft text-white",
   "shadow-[0_0_10px_rgba(0,0,0,0.25)] transition-none hover:bg-win-surface-mid hover:text-white hover:no-underline",
   "before:pointer-events-none before:absolute before:inset-[5px] before:border-2 before:border-dashed before:border-win-accent-deep",
 );

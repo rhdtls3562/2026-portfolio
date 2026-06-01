@@ -9,7 +9,7 @@ export default function StackFolder() {
           key={category}
           className="border border-[#cfcfcf] bg-white p-2.5 shadow-[inset_0_1px_0_rgba(255,255,255,0.8)]"
         >
-          <p className="font-retro-terminal text-2xs uppercase tracking-[0.12em] text-win-blue">
+          <p className="font-retro-terminal text-2xs uppercase tracking-roomy text-win-blue">
             {category}
           </p>
           <div className="mt-1.5 flex flex-col gap-1">

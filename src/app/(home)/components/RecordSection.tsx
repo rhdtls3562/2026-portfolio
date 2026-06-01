@@ -22,7 +22,7 @@ export default function RecordSection() {
             className="opacity-80"
           />
           <div className="flex items-center gap-4">
-            <span className="text-(--color-gold) tracking-[0.4em] text-xs uppercase font-medium">
+            <span className="text-(--color-gold) tracking-epic text-xs uppercase font-medium">
               02
             </span>
             <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-(--color-text-primary)">

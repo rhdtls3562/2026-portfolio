@@ -49,7 +49,7 @@ export default function Header() {
         {/* 로고 */}
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="text-(--color-gold) tracking-[0.3em] text-sm font-semibold uppercase hover:opacity-70 transition-opacity"
+          className="text-(--color-gold) tracking-grand text-sm font-semibold uppercase hover:opacity-70 transition-opacity"
           aria-label="맨 위로 이동"
         >
           KSR
@@ -61,7 +61,7 @@ export default function Header() {
             <button
               key={item.href}
               onClick={() => handleNavClick(item.href)}
-              className="text-(--color-text-secondary) hover:text-(--color-gold) tracking-[0.2em] text-xs font-medium uppercase transition-colors duration-300"
+              className="text-(--color-text-secondary) hover:text-(--color-gold) tracking-broad text-xs font-medium uppercase transition-colors duration-300"
             >
               {item.label}
             </button>
@@ -107,7 +107,7 @@ export default function Header() {
             <button
               key={item.href}
               onClick={() => handleNavClick(item.href)}
-              className="border-b border-(--color-border) py-4 text-left text-(--color-text-secondary) tracking-[0.2em] text-xs font-medium uppercase transition-colors duration-300 hover:text-(--color-gold) last:border-0"
+              className="border-b border-(--color-border) py-4 text-left text-(--color-text-secondary) tracking-broad text-xs font-medium uppercase transition-colors duration-300 hover:text-(--color-gold) last:border-0"
             >
               {item.label}
             </button>

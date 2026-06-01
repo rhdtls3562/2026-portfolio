@@ -28,7 +28,7 @@ export default function MailSection() {
             className="opacity-80"
           />
           <div className="flex items-center gap-4">
-            <span className="text-(--color-gold) tracking-[0.4em] text-xs uppercase font-medium">
+            <span className="text-(--color-gold) tracking-epic text-xs uppercase font-medium">
               04
             </span>
             <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-(--color-text-primary)">
@@ -78,7 +78,7 @@ export default function MailSection() {
               />
               <div className="absolute inset-0 rounded-full ring-1 ring-(--color-gold)/0 group-hover:ring-(--color-gold)/60 transition-all duration-500" />
               <div className="absolute inset-0 flex items-center justify-center">
-                <span className="text-(--color-text-primary) text-xs tracking-[0.3em] uppercase font-semibold drop-shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span className="text-(--color-text-primary) text-xs tracking-grand uppercase font-semibold drop-shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   Contact
                 </span>
               </div>

@@ -16,32 +16,32 @@ export const ABOUT_SECTION_THEMES = [
 
 export const CAREER_ITEMS = [
   {
-    period: "2024.10 – 2025.10",
+    period: "2024.11 – 2025.11",
     company: "Chavron",
     role: "웹퍼블리싱 · 웹디자인",
     cardClassName: "bg-[#fff4f8]",
     dotClassName: "bg-[#f48fb1]",
   },
   {
-    period: "2023.11 – 2024.09",
+    period: "2024.05 – 2024.07",
+    company: "칠빵모빌리티",
+    role: "UI/UX 디자인 · 웹퍼블리셔",
+    cardClassName: "bg-[#f4effd]",
+    dotClassName: "bg-[#9575cd]",
+  },
+  {
+    period: "2023.05 – 2024.05",
     company: "피알몽땅",
     role: "웹서비스기획 · 모바일기획 · UI 설계 및 디자인",
     cardClassName: "bg-[#fff9eb]",
     dotClassName: "bg-[#ffd54f]",
   },
   {
-    period: "2022.01 – 2023.10",
+    period: "2021.05 – 2022.11",
     company: "엔클레어 / 댕댕펫",
     role: "웹디자이너 · 프리랜서",
     cardClassName: "bg-[#eef9f0]",
     dotClassName: "bg-[#81c784]",
-  },
-  {
-    period: "2021.06 – 2021.12",
-    company: "하이어랭크",
-    role: "웹디자인 · 서비스 기획",
-    cardClassName: "bg-[#f4effd]",
-    dotClassName: "bg-[#9575cd]",
   },
   {
     period: "2020.05 – 2021.05",
@@ -97,7 +97,7 @@ export const ABOUT_GLANCE_ITEMS = [
     cardClassName: "border-[#f5d5e3] bg-[#fff5f9]",
   },
   {
-    title: "5 years 6 months",
+    title: "6 years 2 months",
     description:
       "웹디자인, 웹퍼블리싱, 서비스 기획을 넘나들며 실무 경력을 쌓아왔습니다.",
     cardClassName: "border-[#d8ecda] bg-[#f3fbf4]",

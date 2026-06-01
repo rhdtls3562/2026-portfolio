@@ -24,7 +24,7 @@ export default function PlmTickerBand({ items, tone, trackClassName }: Props) {
         {duplicatedItems.map((item, index) => (
           <span
             key={`${item}-${index}`}
-            className="mx-[2.2vw] whitespace-nowrap text-[0.72vw] font-black uppercase tracking-[0.22em]"
+            className="mx-[2.2vw] whitespace-nowrap text-[0.72vw] font-black uppercase tracking-vast"
           >
             {item}
             <span className="mx-[1.7vw] opacity-30">✦</span>

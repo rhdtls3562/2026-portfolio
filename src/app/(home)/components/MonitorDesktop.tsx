@@ -65,7 +65,7 @@ export default function MonitorDesktop({
               activeApp === app.key ? "-translate-y-0.5 scale-110" : "",
             )}
           >
-            <span className="pointer-events-none absolute -top-[2vw] left-1/2 -translate-x-1/2 rounded-full bg-black/80 px-[0.6vw] py-[0.2vw] font-mono text-[0.8vw] font-semibold tracking-[0.14em] text-white opacity-0 shadow-lg transition-opacity duration-150 group-focus-visible:opacity-100 group-hover:opacity-100">
+            <span className="pointer-events-none absolute -top-[2vw] left-1/2 -translate-x-1/2 rounded-full bg-black/80 px-[0.6vw] py-[0.2vw] font-mono text-[0.8vw] font-semibold tracking-airy text-white opacity-0 shadow-lg transition-opacity duration-150 group-focus-visible:opacity-100 group-hover:opacity-100">
               {WINDOW_TITLE[app.key]}
             </span>
             <Image

@@ -21,7 +21,7 @@ export default function RetroConnectionPanel({
     <div className="flex h-full items-center justify-center bg-win-surface-light p-5">
       <div className="w-full max-w-[25rem] border-2 border-white bg-win-surface px-8 py-7 shadow-[0_0_12px_rgba(0,0,0,0.15)]">
         <div className="mb-5 flex items-center justify-center bg-win-blue px-4 py-3 shadow-[inset_0_0_0_2px_rgba(255,255,255,0.15)]">
-          <span className="font-retro-display text-xl uppercase tracking-[0.08em] text-white">
+          <span className="font-retro-display text-xl uppercase tracking-soft text-white">
             {title} <span className="text-win-accent">{accentTitle}</span>
           </span>
         </div>
@@ -29,7 +29,7 @@ export default function RetroConnectionPanel({
         <div className="space-y-3.5">
           {fields.map((field) => (
             <div key={field.label}>
-              <p className="mb-1 font-retro-display text-2xs uppercase tracking-[0.1em] text-win-accent-deep">
+              <p className="mb-1 font-retro-display text-2xs uppercase tracking-widest text-win-accent-deep">
                 {field.label}
               </p>
               <div
@@ -48,7 +48,7 @@ export default function RetroConnectionPanel({
         <div className="mt-5">{children}</div>
 
         {footer ? (
-          <p className="mt-4 text-center font-retro-terminal text-3xs uppercase tracking-[0.1em] text-[#6f6f6f]">
+          <p className="mt-4 text-center font-retro-terminal text-3xs uppercase tracking-widest text-[#6f6f6f]">
             {footer}
           </p>
         ) : null}

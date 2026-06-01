@@ -54,7 +54,7 @@ export default function ProjectCard({ project }: Props) {
         <span className="absolute left-5 top-4 font-mono text-[1.9vw] font-black text-black/10">
           {"</>"}
         </span>
-        <span className="absolute bottom-4 right-5 font-mono text-[0.52rem] font-black uppercase tracking-[0.18em] text-black/20">
+        <span className="absolute bottom-4 right-5 font-mono text-[0.52rem] font-black uppercase tracking-spaced text-black/20">
           {project.slug}
         </span>
       </div>
@@ -62,10 +62,10 @@ export default function ProjectCard({ project }: Props) {
       <div className="px-[0.83vw] pb-[0.83vw] pt-[1.4vw]">
         <div className="flex items-start justify-between gap-[0.83vw]">
           <div>
-            <h3 className="text-[1.2vw] font-black leading-tight tracking-[-0.02em] text-black">
+            <h3 className="text-[1.2vw] font-black leading-tight tracking-snug text-black">
               {project.title}
             </h3>
-            <p className="mt-[0.28vw] font-mono text-[0.55rem] tracking-[0.18em] text-[#b3b3b3]">
+            <p className="mt-[0.28vw] font-mono text-[0.55rem] tracking-spaced text-[#b3b3b3]">
               {project.period}
             </p>
           </div>
@@ -88,12 +88,12 @@ export default function ProjectCard({ project }: Props) {
           ))}
         </div>
 
-        <p className="mt-[1.1vw] text-[0.84vw] leading-[1.7] text-[#636363]">
+        <p className="mt-[1.1vw] text-[0.84vw] leading-read text-[#636363]">
           {project.desc}
         </p>
 
         <div className="mt-[1.4vw] flex items-center justify-between border-t border-[#f1f1f1] pt-[1.1vw]">
-          <span className="rounded-full border border-[#f2dce7] bg-[#fff6fa] px-[0.83vw] py-[0.28vw] text-[0.58rem] font-black uppercase tracking-[0.12em] text-[#bf5d89]">
+          <span className="rounded-full border border-[#f2dce7] bg-[#fff6fa] px-[0.83vw] py-[0.28vw] text-[0.58rem] font-black uppercase tracking-roomy text-[#bf5d89]">
             Project record
           </span>
           {project.href ? (
@@ -101,12 +101,12 @@ export default function ProjectCard({ project }: Props) {
               href={project.href}
               target="_blank"
               rel="noreferrer"
-              className="font-mono text-[0.54rem] uppercase tracking-[0.18em] text-[#8c8c8c] transition-colors hover:text-black"
+              className="font-mono text-[0.54rem] uppercase tracking-spaced text-[#8c8c8c] transition-colors hover:text-black"
             >
               github ↗
             </a>
           ) : (
-            <span className="font-mono text-[0.54rem] uppercase tracking-[0.18em] text-[#b3b3b3]">
+            <span className="font-mono text-[0.54rem] uppercase tracking-spaced text-[#b3b3b3]">
               archive
             </span>
           )}

@@ -28,6 +28,32 @@
   --text-2xs: 0.5rem;
   --text-3xs: 0.375rem;
   --text-4xs: 0.3125rem;
+
+  /* 커스텀 letter-spacing 토큰 */
+  --tracking-close: -0.03em;
+  --tracking-snug: -0.02em;
+  --tracking-fine: 0.01em;
+  --tracking-trim: 0.04em;
+  --tracking-ease: 0.06em;
+  --tracking-soft: 0.08em;
+  --tracking-roomy: 0.12em;
+  --tracking-airy: 0.14em;
+  --tracking-float: 0.15em;
+  --tracking-loose: 0.16em;
+  --tracking-spaced: 0.18em;
+  --tracking-broad: 0.2em;
+  --tracking-vast: 0.22em;
+  --tracking-grand: 0.3em;
+  --tracking-epic: 0.4em;
+
+  /* 커스텀 line-height 토큰 */
+  --leading-flat: 1.02;
+  --leading-flat-md: 1.04;
+  --leading-read-sm: 1.65;
+  --leading-read: 1.7;
+  --leading-read-md: 1.75;
+  --leading-read-lg: 1.8;
+  --leading-read-xl: 1.85;
 }
 
 @utility font-retro-display {

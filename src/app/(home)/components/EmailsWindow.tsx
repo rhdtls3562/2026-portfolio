@@ -47,12 +47,12 @@ export default function EmailsWindow() {
           {"@"}
         </span>
 
-        <span className="inline-flex rounded-full border border-blue-300 bg-[#eef6ff] px-[1.1vw] py-[0.42vw] text-[0.6rem] font-black uppercase tracking-[0.2em] text-[#1565c0]">
+        <span className="inline-flex rounded-full border border-blue-300 bg-[#eef6ff] px-[1.1vw] py-[0.42vw] text-[0.6rem] font-black uppercase tracking-broad text-[#1565c0]">
           Contact
         </span>
 
-        <h2 className="mt-[1.4vw] text-[2.8vw] font-black leading-[1.04] tracking-[-0.02em]">
-          Hybride Developer
+        <h2 className="mt-[1.4vw] text-[2.8vw] font-black leading-flat-md tracking-snug">
+          Hybrid Developer
           <br />
           <span className="relative inline-block">
             <span className="relative z-10">Get yout Chance</span>
@@ -60,7 +60,7 @@ export default function EmailsWindow() {
           </span>
         </h2>
 
-        <p className="mt-[1.4vw] max-w-[34vw] text-[0.91vw] leading-[1.8] text-[#666]">
+        <p className="mt-[1.4vw] max-w-[34vw] text-[0.91vw] leading-read-lg text-[#666]">
           기획, 디자인, 개발 가능 하이브리드 개발자 권새롬입니다. <br />
           성실함과 Ai 친화적인 스킬을 장점으로 열심히 일하겠습니다.
           <br />
@@ -75,11 +75,11 @@ export default function EmailsWindow() {
           <div className="flex items-center justify-between gap-[1.1vw] border-b border-[#dceafd] pb-[1.1vw]">
             <div className="flex items-center gap-[0.83vw]">
               <span className="size-[0.7vw] rounded-full bg-green-400" />
-              <span className="font-mono text-[0.8vw] font-bold tracking-[0.18em] text-[#1565c0]">
+              <span className="font-mono text-[0.8vw] font-bold tracking-spaced text-[#1565c0]">
                 {EMAIL}
               </span>
             </div>
-            <span className="rounded-full border border-[#cde2fb] bg-white px-[0.83vw] py-[0.28vw] text-[0.55rem] font-black uppercase tracking-[0.14em] text-[#1565c0]">
+            <span className="rounded-full border border-[#cde2fb] bg-white px-[0.83vw] py-[0.28vw] text-[0.55rem] font-black uppercase tracking-airy text-[#1565c0]">
               active
             </span>
           </div>
@@ -89,7 +89,7 @@ export default function EmailsWindow() {
               href={naverMailHref}
               target="_blank"
               rel="noreferrer"
-              className="rounded-full border border-[#cde2fb] bg-white px-[1.4vw] py-[1vw] text-center text-[0.75vw] font-black uppercase tracking-[0.15em] text-[#1565c0] transition-colors hover:bg-[#dfefff]"
+              className="rounded-full border border-[#cde2fb] bg-white px-[1.4vw] py-[1vw] text-center text-[0.75vw] font-black uppercase tracking-float text-[#1565c0] transition-colors hover:bg-[#dfefff]"
             >
               Send Mail ↗
             </a>
@@ -97,7 +97,7 @@ export default function EmailsWindow() {
               type="button"
               onClick={handleCopyAddress}
               className={cn(
-                "rounded-full border px-[1.4vw] py-[1vw] text-[0.75vw] font-black uppercase tracking-[0.15em] transition-colors",
+                "rounded-full border px-[1.4vw] py-[1vw] text-[0.75vw] font-black uppercase tracking-float transition-colors",
                 isCopied
                   ? "border-[#c8e6c9] bg-[#eef9f0] text-[#2e7d32]"
                   : "border-[#cde2fb] bg-white text-[#1565c0] hover:bg-[#dfefff]",
@@ -122,7 +122,7 @@ export default function EmailsWindow() {
               <p className="text-[0.91vw] font-black text-black">
                 {item.title}
               </p>
-              <p className="mt-[0.83vw] text-[0.8vw] leading-[1.7] text-[#666]">
+              <p className="mt-[0.83vw] text-[0.8vw] leading-read text-[#666]">
                 {item.description}
               </p>
             </article>

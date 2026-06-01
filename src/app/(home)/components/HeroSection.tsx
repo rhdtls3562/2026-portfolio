@@ -42,7 +42,7 @@ export default function HeroSection() {
         {/* 상단 장식 라인 */}
         <div className="flex items-center gap-4 mb-8">
           <div className="w-12 h-px bg-(--color-gold)" />
-          <span className="text-(--color-gold) tracking-[0.4em] text-xs uppercase font-medium">
+          <span className="text-(--color-gold) tracking-epic text-xs uppercase font-medium">
             Portfolio
           </span>
           <div className="w-12 h-px bg-(--color-gold)" />
@@ -56,7 +56,7 @@ export default function HeroSection() {
         </h1>
 
         {/* 서브 타이틀 */}
-        <p className="text-(--color-text-secondary) tracking-[0.3em] text-sm md:text-base uppercase mt-6 mb-12">
+        <p className="text-(--color-text-secondary) tracking-grand text-sm md:text-base uppercase mt-6 mb-12">
           Frontend Developer
         </p>
 
@@ -66,7 +66,7 @@ export default function HeroSection() {
           className="flex flex-col items-center gap-2 group cursor-pointer"
           aria-label="아래로 스크롤"
         >
-          <span className="text-(--color-text-muted) tracking-[0.2em] text-xs uppercase group-hover:text-(--color-gold) transition-colors">
+          <span className="text-(--color-text-muted) tracking-broad text-xs uppercase group-hover:text-(--color-gold) transition-colors">
             Scroll
           </span>
           <div className="w-px h-12 bg-linear-to-b from-(--color-gold) to-transparent animate-pulse" />
